@@ -1,4 +1,4 @@
-package hackerrank.search;
+package michael.hackerrank.search;
 
 import java.util.Scanner;
 

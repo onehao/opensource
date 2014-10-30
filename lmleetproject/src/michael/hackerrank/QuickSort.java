@@ -1,4 +1,4 @@
-package hackerrank;
+package michael.hackerrank;
 /* Head ends here */
 import java.util.*;
 public class QuickSort {

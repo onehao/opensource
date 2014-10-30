@@ -1,4 +1,4 @@
-package hackerrank.string;
+package michael.hackerrank.string;
 
 	/**********************************
 	 *

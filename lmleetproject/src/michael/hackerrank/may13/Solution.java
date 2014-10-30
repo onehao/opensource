@@ -1,4 +1,4 @@
-package hackerrank.may13;
+package michael.hackerrank.may13;
 
 import java.util.ArrayList;
 import java.util.Arrays;

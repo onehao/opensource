@@ -1,4 +1,4 @@
-package hackerrank.bitmanipulation;
+package michael.hackerrank.bitmanipulation;
 
 import java.io.*;
 import java.util.*;

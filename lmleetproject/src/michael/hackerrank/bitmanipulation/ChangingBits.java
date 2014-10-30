@@ -1,4 +1,4 @@
-package hackerrank.bitmanipulation;
+package michael.hackerrank.bitmanipulation;
 
 import java.io.*;
 
@@ -74,7 +74,7 @@ public class ChangingBits {
 	            else// get_c 5
 	            {
 	            	index = Integer.parseInt(operations[1]);
-	                int C = adds(A, B, index, N); //ÓÅ»¯
+	                int C = adds(A, B, index, N); //ï¿½Å»ï¿½
 	                result.append(C);
 	                //result.Append(((A + B) & ex2[index]) >> index);
 	            }

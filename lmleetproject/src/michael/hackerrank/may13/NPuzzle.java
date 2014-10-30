@@ -1,5 +1,5 @@
-package hackerrank.may13;
-//����һ��ʵ��
+package michael.hackerrank.may13;
+//锟斤拷锟斤拷一锟斤拷实锟斤拷
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -10,17 +10,17 @@ import java.util.Set;
 import java.util.Stack;
 class Entry2 implements Comparable<Entry> {
 
-	    public static int[] dmap = {0, 1, 2, 3, 4, 5, 6, 7, 8};  //Ԥ��������״̬
-	    public int[] map = new int[9];   //���ڴ�ŵ�ǰ״̬
-	    public Entry parent = null;     //������¼��״̬
-	    public int priority = 0;           //��¼��ǰ״̬������ֵ
-	    public int direction = 0;        //��¼��ǰ��������丸����ɺ��ַ�ʽ��չ����
-	    public int deep = 0;         //������
-	    public int redirection = -1; //����
-	    //���ڿͻ�������
+	    public static int[] dmap = {0, 1, 2, 3, 4, 5, 6, 7, 8};  //预锟斤拷锟斤拷锟斤拷锟斤拷状态
+	    public int[] map = new int[9];   //锟斤拷锟节达拷诺锟角白刺�
+	    public Entry parent = null;     //锟斤拷锟斤拷锟斤拷录锟斤拷状态
+	    public int priority = 0;           //锟斤拷录锟斤拷前状态锟斤拷锟斤拷锟斤拷值
+	    public int direction = 0;        //锟斤拷录锟斤拷前锟斤拷锟斤拷锟斤拷锟斤拷涓革拷锟斤拷锟缴猴拷锟街凤拷式锟斤拷展锟斤拷锟斤拷
+	    public int deep = 0;         //锟斤拷锟斤拷锟斤拷
+	    public int redirection = -1; //锟斤拷锟斤拷
+	    //锟斤拷锟节客伙拷锟斤拷锟斤拷锟斤拷
 
 	    public int compareTo(Entry o) {
-	        return this.priority - o.priority;  //��������
+	        return this.priority - o.priority;  //锟斤拷锟斤拷锟斤拷锟斤拷
 	    }
 
 	    @Override
@@ -42,32 +42,32 @@ class Entry2 implements Comparable<Entry> {
 
 	public class NPuzzle { 
 
-	    public static int[] totalPath; //�������·��
+	    public static int[] totalPath; //锟斤拷锟斤拷锟斤拷锟铰凤拷锟�
 
-	    //��������Ƿ񵽴���Ŀ��״̬
+	    //锟斤拷锟斤拷锟斤拷锟斤拷欠竦酱锟斤拷锟侥匡拷锟阶刺�
 	    public boolean check(int[] map) {
 	        for (int i = 0; i < 9; i++) {
-	            if (map[i] != Entry.dmap[i]) {
+	            if (map[i] != Entry2.dmap[i]) {
 	                return false;
 	            }
 	        }
 	        return true;
 	    }
 
-	    //������ֵ���й���
+	    //锟斤拷锟斤拷锟斤拷值锟斤拷锟叫癸拷锟斤拷
 	    public int calPriority(int[] map) {
-	        int wrongNum = 0;  //��¼��λ��
-	        int totalNum = 0;  //��¼��Ҫ�ƶ����ܲ���
-	        int overNum = 0;   //��¼��Ҫ�ߵ�����Ŀ
+	        int wrongNum = 0;  //锟斤拷录锟斤拷位锟斤拷
+	        int totalNum = 0;  //锟斤拷录锟斤拷要锟狡讹拷锟斤拷锟杰诧拷锟斤拷
+	        int overNum = 0;   //锟斤拷录锟斤拷要锟竭碉拷锟斤拷锟斤拷目
 	        for (int i = 0; i < 9; i++) {
-	            if (map[i] != Entry.dmap[i]) {
-	                wrongNum++;   //�ۼӴ�λ��
-	                totalNum = Math.abs(map[i] - Entry.dmap[i]); //�ۼ��ƶ�����
+	            if (map[i] != Entry2.dmap[i]) {
+	                wrongNum++;   //锟桔加达拷位锟斤拷
+	                totalNum = Math.abs(map[i] - Entry2.dmap[i]); //锟桔硷拷锟狡讹拷锟斤拷锟斤拷
 	            }
 
 	            if (i != 0) {
 	                if ((map[i] == map[i - 1] + 1) || (map[i] == map[i - 1] - 1)) {
-	                    overNum += 2;   //�ۼӵߵ��Ĳ���
+	                    overNum += 2;   //锟桔加颠碉拷锟侥诧拷锟斤拷
 	                }
 	            }
 
@@ -98,11 +98,11 @@ class Entry2 implements Comparable<Entry> {
 	    	
 	    }
 
-	    //�Խ�ռ�������
+	    //锟皆斤拷占锟斤拷锟斤拷锟斤拷锟�
 	    public boolean search(int[] map) {
-	        PriorityQueue<Entry> queue = new PriorityQueue<Entry>(326888);  //������Ż���
-	        Set<Entry> set = new HashSet<Entry>(326888);   //������������
-	        Set<Entry> liveSet = new HashSet<Entry>(326888); //���ʵ��˫��ϣ����
+	        PriorityQueue<Entry> queue = new PriorityQueue<Entry>(326888);  //锟斤拷锟斤拷锟斤拷呕锟斤拷锟�
+	        Set<Entry> set = new HashSet<Entry>(326888);   //锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+	        Set<Entry> liveSet = new HashSet<Entry>(326888); //锟斤拷锟绞碉拷锟剿�拷锟较ｏ拷锟斤拷锟�
 	        Entry entry = new Entry();
 	        entry.map = Arrays.copyOf(map, map.length);
 	        entry.direction = 0;
@@ -116,8 +116,8 @@ class Entry2 implements Comparable<Entry> {
 	            entry = queue.poll();
 	            dirList.add(entry.direction);
 	            liveSet.remove(entry);
-	            set.add(entry);         //�����Ϊ�����
-	            if (this.check(entry.map)) { //�Ѵ�Ŀ��
+	            set.add(entry);         //锟斤拷锟斤拷锟轿�拷锟斤拷锟斤拷
+	            if (this.check(entry.map)) { //锟窖达拷目锟斤拷
 	                int sum = 0;
 	                Stack<Integer> tplist = new Stack<Integer>();
 	                while (entry.parent != null) {
@@ -130,7 +130,7 @@ class Entry2 implements Comparable<Entry> {
 	                //System.out.println(entry.direction);
 	                //printDirection(entry.direction);
 	                //System.out.println("---------------------");
-	                //System.out.println("�ƶ����ܲ���Ϊ�� " + sum + "  ");
+	                //System.out.println("锟狡讹拷锟斤拷锟杰诧拷锟斤拷为锟斤拷 " + sum + "  ");
 	                System.out.println(sum);
 	                while(!tplist.empty())
 	                {
@@ -139,12 +139,12 @@ class Entry2 implements Comparable<Entry> {
 	                
 	                NPuzzle.totalPath = new int[tplist.size()];
 	                for (int pk = tplist.size() - 1, pkk = 0; pk >= 0; pk--) {
-	                	NPuzzle.totalPath[pkk++] = tplist.get(pk);  //������Ȼ��ȡ���ƶ�����
+	                	NPuzzle.totalPath[pkk++] = tplist.get(pk);  //锟斤拷锟斤拷锟斤拷然锟斤拷取锟斤拷锟狡讹拷锟斤拷锟斤拷
 	                }
 	                return true;
 
-	            } else { //δ��Ŀ��
-	                //Ѱ�ҿհ׿�
+	            } else { //未锟斤拷目锟斤拷
+	                //寻锟揭空白匡拷
 	                int posx = 0, posy = 0;
 	                for (int i = 0; i < 9; i++) {
 	                    if (entry.map[i] == 0) {
@@ -155,8 +155,8 @@ class Entry2 implements Comparable<Entry> {
 	                }
 	                int[] fx = {-1, 0, 1, 0};
 	                int[] fy = {0, 1, 0, -1};
-	                int pos = posx * 3 + posy;  //��¼��ǰλ
-	                //���ĸ������������
+	                int pos = posx * 3 + posy;  //锟斤拷录锟斤拷前位
+	                //锟斤拷锟侥革拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟�
 	                for (int k = 0; k < 4; k++) {
 	                    if (k == entry.redirection) {
 	                        continue;
@@ -171,19 +171,19 @@ class Entry2 implements Comparable<Entry> {
 	                    }
 	                    
 	                    Entry nextEntry = new Entry();
-	                    //������״̬
+	                    //锟斤拷锟斤拷锟斤拷状态
 	                    nextEntry.map = Arrays.copyOf(entry.map, entry.map.length);
-	                    //����λ�ò����ƶ�Ч��
+	                    //锟斤拷锟斤拷位锟矫诧拷锟斤拷锟狡讹拷效锟斤拷
 	                    int newPos = newi * 3 + newj, temp;
 	                    temp = nextEntry.map[newPos];
 	                    nextEntry.map[newPos] = nextEntry.map[pos];
 	                    nextEntry.map[pos] = temp;
-	                    if (set.contains(nextEntry)) { //����չ�Ľ��Ϊ�����
+	                    if (set.contains(nextEntry)) { //锟斤拷锟斤拷展锟侥斤拷锟轿�拷锟斤拷锟斤拷
 	                        continue;
 	                    }
-	                    if (liveSet.contains(nextEntry)) {//��������ݲ�����
+	                    if (liveSet.contains(nextEntry)) {//锟斤拷锟斤拷锟斤拷锟斤拷莶锟斤拷锟斤拷锟�
 	                        continue;
-	                    } else {    //��������
+	                    } else {    //锟斤拷锟斤拷锟斤拷锟斤拷
 	                        nextEntry.parent = entry;
 	                        nextEntry.direction = k;
 	                        if (k + 2 < 3) {
@@ -201,7 +201,7 @@ class Entry2 implements Comparable<Entry> {
 	        }
 	        return false;
 	    }
-	    //���ڷ�������
+	    //锟斤拷锟节凤拷锟斤拷锟斤拷锟斤拷
 
 	    public static void main(String[] args) {
 	        
