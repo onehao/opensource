@@ -28,6 +28,8 @@ public class Single_Number {
 		System.out.println(result);
 		return result;
 	}
+	
+	//you can see who write what.
 
 	public static void main(String[] args) {
 		Single_Number sn = new Single_Number();
