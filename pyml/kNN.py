@@ -25,13 +25,12 @@ def classify0(inX, dataSet, labels,k):
 
 def file2matrix(filename):
     fr = open(filename)
-    
-    arrayOLines = fr.readLines()
-    numberOfLines = len(arrayOLines)
-    returnMat = zeros((numberOfLines,3))
-    classLabelVector = []
+    numberOfLines = len(fr.readlines())         #get the number of lines in the file
+    returnMat = zeros((numberOfLines,3))        #prepare matrix to return
+    classLabelVector = []                       #prepare labels return   
+    fr = open(filename)
     index = 0
-    for line in arrayOLines:
+    for line in fr.readlines():
         line = line.strip()
         listFromLine = line.split('\t')
         returnMat[index,:] = listFromLine[0:3]
