@@ -1,7 +1,8 @@
 from numpy import *;
 import kNN
-from matplotlib import *;
 import matplotlib.pyplot as plt
+
+
 
 group, labels = kNN.createDatSet()
 
@@ -9,8 +10,21 @@ print(group)
 
 print(labels)
 
-print(kNN.classify0([0][0], group, labels, 3))
+print(group.shape)
 
+#michael test classify
+def classifyTest():
+    print(kNN.classify0([0][0], group, labels, 3))
+    print(kNN.classify0([1][0], group, labels, 3))
+    print(kNN.classify0([2][0], group, labels, 3))
+    print(kNN.classify0([3][0], group, labels, 3))
+    print(kNN.classify0([0][1], group, labels, 4))
+    print(kNN.classify0([1][1], group, labels, 3))
+    print(kNN.classify0([2][1], group, labels, 3))
+    print(kNN.classify0([3][1], group, labels, 3))
+    
+
+classifyTest();
 
 datingDataMat, datingLabels = kNN.file2matrix('datingTestSet2.txt')
 
@@ -39,4 +53,8 @@ kNN.datingClassTest()
 
 kNN.classifyPerson()
 
+kNN.handwritingClassTest2()
+
+print('-----------kNN.handwritingClassTest2()----------')
+kNN.handwritingClassTest2()
 
