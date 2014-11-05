@@ -1,11 +1,23 @@
 from numpy import *;
 import kNN
+import numpy as np
 import matplotlib.pyplot as plt
+from mayavi import mlab
 
 '''
 @author: Michael Wan
 @since: 2014-11-01
 '''
+
+def etsIntro():
+    x, y = np.ogrid[-2:2:20j, -2:2:20j]
+    z = x * np.exp( - x**2 - y**2)
+    
+    pl = mlab.surf(x, y, z, warp_scale="auto")
+    mlab.axes(xlabel='x', ylabel='y', zlabel='z')
+    mlab.outline(pl)
+
+etsIntro()
 
 group, labels = kNN.createDatSet()
 
@@ -77,4 +89,8 @@ print('-----------kNN.handwritingClassTest2()----------')
 print('-----------to see the same training data and test data will still have some incorrect rate.----------')
 #to see the same training data and test data will still have some incorrect rate.
 kNN.handwritingClassTest2()
+
+
+
+
 
