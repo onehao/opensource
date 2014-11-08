@@ -1,2 +1,5 @@
 /.pydevproject
 /kNN.pyc
+/six.pyc
+/*.pyc
+/ch02/knn/*.pyc
