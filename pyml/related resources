@@ -1,3 +1,13 @@
 https://github.com/pbharrin/machinelearninginaction
 
 http://www.manning.com/pharrington/
+
+
+#http://www.pythoner.com/200.html
+修改matplotlibrc文件
+进入Python安装目录下的Lib\site-packages\matplotlib\mpl-data目录，打开matplotlibrc文件，删除font.family和font.sans-serif两行前的#，并在font.sans-serif后添加微软雅黑字体（Microsoft YaHei），代码如下：
+
+
+font.family         : sans-serif
+font.sans-serif     : Microsoft YaHei, Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+ 
