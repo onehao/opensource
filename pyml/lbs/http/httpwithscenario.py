@@ -31,9 +31,8 @@ def getRequest(requestUrl,context):
     print(r1.status, r1.reason)
     data1 = r1.read()
     print(data1)
-    path = xpath_get(data1, "status")
-    print(path)
     conn.close()
+    return data1
     
 def postRequest(requesturl, context, params, headers):
     #params = urllib.urlencode({'name': "geotable", 'geotype': 1, 'is_published': 1, "ak" : "wOexvA0egnE0qUUWHYcyY4wX"})
@@ -52,7 +51,13 @@ def myTest():
     params = urllib.urlencode({'name': "michael1", 'geotype': 1, 'is_published': 1, "ak" : "wOexvA0egnE0qUUWHYcyY4wX"})
     headers = {"Content-type": "application/x-www-form-urlencoded",
             "Accept": "application/json"}
-    #postRequest("api.map.baidu.com", "/geodata/v3/geotable/create" , params, headers);
-
+    #postRequest("api.map.baidu.com", "/geodata/v3/geotable/create", params, headers);
+    file_object = open('result.txt', 'w')
+    
+    for i in range(1, 1000):
+        result = getRequest("api.map.baidu.com", "/telematics/v3/movie?qt=hot_movie&out_coord_type=bd09mc&coord_type=gcj02&location=北京&output=xml&ak=MOCOlcworadtFqL6jbaIwFsq")
+        file_object.write(result)
+    file_object.close( )
+    
 myTest()  
     
