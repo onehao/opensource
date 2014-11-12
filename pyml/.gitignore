@@ -2,4 +2,6 @@
 /kNN.pyc
 /six.pyc
 /*.pyc
-/ch02/knn/*.pyc
+/inaction/ch02/knn/*.pyc
+/lbs/http/*.pyc
+/inaction/ch03/decisiontree/*.pyc
