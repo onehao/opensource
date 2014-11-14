@@ -52,10 +52,11 @@ def myTest():
     headers = {"Content-type": "application/x-www-form-urlencoded",
             "Accept": "application/json"}
     #postRequest("api.map.baidu.com", "/geodata/v3/geotable/create", params, headers);
-    file_object = open('iplocation.txt', 'w')
+    file_object = open('wending.txt', 'w')
     result = getRequest("api.map.baidu.com", "/geocoder/v2/?ak=wOexvA0egnE0qUUWHYcyY4wX&coordtype=wgs84ll&callback=renderReverse&location=36.067684,120.389744&output=xml&pois=1")
-    for i in range(1, 130):
-        result = getRequest("api.map.baidu.com", "/direction/v1?mode=driving&origin=上地五街&destination=北京大学&origin_region=北京&destination_region=北京&output=json&ak=wOexvA0egnE0qUUWHYcyY4wX")
+    for i in range(1, 1000):
+        #http://api.map.baidu.com/location/ip?ak=Xv6KPR3tnTvL40X7yXKB02U1&coor=bd09ll&ip=221.199.192.7
+        result = getRequest("api.map.baidu.com", "/location/ip?ak=Xv6KPR3tnTvL40X7yXKB02U1&coor=bd09ll&ip=221.199.192.7")
         file_object.write(result)
         file_object.write("\n")
     file_object.close( )

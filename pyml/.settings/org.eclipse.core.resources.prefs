@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
 encoding//inaction/ch03/decisiontree/test.py=utf-8
 encoding//lbs/http/httpwithscenario.py=utf-8
-encoding//lbs/ip/getRandomIP.py=utf-8
+encoding//lbs/webapi/genLocationByCoord.py=utf-8
+encoding//lbs/webapi/getRandomIP.py=utf-8
+encoding//lbs/webapi/parseJson.py=utf-8
 encoding//others/Kmeans.py=utf-8
