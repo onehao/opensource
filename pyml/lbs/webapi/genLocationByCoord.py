@@ -4,9 +4,9 @@
 @since: 2014-11-13
 '''
 
-
 import httplib
 import json
+import unittest
 import sys
 reload(sys)
 #http://www.pythoner.com/200.html
@@ -47,5 +47,19 @@ def getLocation():
         file_write.write('\n')
 #         file_write.write(var[1].replace('\n','') + "," + var[0] + '\n')
     file_write.close()
+
+def geocoderMetamorphic():
+    file_read = open('locationbd09ll', 'r')
+    list = file_read.readlines()
+    for i in range(0, len(list)-1):
+        #file_write.write(list[i])
+        var = list[i].split(",")
+        context = "/geocoder/v2/?pois=0&output=json&ak=wOexvA0egnE0qUUWHYcyY4wX&location=" + var[1].replace('\n','') + "," + var[0]
+        result = getRequest("api.map.baidu.com", context)
+        resultJsonObject = json.loads(result)
+        location = resultJsonObject['result']['formatted_address']
+        reverseGeocodingContext = '/geocoder/v2/?output=json&ak=wOexvA0egnE0qUUWHYcyY4wX&address=' + location
+        result = getRequest("api.map.baidu.com", context)
         
-getLocation()        
+
+geocoderMetamorphic()        
