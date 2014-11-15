@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//crawler/lbs_forum.py=utf-8
 encoding//inaction/ch03/decisiontree/test.py=utf-8
 encoding//lbs/http/httpwithscenario.py=utf-8
 encoding//lbs/webapi/genLocationByCoord.py=utf-8
