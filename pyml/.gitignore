@@ -5,3 +5,5 @@
 /inaction/ch02/knn/*.pyc
 /lbs/http/*.pyc
 /inaction/ch03/decisiontree/*.pyc
+/lbs/webapi/*.pyc
+/lbs/ut/*.pyc
