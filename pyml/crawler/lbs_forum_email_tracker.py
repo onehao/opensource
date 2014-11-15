@@ -21,7 +21,7 @@ from myemail import send_mail
 #运行时没问题， 但是编译有有错误提示， 可以忽略。  
 #sys.setdefaultencoding('utf8')
 print(sys.getdefaultencoding())
-mailto_list=["wanhao01@baidu.com", 'onehao333@gmail.com'] 
+mailto_list=["wanhao01@baidu.com", 'onehaojacket@gmail.com'] 
 
 
 def get4PageForum():
