@@ -22,9 +22,9 @@ reload(sys)
 #运行时没问题， 但是编译有有错误提示， 可以忽略。  
 sys.setdefaultencoding('utf8')
 print(sys.getdefaultencoding())
-
+mailto_list=["wanhao01@baidu.com", 'onehao333@gmail.com'] 
 #定义百度函数
-def baidu_tieba(url,begin_page,end_page):   
+def lbs_forum(url,begin_page,end_page):   
     for i in range(begin_page, end_page+1):
         sName = string.zfill(i,5) #+ '.html'#自动填充成六位的文件名
         print '正在下载第' + str(i) + '个网页，并将其存储为' + sName + '......'
@@ -56,6 +56,8 @@ def baidu_tieba(url,begin_page,end_page):
                 if len(title) > 0:
                     f.write(m)
             f.close()
+
+
 
 def enValidateFileName(name):
     #\/：*？“<>| file name shouldn't contain these chars.
@@ -91,5 +93,5 @@ end_page = int(raw_input(u'请输入终点的页数：\n'))
 
 #调用
 
-baidu_tieba(bdurl,begin_page,end_page)
+lbs_forum(bdurl,begin_page,end_page)
 
