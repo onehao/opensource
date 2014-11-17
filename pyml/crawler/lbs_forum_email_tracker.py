@@ -40,7 +40,10 @@ def get4PageForum():
         result2 +=match
         for i in range(0,len(match)):
             result += match[i] + "<br />"
-    send_mail(mailto_list, 'LBS WEB API forum _' + time.strftime("%Y-%m-%d", time.localtime()), result)
+    if send_mail(mailto_list, 'LBS WEB API forum _ ' + time.strftime("%Y-%m-%d", time.localtime()), result):
+        print "发送成功"  
+    else:  
+        print "发送失败"
     #send_mail(mailto_list, 'LBS WEB API forum _2' + time.strftime("%Y-%m-%d", time.localtime()), result2)
 
 get4PageForum()
