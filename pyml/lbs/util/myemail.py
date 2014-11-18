@@ -11,6 +11,7 @@ from email.mime.text import MIMEText
 import os
 import smtplib  
 import sys
+import crawler
 
 sys.path.append(os.path.abspath('.') + '\\myemail.py')
 
@@ -37,10 +38,10 @@ def send_mail(to_list,sub,content):  #to_list：收件人；sub：主题；conte
         s.close()  
         return True  
     except Exception, e:  
-        print str(e)  
+        crawler.logger.info(str(e)) 
         return False  
 if __name__ == '__main__':  
     if send_mail(mailto_list,"hello","<a href='http://www.cnblogs.com/xiaowuyi'>小五义</a>"):  
-        print "发送成功"  
+        crawler.logger.info("发送成功")  
     else:  
-        print "发送失败"
+        crawler.logger.info("发送失败")
