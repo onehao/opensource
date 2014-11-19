@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 import logging
+import logging.config
+
+
 # 创建一个logger
 logger = logging.getLogger('mylogger')
 logger.setLevel(logging.DEBUG)
@@ -16,5 +19,19 @@ ch.setFormatter(formatter)
 # 给logger添加handler
 logger.addHandler(fh)
 logger.addHandler(ch)
+
+# CONF_LOG = "logging.conf"  
+# logging.config.fileConfig(CONF_LOG);    # 采用配置文件   
+# logger = logging.getLogger("mylogger")  
+# logger.debug("Hello mylogger")  
+#   
+# logger = logging.getLogger()  
+# logger.info("Hello root")  
+
+
 # 记录一条日志
 logger.info('logger -- init')
+logger.warning('logger -- init')
+logger.error('logger -- init')
+logger.debug('logger -- init')
+logger.critical('logger -- init')

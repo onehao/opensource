@@ -48,7 +48,7 @@ def get4PageForum():
     if send_mail(mailto_list, 'LBS WEB API forum _ ' + time.strftime("%Y-%m-%d", time.localtime()), result):
         crawler.logger.info("发送成功")
     else:  
-        crawler.logger.info("发送失败")
+        crawler.logger.error('发送失败')
     #send_mail(mailto_list, 'LBS WEB API forum _2' + time.strftime("%Y-%m-%d", time.localtime()), result2)
 
 get4PageForum()
