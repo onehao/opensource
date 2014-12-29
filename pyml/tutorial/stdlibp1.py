@@ -6,8 +6,6 @@
 @author: Michael Wan
 @since: 2014-12-29
 '''
-'''Operating System Interface'''
-
 from datetime import date
 import datetime
 import doctest
@@ -23,7 +21,7 @@ import unittest
 import urllib2
 import zlib
 
-
+'''Operating System Interface'''
 print(os.getcwd())
 os.system('mkdir newmkdir')
 print(os.system('ipconfig'))
