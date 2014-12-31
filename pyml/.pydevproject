@@ -9,6 +9,9 @@
 <path>/${PROJECT_DIR_NAME}/lbs/webapi</path>
 <path>/${PROJECT_DIR_NAME}/others</path>
 <path>/${PROJECT_DIR_NAME}/tutorial</path>
+<path>/${PROJECT_DIR_NAME}/tools/newspdf/xhtml2pdf</path>
+<path>/${PROJECT_DIR_NAME}/tools/newspdf</path>
+<path>/${PROJECT_DIR_NAME}/tools</path>
 </pydev_pathproperty>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 2.7</pydev_property>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">D:\Python27\python.exe</pydev_property>
