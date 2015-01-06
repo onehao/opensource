@@ -62,19 +62,13 @@ class HiFamily:
  
         response = urllib2.urlopen(req)
         the_page = response.read()
-        type = sys.getfilesystemencoding() 
-        print the_page.decode("UTF-8").encode(type) 
+        #type = sys.getfilesystemencoding() 
+        print the_page.decode("UTF-8")#.encode(type) 
          
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print "Usage: python hifamily.py InputFile"
-        print "In input file, first is article url address, second line is cookies."
-        print "doc : http://family.baidu.com/portal/techForum/detail?articleId=707882268"
-    elif not os.path.exists(sys.argv[1]):
-        print "%s : file dose not exists."
-    else:
+
         print "Thanks for using HiFamily, initing..."
-        input_file = open(sys.argv[1], 'r')
+        input_file = open('familyinfo.txt', 'r')
         lines = input_file.readlines()
         url = lines[0][:-1]
         cookies = lines[1][:-1]
