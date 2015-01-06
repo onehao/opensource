@@ -2,6 +2,7 @@ eclipse.preferences.version=1
 encoding//crawler/__init__.py=utf-8
 encoding//crawler/lbs_forum.py=utf-8
 encoding//crawler/lbs_forum_email_tracker.py=utf-8
+encoding//crawler/qiubai.py=utf-8
 encoding//crawler/sms/__init__.py=utf-8
 encoding//hackerrank/Whatsyourname.py=utf-8
 encoding//inaction/ch03/decisiontree/test.py=utf-8
