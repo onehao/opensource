@@ -52,7 +52,7 @@ class Baidu_Spider:
     # 初始化加载页面并将其转码储存
     def baidu_tieba(self):
         # 读取页面的原始信息并将其从gbk转码
-        myPage = urllib2.urlopen(self.myUrl).read().decode("gbk")
+        myPage = urllib2.urlopen(self.myUrl).read().decode("utf-8")
         # 计算楼主发布内容一共有多少页
         endPage = self.page_counter(myPage)
         # 获取该帖的标题
@@ -106,14 +106,14 @@ class Baidu_Spider:
             print u'爬虫报告：爬虫%d号正在加载中...' % i
             myPage = urllib2.urlopen(url + str(i)).read()
             # 将myPage中的html代码处理并存储到datas里面
-            self.deal_data(myPage.decode('gbk'))
+            self.deal_data(myPage.decode('utf8'))
             
 
     # 将内容从页面代码中抠出来
     def deal_data(self,myPage):
         myItems = re.findall('id="post_content.*?>(.*?)</div>',myPage,re.S)
         for item in myItems:
-            data = self.myTool.Replace_Char(item.replace("\n","").encode('gbk'))
+            data = self.myTool.Replace_Char(item.replace("\n","").encode('utf8'))
             self.datas.append(data+'\n')
 
 
