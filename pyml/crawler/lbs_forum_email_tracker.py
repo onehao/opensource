@@ -15,9 +15,7 @@ import string, urllib2
 import sys
 import time
 import crawler
-
-from myemail import send_mail
-
+from crawler.myemail import send_mail
 
 
 #http://www.pythoner.com/200.html
@@ -46,9 +44,10 @@ def get4PageForum():
         for i in range(0,len(match)):
             result += match[i].replace("viewthread", "bbs.lbsyun.baidu.com/viewthread") + "<br />"
     if send_mail(mailto_list, 'LBS WEB API forum _ ' + time.strftime("%Y-%m-%d", time.localtime()), result):
-        crawler.logger.info("发送成功")
+        crawler.logger.info("发送成功".decode('utf8'))
     else:  
-        crawler.logger.error('发送失败')
+        crawler.logger.error('发送失败'.decode('utf8'))
     #send_mail(mailto_list, 'LBS WEB API forum _2' + time.strftime("%Y-%m-%d", time.localtime()), result2)
 
 get4PageForum()
+raw_input()
