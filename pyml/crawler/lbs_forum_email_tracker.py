@@ -50,4 +50,4 @@ def get4PageForum():
     #send_mail(mailto_list, 'LBS WEB API forum _2' + time.strftime("%Y-%m-%d", time.localtime()), result2)
 
 get4PageForum()
-raw_input()
+#raw_input()
