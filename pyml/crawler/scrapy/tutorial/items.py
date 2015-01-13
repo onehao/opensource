@@ -9,3 +9,10 @@ class TutorialItem(Item):
     # define the fields for your item here like:
     # name = Field()
     pass
+
+class Dmozitem(Item):
+    title = Field()
+    link = Field()
+    desc = Field()
+    
+
