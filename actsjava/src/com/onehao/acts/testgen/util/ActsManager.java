@@ -32,7 +32,7 @@ public class ActsManager {
     public static void main(String[] args) {
         args =
                 new String[] { "",
-                        "D:\\document\\onedrive\\LBS\\\\FireEyeacts_beta_v1_r9.1\\direction_beijing_v2.xml" };
+                        "direction_beijing_v2.xml" };
         
 //        StrategyCaseParaService service = new StrategyCaseParaService();
 //        List<TestCase> list = service.getTestCaseFromConf(args[1],"1");
