@@ -22,7 +22,7 @@ import edu.uta.cse.fireeye.util.Util;
 //import edu.uta.cse.fireeye.service.engine.SUTInfoReader;
 /**
  * 
- * @author yanchen
+ * @author wanhao01
  *
  */
 public class ActsManager {
