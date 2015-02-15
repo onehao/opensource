@@ -7,6 +7,7 @@ import com.onehao.acts.testgen.common.TestGenProfile;
 import com.onehao.acts.testgen.common.TestSet;
 import com.onehao.acts.testgen.service.engine.FireEye;
 import com.onehao.acts.testgen.service.engine.SUTInfoReader;
+import com.onehao.acts.testgen.service.exception.OperationServiceException;
 import com.onehao.acts.testgen.service.extension.PostExtensionManager;
 import com.onehao.acts.testgen.service.extension.PreExtensionManager;
 import com.onehao.acts.testgen.service.extension.Utils;
@@ -16,10 +17,6 @@ import com.onehao.acts.testgen.service.extension.post.RandFillingStrategy;
 import com.onehao.acts.testgen.service.extension.pre.BoundaryValueGenStrategy;
 import com.onehao.acts.testgen.service.extension.pre.IPreExtensionStrategy;
 
-import edu.uta.cse.fireeye.service.exception.OperationServiceException;
-import edu.uta.cse.fireeye.util.Util;
-
-//import edu.uta.cse.fireeye.service.engine.SUTInfoReader;
 /**
  * 
  * @author wanhao01
@@ -32,11 +29,12 @@ public class ActsManager {
     public static void main(String[] args) {
         args =
                 new String[] { "",
-                        "direction_beijing_v2.xml" };
+                        "direction_beijing_v2.xml","output.csv" };
         
 //        StrategyCaseParaService service = new StrategyCaseParaService();
 //        List<TestCase> list = service.getTestCaseFromConf(args[1],"1");
         SUT sut = doActs(args);
+        System.out.println(sut);
         
     }
 

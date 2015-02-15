@@ -17,11 +17,11 @@ import com.onehao.acts.testgen.common.Constraint;
 import com.onehao.acts.testgen.common.SUT;
 import com.onehao.acts.testgen.common.TestGenProfile;
 import com.onehao.acts.testgen.common.TestSet;
+import com.onehao.acts.testgen.service.exception.OperationServiceException;
 
 import edu.uta.cse.fireeye.common.Parameter;
 import edu.uta.cse.fireeye.common.Relation;
 import edu.uta.cse.fireeye.gui.FireEyeMainWin;
-import edu.uta.cse.fireeye.service.exception.OperationServiceException;
 import edu.uta.cse.fireeye.util.CSVPrinter;
 
 public class TestSetWrapper {

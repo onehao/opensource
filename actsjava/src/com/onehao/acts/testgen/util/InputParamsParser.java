@@ -3,9 +3,7 @@ package com.onehao.acts.testgen.util;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -191,9 +189,7 @@ public class InputParamsParser {
 				reader.close();
 				freader.close();
 				return result;
-			} else {
-				return null;
-			}
+			} 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
