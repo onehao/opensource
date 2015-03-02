@@ -3,6 +3,7 @@ encoding//crawler/2ndfun_email_tracker.py=utf-8
 encoding//crawler/__init__.py=utf-8
 encoding//crawler/lbs_forum.py=utf-8
 encoding//crawler/lbs_forum_email_tracker.py=utf-8
+encoding//crawler/minispider/eagle.py=utf-8
 encoding//crawler/myemail.py=utf-8
 encoding//crawler/qiubai.py=utf-8
 encoding//crawler/scrapy/tutorial/spiders/dmoz_spider.py=utf-8
