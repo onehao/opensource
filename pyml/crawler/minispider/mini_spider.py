@@ -16,11 +16,8 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 parser = argparse.ArgumentParser(prog='mini_spider.py',
                                  description = '迷你定向抓取器mini_spider.py，实现对种子链接的广度优先抓取，并把URL长相符合特定pattern的网页保存到磁盘上。',
-#                                  usage='%(prog)s files',
                                  epilog='bug reports:\n  mail: wanhao01@baidu.com',
                                  formatter_class=argparse.RawTextHelpFormatter)
-
-# parser = argparse.ArgumentParser()
 
 parser.add_argument('-v',
                     '--version',
