@@ -282,4 +282,4 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         sys.exit(-1)
     except Exception as ex:
-        print str(ex).decode('gbk')
+        print str(ex)
