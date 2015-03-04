@@ -11,11 +11,17 @@ Created on 2015年3月2日
 '''
 
 import sys
+
+from crawler.minispider import logerror
 import main
+
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 if __name__ == '__main__':
-    main.main()
+    try:
+        main.main()
+    except Exception as exception:
+        logerror("error during running, details: " + str(exception))
     pass

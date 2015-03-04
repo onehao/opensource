@@ -1,0 +1,295 @@
+2015-03-04 14:20:42,973 - mylogger - INFO - logger -- init
+2015-03-04 14:20:42,973 - mylogger - WARNING - logger -- init
+2015-03-04 14:20:42,973 - mylogger - ERROR - logger -- init
+2015-03-04 14:20:42,973 - mylogger - DEBUG - logger -- init
+2015-03-04 14:20:42,973 - mylogger - CRITICAL - logger -- init
+2015-03-04 14:20:42,977 - minispider - INFO - spider.conf
+2015-03-04 14:22:30,226 - mylogger - INFO - logger -- init
+2015-03-04 14:22:30,226 - mylogger - WARNING - logger -- init
+2015-03-04 14:22:30,227 - mylogger - ERROR - logger -- init
+2015-03-04 14:22:30,227 - mylogger - DEBUG - logger -- init
+2015-03-04 14:22:30,227 - mylogger - CRITICAL - logger -- init
+2015-03-04 14:22:58,552 - mylogger - INFO - logger -- init
+2015-03-04 14:22:58,552 - mylogger - WARNING - logger -- init
+2015-03-04 14:22:58,552 - mylogger - ERROR - logger -- init
+2015-03-04 14:22:58,552 - mylogger - DEBUG - logger -- init
+2015-03-04 14:22:58,552 - mylogger - CRITICAL - logger -- init
+2015-03-04 14:27:59,056 - minispider - INFO - spider.conf
+2015-03-04 14:28:53,921 - mylogger - INFO - logger -- init
+2015-03-04 14:28:53,921 - mylogger - WARNING - logger -- init
+2015-03-04 14:28:53,921 - mylogger - ERROR - logger -- init
+2015-03-04 14:28:53,921 - mylogger - DEBUG - logger -- init
+2015-03-04 14:28:53,921 - mylogger - CRITICAL - logger -- init
+2015-03-04 14:28:53,924 - minispider - INFO - jljlkjljlkj -- init
+2015-03-04 14:28:53,927 - minispider - INFO - spider.conf
+2015-03-04 14:37:23,312 - mylogger - INFO - logger -- init
+2015-03-04 14:37:23,313 - mylogger - WARNING - logger -- init
+2015-03-04 14:37:23,313 - mylogger - ERROR - logger -- init
+2015-03-04 14:37:23,313 - mylogger - DEBUG - logger -- init
+2015-03-04 14:37:23,315 - mylogger - CRITICAL - logger -- init
+2015-03-04 14:37:30,766 - minispider - INFO - minispider -- init
+2015-03-04 14:37:38,282 - minispider - INFO - spider.conf1
+2015-03-04 14:45:32,404 - mylogger - INFO - logger -- init
+2015-03-04 14:45:32,404 - mylogger - WARNING - logger -- init
+2015-03-04 14:45:32,404 - mylogger - ERROR - logger -- init
+2015-03-04 14:45:32,404 - mylogger - DEBUG - logger -- init
+2015-03-04 14:45:32,405 - mylogger - CRITICAL - logger -- init
+2015-03-04 14:45:32,408 - minispider - INFO - minispider -- init
+2015-03-04 14:45:36,753 - minispider - INFO - spider.conf1
+2015-03-04 14:46:21,612 - minispider - ERROR - 
+2015-03-04 14:46:33,779 - mylogger - INFO - logger -- init
+2015-03-04 14:46:33,779 - mylogger - WARNING - logger -- init
+2015-03-04 14:46:33,780 - mylogger - ERROR - logger -- init
+2015-03-04 14:46:33,780 - mylogger - DEBUG - logger -- init
+2015-03-04 14:46:33,780 - mylogger - CRITICAL - logger -- init
+2015-03-04 14:46:33,782 - minispider - INFO - minispider -- init
+2015-03-04 14:46:33,785 - minispider - INFO - spider.conf1
+2015-03-04 14:46:48,421 - minispider - ERROR - No section: 'spider'
+2015-03-04 14:50:55,538 - mylogger - INFO - logger -- init
+2015-03-04 14:50:55,538 - mylogger - WARNING - logger -- init
+2015-03-04 14:50:55,538 - mylogger - ERROR - logger -- init
+2015-03-04 14:50:55,538 - mylogger - DEBUG - logger -- init
+2015-03-04 14:50:55,538 - mylogger - CRITICAL - logger -- init
+2015-03-04 14:50:55,539 - minispider - INFO - minispider -- init
+2015-03-04 14:50:55,542 - minispider - INFO - spider.conf1
+2015-03-04 14:50:55,542 - minispider - ERROR - No section: 'spider'
+2015-03-04 14:53:54,576 - mylogger - INFO - logger -- init
+2015-03-04 14:53:54,576 - mylogger - WARNING - logger -- init
+2015-03-04 14:53:54,578 - mylogger - ERROR - logger -- init
+2015-03-04 14:53:54,578 - mylogger - DEBUG - logger -- init
+2015-03-04 14:53:54,578 - mylogger - CRITICAL - logger -- init
+2015-03-04 14:53:54,578 - minispider - INFO - minispider -- init
+2015-03-04 14:53:54,581 - minispider - INFO - spider.conf1
+2015-03-04 14:53:54,581 - minispider - ERROR - No section: 'spider'
+2015-03-04 16:46:28,709 - mylogger - INFO - logger -- init
+2015-03-04 16:46:28,710 - mylogger - WARNING - logger -- init
+2015-03-04 16:46:28,710 - mylogger - ERROR - logger -- init
+2015-03-04 16:46:28,710 - mylogger - DEBUG - logger -- init
+2015-03-04 16:46:28,710 - mylogger - CRITICAL - logger -- init
+2015-03-04 16:46:28,713 - minispider - INFO - minispider -- init
+2015-03-04 16:46:28,714 - minispider - INFO - spider.conf1
+2015-03-04 17:19:09,464 - mylogger - INFO - logger -- init
+2015-03-04 17:19:09,466 - mylogger - WARNING - logger -- init
+2015-03-04 17:19:09,467 - mylogger - ERROR - logger -- init
+2015-03-04 17:19:09,467 - mylogger - DEBUG - logger -- init
+2015-03-04 17:19:09,467 - mylogger - CRITICAL - logger -- init
+2015-03-04 17:19:09,469 - minispider - INFO - minispider -- init
+2015-03-04 17:19:51,865 - mylogger - INFO - logger -- init
+2015-03-04 17:19:51,865 - mylogger - WARNING - logger -- init
+2015-03-04 17:19:51,865 - mylogger - ERROR - logger -- init
+2015-03-04 17:19:51,865 - mylogger - DEBUG - logger -- init
+2015-03-04 17:19:51,865 - mylogger - CRITICAL - logger -- init
+2015-03-04 17:19:51,868 - minispider - INFO - minispider -- init
+2015-03-04 17:19:51,887 - minispider - INFO - spider.conf1
+2015-03-04 17:20:04,732 - minispider - ERROR - config file can not be found or read
+2015-03-04 17:30:36,637 - mylogger - INFO - logger -- init
+2015-03-04 17:30:36,638 - mylogger - WARNING - logger -- init
+2015-03-04 17:30:36,638 - mylogger - ERROR - logger -- init
+2015-03-04 17:30:36,638 - mylogger - DEBUG - logger -- init
+2015-03-04 17:30:36,638 - mylogger - CRITICAL - logger -- init
+2015-03-04 17:30:36,640 - minispider - INFO - minispider -- init
+2015-03-04 17:30:36,654 - minispider - INFO - spider.conf1
+2015-03-04 17:30:36,654 - minispider - ERROR - config file can not be found or read in the path: D:\workspace\opensource\pyml\crawler\minispider, the program will be exit, please check the config file.
+2015-03-04 17:34:13,391 - mylogger - INFO - logger -- init
+2015-03-04 17:34:13,391 - mylogger - WARNING - logger -- init
+2015-03-04 17:34:13,392 - mylogger - ERROR - logger -- init
+2015-03-04 17:34:13,392 - mylogger - DEBUG - logger -- init
+2015-03-04 17:34:13,392 - mylogger - CRITICAL - logger -- init
+2015-03-04 17:34:13,394 - minispider - INFO - minispider -- init
+2015-03-04 17:34:13,410 - minispider - INFO - spider.conf1
+2015-03-04 17:34:13,411 - minispider - ERROR - config file can not be found or read in the path: D:\workspace\opensource\pyml\crawler\minispider, the program will be exit, please check the config file.
+2015-03-04 17:35:26,444 - mylogger - INFO - logger -- init
+2015-03-04 17:35:26,446 - mylogger - WARNING - logger -- init
+2015-03-04 17:35:26,446 - mylogger - ERROR - logger -- init
+2015-03-04 17:35:26,446 - mylogger - DEBUG - logger -- init
+2015-03-04 17:35:26,446 - mylogger - CRITICAL - logger -- init
+2015-03-04 17:35:26,447 - minispider - INFO - minispider -- init
+2015-03-04 17:35:26,457 - minispider - INFO - spider.conf1
+2015-03-04 17:35:26,457 - minispider - ERROR - config file can not be found or read in the path: D:\workspace\opensource\pyml\crawler\minispider, the program will be exit, please check the config file.
+2015-03-04 17:37:06,509 - mylogger - INFO - logger -- init
+2015-03-04 17:37:06,509 - mylogger - WARNING - logger -- init
+2015-03-04 17:37:06,509 - mylogger - ERROR - logger -- init
+2015-03-04 17:37:06,509 - mylogger - DEBUG - logger -- init
+2015-03-04 17:37:06,509 - mylogger - CRITICAL - logger -- init
+2015-03-04 17:37:06,510 - minispider - INFO - minispider -- init
+2015-03-04 17:37:06,528 - minispider - INFO - spider.conf1
+2015-03-04 17:37:06,529 - minispider - ERROR - config file can not be found or read in the path: D:\workspace\opensource\pyml\crawler\minispider\spider.conf1, the program will be exit, please check the config file.
+2015-03-04 17:38:07,823 - mylogger - INFO - logger -- init
+2015-03-04 17:38:07,825 - mylogger - WARNING - logger -- init
+2015-03-04 17:38:07,825 - mylogger - ERROR - logger -- init
+2015-03-04 17:38:07,825 - mylogger - DEBUG - logger -- init
+2015-03-04 17:38:07,825 - mylogger - CRITICAL - logger -- init
+2015-03-04 17:38:07,826 - minispider - INFO - minispider -- init
+2015-03-04 17:38:07,845 - minispider - INFO - spider.conf
+2015-03-04 18:00:56,707 - mylogger - INFO - logger -- init
+2015-03-04 18:00:56,707 - mylogger - WARNING - logger -- init
+2015-03-04 18:00:56,707 - mylogger - ERROR - logger -- init
+2015-03-04 18:00:56,707 - mylogger - DEBUG - logger -- init
+2015-03-04 18:00:56,709 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:00:56,710 - minispider - INFO - minispider -- init
+2015-03-04 18:00:56,736 - minispider - INFO - spider.conf1
+2015-03-04 18:01:49,680 - mylogger - INFO - logger -- init
+2015-03-04 18:01:49,680 - mylogger - WARNING - logger -- init
+2015-03-04 18:01:49,680 - mylogger - ERROR - logger -- init
+2015-03-04 18:01:49,680 - mylogger - DEBUG - logger -- init
+2015-03-04 18:01:49,680 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:01:49,681 - minispider - INFO - minispider -- init
+2015-03-04 18:01:49,690 - minispider - INFO - spider.conf1
+2015-03-04 18:01:49,690 - minispider - ERROR - config file can not be found or read in the path: D:\workspace\opensource\pyml\crawler\minispider\spider.conf1
+2015-03-04 18:01:49,690 - minispider - ERROR - config file can not be found or read in the path: D:\workspace\opensource\pyml\crawler\minispider\spider.conf1, the program will be exit, please check the config file.
+2015-03-04 18:04:30,043 - mylogger - INFO - logger -- init
+2015-03-04 18:04:30,045 - mylogger - WARNING - logger -- init
+2015-03-04 18:04:30,045 - mylogger - ERROR - logger -- init
+2015-03-04 18:04:30,045 - mylogger - DEBUG - logger -- init
+2015-03-04 18:04:30,046 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:04:30,048 - minispider - INFO - minispider -- init
+2015-03-04 18:04:30,072 - minispider - INFO - spider.conf1
+2015-03-04 18:04:30,072 - minispider - ERROR - config file can not be found or read in the path: D:\workspace\opensource\pyml\crawler\minispider\spider.conf1
+2015-03-04 18:04:46,456 - mylogger - INFO - logger -- init
+2015-03-04 18:04:46,456 - mylogger - WARNING - logger -- init
+2015-03-04 18:04:46,456 - mylogger - ERROR - logger -- init
+2015-03-04 18:04:46,456 - mylogger - DEBUG - logger -- init
+2015-03-04 18:04:46,456 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:04:46,457 - minispider - INFO - minispider -- init
+2015-03-04 18:04:46,467 - minispider - INFO - spider.conf1
+2015-03-04 18:04:46,467 - minispider - ERROR - config file can not be found or read in the path: D:\workspace\opensource\pyml\crawler\minispider\spider.conf1
+2015-03-04 18:04:46,469 - minispider - ERROR - <class 'crawler.minispider.SpiderConfigParser.NoConfigError'>,config file can not be found or read in the path: D:\workspace\opensource\pyml\crawler\minispider\spider.conf1, the program will be exit, please check the config file.
+2015-03-04 18:09:37,361 - mylogger - INFO - logger -- init
+2015-03-04 18:09:37,361 - mylogger - WARNING - logger -- init
+2015-03-04 18:09:37,361 - mylogger - ERROR - logger -- init
+2015-03-04 18:09:37,361 - mylogger - DEBUG - logger -- init
+2015-03-04 18:09:37,361 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:09:37,362 - minispider - INFO - minispider -- init
+2015-03-04 18:09:37,381 - minispider - INFO - spider.conf
+2015-03-04 18:09:37,384 - minispider - WARNING - <class 'crawler.minispider.SpiderConfigParser.Error'>,error during parsing the config file, using the default option value for:url_list_file
+2015-03-04 18:09:37,384 - minispider - WARNING - <class 'crawler.minispider.SpiderConfigParser.Error'>,error during parsing the config file, using the default option value for:output_directory
+2015-03-04 18:09:59,289 - mylogger - INFO - logger -- init
+2015-03-04 18:09:59,289 - mylogger - WARNING - logger -- init
+2015-03-04 18:09:59,289 - mylogger - ERROR - logger -- init
+2015-03-04 18:09:59,289 - mylogger - DEBUG - logger -- init
+2015-03-04 18:09:59,289 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:09:59,290 - minispider - INFO - minispider -- init
+2015-03-04 18:09:59,303 - minispider - INFO - spider.conf
+2015-03-04 18:09:59,303 - minispider - WARNING - <class 'crawler.minispider.SpiderConfigParser.Error'>,error during parsing the config file, using the default option value for:url_list_file
+2015-03-04 18:09:59,305 - minispider - WARNING - <class 'crawler.minispider.SpiderConfigParser.Error'>,error during parsing the config file, using the default option value for:output_directory
+2015-03-04 18:09:59,305 - minispider - WARNING - <class 'crawler.minispider.SpiderConfigParser.Error'>,error during parsing the config file, using the default option value for:max_depth
+2015-03-04 18:09:59,305 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'crawl_interval1' in section: 'spider', using the default option value for:crawl_interval1
+2015-03-04 18:09:59,305 - minispider - WARNING - <class 'crawler.minispider.SpiderConfigParser.Error'>,error during parsing the config file, using the default option value for:crawl_timeout
+2015-03-04 18:09:59,305 - minispider - WARNING - <class 'crawler.minispider.SpiderConfigParser.Error'>,error during parsing the config file, using the default option value for:target_url
+2015-03-04 18:09:59,305 - minispider - WARNING - <class 'crawler.minispider.SpiderConfigParser.Error'>,error during parsing the config file, using the default option value for:thread_count
+2015-03-04 18:09:59,305 - minispider - WARNING - <class 'crawler.minispider.SpiderConfigParser.Error'>,error during parsing the config file, using the default option value for:email
+2015-03-04 18:12:07,101 - mylogger - INFO - logger -- init
+2015-03-04 18:12:07,101 - mylogger - WARNING - logger -- init
+2015-03-04 18:12:07,101 - mylogger - ERROR - logger -- init
+2015-03-04 18:12:07,101 - mylogger - DEBUG - logger -- init
+2015-03-04 18:12:07,101 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:12:07,101 - minispider - INFO - minispider -- init
+2015-03-04 18:12:07,117 - minispider - INFO - spider.conf
+2015-03-04 18:12:07,117 - minispider - WARNING - <type 'exceptions.Exception'>,, using the default option value for:url_list_file
+2015-03-04 18:12:07,118 - minispider - WARNING - <type 'exceptions.Exception'>,, using the default option value for:output_directory
+2015-03-04 18:12:07,118 - minispider - WARNING - <type 'exceptions.Exception'>,, using the default option value for:max_depth
+2015-03-04 18:12:07,118 - minispider - WARNING - <type 'exceptions.Exception'>,, using the default option value for:crawl_timeout
+2015-03-04 18:12:07,118 - minispider - WARNING - <type 'exceptions.Exception'>,, using the default option value for:target_url
+2015-03-04 18:12:07,118 - minispider - WARNING - <type 'exceptions.Exception'>,, using the default option value for:thread_count
+2015-03-04 18:12:07,118 - minispider - WARNING - <type 'exceptions.Exception'>,, using the default option value for:email
+2015-03-04 18:12:31,125 - mylogger - INFO - logger -- init
+2015-03-04 18:12:31,125 - mylogger - WARNING - logger -- init
+2015-03-04 18:12:31,125 - mylogger - ERROR - logger -- init
+2015-03-04 18:12:31,125 - mylogger - DEBUG - logger -- init
+2015-03-04 18:12:31,125 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:12:31,127 - minispider - INFO - minispider -- init
+2015-03-04 18:12:31,145 - minispider - INFO - spider.conf
+2015-03-04 18:12:31,147 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'crawl_interval1' in section: 'spider', using the default option value for:crawl_interval1
+2015-03-04 18:14:54,720 - mylogger - INFO - logger -- init
+2015-03-04 18:14:54,721 - mylogger - WARNING - logger -- init
+2015-03-04 18:14:54,721 - mylogger - ERROR - logger -- init
+2015-03-04 18:14:54,721 - mylogger - DEBUG - logger -- init
+2015-03-04 18:14:54,721 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:14:54,723 - minispider - INFO - minispider -- init
+2015-03-04 18:14:54,740 - minispider - INFO - spider.conf
+2015-03-04 18:14:54,740 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'url_list_file' in section: 'spider'url_list_file
+2015-03-04 18:14:54,740 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'crawl_interval1' in section: 'spider'crawl_interval1
+2015-03-04 18:18:49,855 - mylogger - INFO - logger -- init
+2015-03-04 18:18:49,857 - mylogger - WARNING - logger -- init
+2015-03-04 18:18:49,857 - mylogger - ERROR - logger -- init
+2015-03-04 18:18:49,858 - mylogger - DEBUG - logger -- init
+2015-03-04 18:18:49,858 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:18:49,862 - minispider - INFO - minispider -- init
+2015-03-04 18:18:49,888 - minispider - INFO - spider.conf
+2015-03-04 18:18:49,890 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'url_list_file' in section: 'spider'url_list_file
+2015-03-04 18:19:40,641 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'crawl_interval1' in section: 'spider'crawl_interval1
+2015-03-04 18:24:48,565 - mylogger - INFO - logger -- init
+2015-03-04 18:24:48,565 - mylogger - WARNING - logger -- init
+2015-03-04 18:24:48,565 - mylogger - ERROR - logger -- init
+2015-03-04 18:24:48,565 - mylogger - DEBUG - logger -- init
+2015-03-04 18:24:48,565 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:24:48,568 - minispider - INFO - minispider -- init
+2015-03-04 18:24:48,578 - minispider - INFO - spider.conf
+2015-03-04 18:24:48,579 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'crawl_interval1' in section: 'spider'crawl_interval1
+2015-03-04 18:24:48,579 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'email' in section: 'spider'email
+2015-03-04 18:30:37,806 - mylogger - INFO - logger -- init
+2015-03-04 18:30:37,806 - mylogger - WARNING - logger -- init
+2015-03-04 18:30:37,806 - mylogger - ERROR - logger -- init
+2015-03-04 18:30:37,808 - mylogger - DEBUG - logger -- init
+2015-03-04 18:30:37,808 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:30:37,809 - minispider - INFO - minispider -- init
+2015-03-04 18:30:37,828 - minispider - INFO - spider.conf
+2015-03-04 18:30:37,828 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'crawl_interval1' in section: 'spider'crawl_interval1
+2015-03-04 18:30:37,828 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'email' in section: 'spider'email
+2015-03-04 18:38:07,996 - mylogger - INFO - logger -- init
+2015-03-04 18:38:07,997 - mylogger - WARNING - logger -- init
+2015-03-04 18:38:07,997 - mylogger - ERROR - logger -- init
+2015-03-04 18:38:07,997 - mylogger - DEBUG - logger -- init
+2015-03-04 18:38:07,997 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:38:07,999 - minispider - INFO - minispider -- init
+2015-03-04 18:38:08,016 - minispider - INFO - spider.conf
+2015-03-04 18:38:08,016 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'crawl_interval1' in section: 'spider'crawl_interval1
+2015-03-04 18:38:08,017 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'email' in section: 'spider'email
+2015-03-04 18:39:53,309 - mylogger - INFO - logger -- init
+2015-03-04 18:39:53,309 - mylogger - WARNING - logger -- init
+2015-03-04 18:39:53,309 - mylogger - ERROR - logger -- init
+2015-03-04 18:39:53,309 - mylogger - DEBUG - logger -- init
+2015-03-04 18:39:53,309 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:39:53,311 - minispider - INFO - minispider -- init
+2015-03-04 18:39:53,322 - minispider - INFO - spider.conf
+2015-03-04 18:41:58,085 - mylogger - INFO - logger -- init
+2015-03-04 18:41:58,086 - mylogger - WARNING - logger -- init
+2015-03-04 18:41:58,086 - mylogger - ERROR - logger -- init
+2015-03-04 18:41:58,086 - mylogger - DEBUG - logger -- init
+2015-03-04 18:41:58,086 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:41:58,088 - minispider - INFO - minispider -- init
+2015-03-04 18:41:58,101 - minispider - INFO - spider.conf
+2015-03-04 18:42:32,709 - mylogger - INFO - logger -- init
+2015-03-04 18:42:32,709 - mylogger - WARNING - logger -- init
+2015-03-04 18:42:32,710 - mylogger - ERROR - logger -- init
+2015-03-04 18:42:32,710 - mylogger - DEBUG - logger -- init
+2015-03-04 18:42:32,710 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:42:32,711 - minispider - INFO - minispider -- init
+2015-03-04 18:42:32,730 - minispider - INFO - spider.conf
+2015-03-04 18:43:10,686 - mylogger - INFO - logger -- init
+2015-03-04 18:43:10,686 - mylogger - WARNING - logger -- init
+2015-03-04 18:43:10,686 - mylogger - ERROR - logger -- init
+2015-03-04 18:43:10,686 - mylogger - DEBUG - logger -- init
+2015-03-04 18:43:10,687 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:43:10,687 - minispider - INFO - minispider -- init
+2015-03-04 18:43:10,713 - minispider - INFO - spider.conf
+2015-03-04 18:43:10,713 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'crawl_interval1' in section: 'spider'crawl_interval1
+2015-03-04 18:43:10,714 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'email' in section: 'spider'email
+2015-03-04 18:45:50,252 - mylogger - INFO - logger -- init
+2015-03-04 18:45:50,253 - mylogger - WARNING - logger -- init
+2015-03-04 18:45:50,253 - mylogger - ERROR - logger -- init
+2015-03-04 18:45:50,253 - mylogger - DEBUG - logger -- init
+2015-03-04 18:45:50,253 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:45:50,255 - minispider - INFO - minispider -- init
+2015-03-04 18:45:50,275 - minispider - INFO - spider.conf
+2015-03-04 18:45:50,276 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'crawl_interval1' in section: 'spider'crawl_interval1
+2015-03-04 18:45:50,276 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'email' in section: 'spider'email
+2015-03-04 18:46:18,730 - mylogger - INFO - logger -- init
+2015-03-04 18:46:18,730 - mylogger - WARNING - logger -- init
+2015-03-04 18:46:18,730 - mylogger - ERROR - logger -- init
+2015-03-04 18:46:18,730 - mylogger - DEBUG - logger -- init
+2015-03-04 18:46:18,730 - mylogger - CRITICAL - logger -- init
+2015-03-04 18:46:18,732 - minispider - INFO - minispider -- init
+2015-03-04 18:46:18,743 - minispider - INFO - spider.conf
+2015-03-04 18:46:18,743 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'crawl_interval1' in section: 'spider'crawl_interval1
+2015-03-04 18:46:18,743 - minispider - WARNING - <class 'ConfigParser.NoOptionError'>,No option 'email' in section: 'spider'email

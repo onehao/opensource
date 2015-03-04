@@ -11,15 +11,18 @@ Created on 2015年3月3日
 '''
 
 import argparse
-import ConfigParser
 import sys
 
+from crawler.minispider import logerror
+from crawler.minispider import loginfo
+from crawler.minispider.SpiderConfigParser import SpiderConfig
+from crawler.minispider.SpiderConfigParser import NoConfigError
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 parser = argparse.ArgumentParser(prog='mini_spider.py',
-                                 description = 'mini_spider.py，using the BFS，to save the web page ' + 
-                                               'matching the specific pattern to local',
+                                 description = 'mini_spider.py，using the BFS，to save the ' + 
+                                               'web page matching the specific pattern to local',
                                  epilog='bug reports:\n  mail: wanhao01@baidu.com',
                                  formatter_class=argparse.RawTextHelpFormatter)
 
@@ -36,78 +39,31 @@ parser.add_argument('-c',
                     default=False,
                     help="specify the config file")
 
+options, _ = parser.parse_known_args()
+args = parser.parse_args()
 
-class SpiderConfig(object):
+def initConfig():
     '''
-    spider configuration file encapsulation.
+    
     '''
-    __url_list_file = ''
-    def __init__(self, configName):
-        '''
-        Constructor
-        '''
-        __spiderSection = 'spider'
-        cf = ConfigParser.ConfigParser()
-        cf.read(configName)
-        self.__url_list_file = cf.get(__spiderSection, 'url_list_file')
-        self.__output_dir = cf.get(__spiderSection, 'output_directory')
-        self.__max_depth = cf.get(__spiderSection, 'max_depth')
-        self.__crawl_interval = cf.get(__spiderSection, 'crawl_interval')
-        self.__crawl_timeout = cf.get(__spiderSection, 'crawl_timeout')
-        self.__target_url = cf.get(__spiderSection, 'target_url')
-        self.__thread_count = cf.get(__spiderSection, 'thread_count')
-    
-    def getUrlListFile(self):
-        '''
-        get the seed dir.
-        '''
-        return self.__url_list_file
-    
-    def getOutputDir(self):
-        '''
-        path to store the output the result.
-        '''
-        return self.__output_dir
-    
-    def getMaxDepth(self):
-        '''
-        the max crawl depth.
-        '''
-        return self.__max_depth
-        
-    def getCrawlInterval(self):
-        '''
-        ge the crawling interval.
-        '''
-        return self.__crawl_interval
-        
-    def getTimeOut(self):
-        '''
-        get timeout.
-        '''
-        return self.__crawl_timeout
-    
-    def getTargetUrlPattern(self):
-        '''
-        get the target url pattern.
-        '''
-        return self.__target_url
-        
-    def getThreadCount(self):
-        '''
-        get the max number of thread to crawl
-        '''
-        return self.__thread_count
+    configName = "spider.conf"
+    if args.config:
+        configName = args.config
+    loginfo(configName) 
+    spiderConfig = SpiderConfig(configName)
+    try:
+        spiderConfig.loadConfigFile()
+    except NoConfigError as error:
+        logerror(str(error))
+        logerror(str(type(error)) + ',' + error.message + 
+                 ', the program will be exit, please check the config file.')
+        return 
+    return spiderConfig
 
 
 def main():
     '''
     the main function.
     '''
-    options, _ = parser.parse_known_args()
-    args = parser.parse_args()
-    configName = "spider.conf"
-    if args.config:
-        configName = args.config
-    print(configName) 
-    spiderConfig = SpiderConfig(configName)
+    print(spiderConfig.getCrawlInterval())
+    print('finished')
