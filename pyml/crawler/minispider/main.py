@@ -44,7 +44,7 @@ args = parser.parse_args()
 
 def initConfig():
     '''
-    
+    initialize the configuration file.
     '''
     configName = "spider.conf"
     if args.config:
