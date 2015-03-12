@@ -52,7 +52,7 @@ class SpiderConfig(object):
         self.__initOption('url_list_file')
         self.__initOption('output_directory')
         self.__initOption('max_depth')
-        self.__initOption('crawl_interval1')
+        self.__initOption('crawl_interval')
         self.__initOption('crawl_timeout')
         self.__initOption('target_url')
         self.__initOption('thread_count')

@@ -11,12 +11,15 @@ Created on 2015年3月3日
 '''
 
 import argparse
+import os
 import sys
 
-from crawler.minispider import logerror
+from crawler.minispider import logerror, SpiderConfigParser
 from crawler.minispider import loginfo
-from crawler.minispider.SpiderConfigParser import SpiderConfig
 from crawler.minispider.SpiderConfigParser import NoConfigError
+from crawler.minispider.SpiderConfigParser import SpiderConfig
+from crawler.minispider.SpiderHandler import Spiderhandler
+
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -61,9 +64,31 @@ def initConfig():
     return spiderConfig
 
 
+def crawl():
+    '''
+    encapsulate the logic.
+    crawling using the specific configuration.
+    '''
+    config = initConfig()
+    max_depth = config.getMaxDepth()
+    handler = Spiderhandler()
+    
+    folder = config.getUrlListFile()
+    for root, dirs, files in os.walk(folder):
+        for f in files:
+            print(root + os.sep + f)
+            file_read = open(root + os.sep + f, 'r')
+            urls = file_read.readlines()
+            
+            handler.crawl_urls(urls, config.getTargetUrlPattern(), config.getOutputDir(),
+                               config.getMaxDepth(), config.getCrawlInterval(), 
+                               config.getTimeOut(), config.getThreadCount())
+            
+
+
 def main():
     '''
     the main function.
     '''
-    print(spiderConfig.getCrawlInterval())
+    crawl()
     print('finished')
