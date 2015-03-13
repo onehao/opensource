@@ -12,6 +12,7 @@ encoding//crawler/minispider/__init__.py=utf-8
 encoding//crawler/minispider/eagle.py=utf-8
 encoding//crawler/minispider/main.py=utf-8
 encoding//crawler/minispider/mini_spider.py=utf-8
+encoding//crawler/minispider/test/SpiderConfigParserTest.py=utf-8
 encoding//crawler/minispider/testpool.py=utf-8
 encoding//crawler/myemail.py=utf-8
 encoding//crawler/qiubai.py=utf-8

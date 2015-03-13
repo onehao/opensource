@@ -41,6 +41,7 @@ class CrawlerThread(threading.Thread):
             try:   
                 callable, args, kwds = self.workQueue.get(timeout=self.timeout)   
                 res = callable(*args, **kwds)   
+                print(res)
                 loginfo("worker[%2d]: %s" % (self.id, str(res)))
                 self.resultQueue.put(res)   
             except Queue.Empty:   
@@ -97,10 +98,10 @@ def save_url(id, sleep=0.001):
     '''  
     try:   
         data = urllib.urlopen('http://pycm.baidu.com:8081/1/page1_1.html').read()  
-        print(data)
+        #print(data)
     except:   
         print '[%4d]' % id, sys.exc_info()[:2]   
-    return id
+    return str(id) + data 
 
    
 def test(): 
@@ -111,7 +112,7 @@ def test():
     socket.setdefaulttimeout(10)   
     print 'start testing'   
     wm = ThreadPool(10)   
-    for i in range(500):   
+    for i in range(50):   
         wm.add_job(save_url, i, i*0.001)   
     wm.wait_for_complete()   
     print 'end testing'  

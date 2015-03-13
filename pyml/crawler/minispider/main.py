@@ -80,9 +80,7 @@ def crawl():
             file_read = open(root + os.sep + f, 'r')
             urls = file_read.readlines()
             
-            handler.crawl_urls(urls, config.getTargetUrlPattern(), config.getOutputDir(),
-                               config.getMaxDepth(), config.getCrawlInterval(), 
-                               config.getTimeOut(), config.getThreadCount())
+            handler.crawl_urls(urls, config, config.getMaxDepth())
             
 
 
