@@ -1,0 +1,12 @@
+
+
+在tutorial目录下按住shift右击，在此处打开命令窗口，输入：
+
+
+
+scrapy crawl dmoz  
+
+scrapy shell http://www.dmoz.org/Computers/Programming/Languages/Python/Books/  
+
+
+scrapy crawl dmoz -o items.json -t json

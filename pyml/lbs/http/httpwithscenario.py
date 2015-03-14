@@ -62,5 +62,6 @@ def myTest():
         file_object.write("\n")
     file_object.close( )
     
-myTest()  
-    
+#myTest()  
+
+getRequest("api.map.baidu.com", "/geosearch/v3/nearbyPolygon?geotable_id=68379&location=12948032,4845090&radis=6666&coord_type=4&page_size=50&page_index=0&scope=1&ak=bWvpyBB70FswqwPA4nUkmoSW&sn=8c6e780d33ac77a588159018d4b52dd3")

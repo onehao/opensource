@@ -15,20 +15,18 @@ import string, urllib2
 import sys
 import time
 import crawler
-
-from myemail import send_mail
-
+from crawler.myemail import send_mail
 
 
 #http://www.pythoner.com/200.html
 #运行时没问题， 但是编译有有错误提示， 可以忽略。  
 #sys.setdefaultencoding('utf8')
 crawler.logger.info(sys.getdefaultencoding())
-mailto_list=["wanhao01@baidu.com", 'onehaojacket@gmail.com'] 
+mailto_list=["wanhao01@baidu.com", 'onehaojacket@gmail.com','174823192@qq.com'] 
 
 
-def get4PageForum():
-    url = 'http://bbs.lbsyun.baidu.com/forumdisplay.php?fid=7&page='
+def get4PageForum(url,title):
+    #url = 'http://bbs.lbsyun.baidu.com/forum.php?mod=forumdisplay&fid=7&page='
     result = ""
     result2 = []
     crawler.logger.info("test")
@@ -38,17 +36,31 @@ def get4PageForum():
         
         #f = open(sName,'w+')
         m = urllib2.urlopen(url + str(i)).read()
+        #print(m)
+        regex = '<a[\s]+href=\"forum.php\?mod=viewthread.*\"[\s]+onclick=\"atarget\(this\)\"[\s]+class=\"s[\s]xst\"[\s]>.*</a>'
         # 将正则表达式编译成Pattern对象
-        pattern = re.compile('<a href=\"viewthread\.php\?tid=.*</a>')
+        pattern = re.compile(r'<!--[\s]+主题名称[\s]+-->[\s]+<a[\s]+href=\"forum.php\?mod=viewthread.*\"[\s]+onclick=\"atarget\(this\)\"[\s]+class=\"s[\s]xst\"[\s]>.*</a>')
+        pattern2 = re.compile('<a[\s]+href=\"forum.php\?mod=viewthread.*\"[\s]+onclick=\"atarget\(this\)\"[\s]+class=\"s[\s]xst\"[\s]>.*</a>')
         match = pattern.findall(m)
+#         match = re.findall(regex,m)
+#         print(match)
+#         match = re.compile(regex).search(m)
+#         print(match)
+
+        #match = pattern2.findall(match)
         crawler.logger.info(match)
         result2 +=match
         for i in range(0,len(match)):
-            result += match[i].replace("viewthread", "bbs.lbsyun.baidu.com/viewthread") + "<br />"
-    if send_mail(mailto_list, 'LBS WEB API forum _ ' + time.strftime("%Y-%m-%d", time.localtime()), result):
-        crawler.logger.info("发送成功")
+            test = pattern2.findall(match[i])
+            match[i] = pattern2.findall(match[i])[0]
+            result += match[i].replace("forum.php", "bbs.lbsyun.baidu.com/forum.php") + "<br />"
+    if send_mail(mailto_list, 'LBS WEB API forum _ ' + title+"_"+ time.strftime("%Y-%m-%d", time.localtime()), result):
+        crawler.logger.info("发送成功".decode('utf8'))
     else:  
-        crawler.logger.error('发送失败')
+        crawler.logger.error('发送失败'.decode('utf8'))
     #send_mail(mailto_list, 'LBS WEB API forum _2' + time.strftime("%Y-%m-%d", time.localtime()), result2)
 
-get4PageForum()
+get4PageForum('http://bbs.lbsyun.baidu.com/forum.php?mod=forumdisplay&fid=7&page=',"WEB_API")
+get4PageForum('http://bbs.lbsyun.baidu.com/forum.php?mod=forumdisplay&fid=6&page=',"LBS云")
+get4PageForum('http://bbs.lbsyun.baidu.com/forum.php?mod=viewthread&tid=81406&extra=page=',"鹰眼")
+#raw_input()

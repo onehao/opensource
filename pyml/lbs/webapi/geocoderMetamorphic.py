@@ -23,6 +23,7 @@ class TestSequenceFunctions(unittest.TestCase):
         self.seq = range(10)
 
     def test_shuffle(self):
+        filtered = open("./results", 'w')
         for i in range(1, 2):
             file_read = open('locationbd09ll', 'r')
             list = file_read.readlines()
@@ -45,7 +46,10 @@ class TestSequenceFunctions(unittest.TestCase):
                 # make sure the shuffled sequence does not lose any elements
                 self.assertLess(fabs(lng - float(var[0])), 0.000002, 'expect: ' + str(lng) + ', actual: ' + var[0] + '\n' + context + '\n' + reverseGeocodingContext)
                 self.assertLess(fabs(lat - float(var[1])), 0.000002, 'expect: ' + str(lat) + ', actual: ' + var[1] + '\n' + context + '\n' + reverseGeocodingContext)
-            
+                if fabs(lng - float(var[0])) > 0.000002 or fabs(lat - float(var[1])) > 0.000002:
+                    filtered.write('ori:' + var[0] + ',' + var[1] + ' and des:' + lng + ',' + lat +  '\n')
+                
+        filtered.close()   
 
 def getRequest(requestUrl,context):
     conn = httplib.HTTPConnection(requestUrl)
