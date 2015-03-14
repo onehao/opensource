@@ -36,12 +36,14 @@ class TestSequenceFunctions(unittest.TestCase):
     def test_AttributeNotExist(self):
         configName = "spidertest.conf"
         self.spiderConfig = SpiderConfig(configName)
-        try:
-            self.spiderConfig.loadConfigFile()
-            self.assertTrue(False, 'NoConfigError should be thrown.')
-        except NoConfigError as exception:
-            self.assertTrue(True, 'test_FileNotExist pass.')
+
+        self.spiderConfig.loadConfigFile()
     
+    def checklog(self, logfile, message):
+        '''
+        by default check the last line of the log file.
+        '''
+        
         
 
 if __name__ == '__main__':
