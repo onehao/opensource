@@ -14,7 +14,7 @@ from crawler.minispider.SpiderHtmlParser import SpiderHtmlParser
 from crawler.minispider.SpiderThreadPool import ThreadPool
 
 
-class Spiderhandler():
+class Spiderhandler(object):
     '''
     crawling related logics.
     '''
@@ -34,7 +34,8 @@ class Spiderhandler():
             try:
                 #urls = self.htmlparser.parse_url(urlQueue.pop(), output_directory, target_url, crawl_interval, crawl_timeout)
                 self.tp.add_job(self.htmlparser.parse_url, urlQueue.pop(), config.getOutputDir(), 
-                                config.getTargetUrlPattern(), config.getCrawlInterval(), config.getTimeOut())
+                                config.getTargetUrlPattern(), config.getCrawlInterval(), 
+                                config.getTimeOut())
                  
             except Exception as ex:
                 continue

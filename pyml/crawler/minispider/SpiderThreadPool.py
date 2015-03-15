@@ -113,7 +113,7 @@ def test():
     print 'start testing'   
     wm = ThreadPool(10)   
     for i in range(50):   
-        wm.add_job(save_url, i, i*0.001)   
+        wm.add_job(save_url, i, i  *0.001)   
     wm.wait_for_complete()   
     print 'end testing'  
     

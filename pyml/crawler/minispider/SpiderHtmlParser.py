@@ -23,26 +23,29 @@ from crawler.minispider.SpiderFileUtils import SpiderFileUtils
 
 
 class SpiderHtmlParser(SGMLParser):
-     
-   
+    '''
+    the class used to handle the HTML parsing
+    related operations.
+    '''
     
     def __init__(self):
         self.filehandler = SpiderFileUtils()
         self.urls = [] 
-        self.codes = [200,201,302,301]
+        self.codes = [200, 201, 302, 301]
         SGMLParser.__init__(self)
     
     def start_a(self, attrs):
         '''
         parsing elements <a></a>
         ''' 
-        href = [v for k, v in attrs if k=='href'] 
+        href = [v for k, v in attrs if k == 'href'] 
         if href: 
             self.urls.extend(href) 
 
     def parse_url(self, url, outputdir, target_url, sleep=1, timeout=1): 
         '''
-        test job 
+        parse the $url and the save the content url content
+        to the $outputdir which match the $target_url patten. 
         '''  
         import socket
         socket.setdefaulttimeout(timeout)
@@ -62,6 +65,8 @@ class SpiderHtmlParser(SGMLParser):
             time.sleep(sleep)
              
             print(data)
+        except IOError as ioex:
+            logerror('[' + ioex.errorno + '] ' + ioex.strerror)  
         except Exception as ex:   
             logerror(ex.message)  
         return urls
@@ -73,7 +78,7 @@ class SpiderHtmlParser(SGMLParser):
         if(not os.path.exists(outputdir)):
             os.makedirs(outputdir)
         filename = self.__validate_name(url)
-        f = open(outputdir + os.sep + filename,'w')
+        f = open(outputdir + os.sep + filename, 'w')
         f.writelines(data)
         f.close()
 #     
@@ -98,7 +103,6 @@ class SpiderHtmlParser(SGMLParser):
         else:
             return url[0:255]
         
-    
     def __parse_subpage_url(self, data, url, target_url):
         '''
         get the url path from the specific $url, used for the crawling of the next iteration.
