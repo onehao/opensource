@@ -10,7 +10,9 @@ Created on 2015年3月13日
 @author: wanhao01
 '''
 
+import os
 import random
+import sys
 import unittest
 
 from crawler.minispider.SpiderConfigParser import SpiderConfig, NoConfigError
@@ -35,6 +37,7 @@ class TestSequenceFunctions(unittest.TestCase):
     
     def test_AttributeNotExist(self):
         configName = "spidertest.conf"
+        #os.remove(os.path.split(os.path.realpath(__file__))[0] + os.sep + 'test.log')
         self.spiderConfig = SpiderConfig(configName)
         try:
             self.spiderConfig.loadConfigFile()

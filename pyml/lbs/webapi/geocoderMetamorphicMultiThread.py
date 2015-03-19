@@ -12,6 +12,7 @@ import threading
 import unittest
 
 import lbslogger
+import socket
 
 
 reload(sys)
@@ -28,6 +29,7 @@ def executeTest(results, lock, item,ak):
     result = getRequest("api.map.baidu.com", context)
     resultJsonObject = json.loads(result)
     if(resultJsonObject['status'] != 0):
+        lbslogger.logerror(resultJsonObject['result'] + '--' + resultJsonObject['message'])
         raise Exception(resultJsonObject['result'] + '--' + resultJsonObject['message'])
 #         lbslogger.logerror(resultJsonObject['result'] + '--' + resultJsonObject['message'])
         print('')
@@ -39,6 +41,8 @@ def executeTest(results, lock, item,ak):
         lng = coord['result']['location']['lng']
         lat = coord['result']['location']['lat']
     except:
+        lbslogger.logerror('request: ' + reverseGeocodingContext)
+        lbslogger.logerror('result: ' + result)
         print 'request: ' + reverseGeocodingContext
         print 'result: ' + result
         # make sure the shuffled sequence does not lose any elements
@@ -71,7 +75,7 @@ def geocoderTest():
            ,'lSXoUcCoRqx0hk0wRWB4W17y','Ow5fqi6DQXmgD5PGSB7QBdHF']
     threadNum = 46
     for i in range(1, 2):
-        file_read = open('locationbd09ll', 'r')
+        file_read = open('coreoutput', 'r')
         lines = file_read.readlines()
         for i in range(0, len(lines)-1,threadNum):
             #file_write.write(list[i])
@@ -81,6 +85,7 @@ def geocoderTest():
                     thread = threading.Thread(target=executeTest, args=(results,lock,lines[i+t],aks[threadNum % len(aks)]))
                 except Exception as ex:
                     lbslogger.logerror(ex.Message)
+                    lbslogger.logerror(str(ex))
                     continue
                 threads.append(thread)
                 thread.start()
@@ -100,13 +105,22 @@ def waitforcomplete(threads):
         
 
 def getRequest(requestUrl,context):
-    conn = httplib.HTTPConnection(requestUrl)
-    conn.request("GET", context)
-    r1 = conn.getresponse()
-#     print(r1.status, r1.reason)
-    data1 = r1.read()
+    socket.setdefaulttimeout(10)
+    try:
+        conn = httplib.HTTPConnection(requestUrl)
+        conn.request("GET", context)
+        r1 = conn.getresponse()
+    #     print(r1.status, r1.reason)
+        data1 = r1.read()
+    except Exception as ex:
+        lbslogger.logerror("error url: " + requestUrl + context)
+        lbslogger.logerror(str(ex))
+        lbslogger.logerror(str(r1))
+        
+    finally:
+        conn.close()
 #     print(data1)
-    conn.close()
+    
     return data1
 
 if __name__ == '__main__':
