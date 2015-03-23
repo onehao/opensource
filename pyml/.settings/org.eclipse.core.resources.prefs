@@ -31,6 +31,7 @@ encoding//lbs/webapi/geocoderMetamorphicMultiThread.py=utf-8
 encoding//lbs/webapi/getRandomIP.py=utf-8
 encoding//lbs/webapi/ipcompare.py=utf-8
 encoding//lbs/webapi/lbslogger.py=utf-8
+encoding//lbs/webapi/log_analyser.py=utf-8
 encoding//lbs/webapi/parseJson.py=utf-8
 encoding//lbs/webapi/uidforeventdetail.py=utf-8
 encoding//others/Kmeans.py=utf-8

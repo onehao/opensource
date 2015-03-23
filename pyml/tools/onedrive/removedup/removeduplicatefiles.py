@@ -14,12 +14,13 @@ def remove_recrusive(folder):
         for f in files:
             if('(1)' in f or '(2)' in f):
                 filename = root + os.sep + f
-                print(filename)
+                
                 
                 try:
                     size = size + os.path.getsize(root + os.sep + f)
                     count = count + 1
                     os.remove(filename)
+                    print(filename)
                 except:
                     continue
     return size, count          

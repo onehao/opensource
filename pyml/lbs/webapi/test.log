@@ -1333,3 +1333,13 @@
 2015-03-11 09:55:26,566 - minispider - INFO - 45
 2015-03-11 09:55:26,605 - minispider - INFO - 46
 2015-03-11 13:53:33,869 - minispider - INFO - minispider -- init
+2015-03-23 19:37:19,367 - minispider - INFO - minispider -- init
+2015-03-23 19:39:36,861 - minispider - INFO - minispider -- init
+2015-03-23 19:40:31,076 - minispider - INFO - minispider -- init
+2015-03-23 19:41:22,967 - minispider - INFO - /geoconv/v1 calling number: 32112
+2015-03-23 19:41:33,384 - minispider - INFO - /geocoder/v2 calling number: 169988
+2015-03-23 19:41:41,599 - minispider - INFO - /place/v2 calling number: 11450
+2015-03-23 19:41:49,453 - minispider - INFO - /place/v2/suggestion calling number: 787
+2015-03-23 19:41:57,249 - minispider - INFO - /direction/v1 calling number: 15239
+2015-03-23 19:42:05,025 - minispider - INFO - /direction/v1/routematrix calling number: 4190
+2015-03-23 19:42:12,618 - minispider - INFO - /location/ip calling number: 19312
