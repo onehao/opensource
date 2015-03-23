@@ -58,6 +58,8 @@ def executeTest(results, lock, item,ak):
 def geocoderTest():
     global results
     count = 0
+    coordfile = 'coreoutputcn'
+    lbslogger.loginfo('starting .. ' + coordfile)
     results = open("./results", 'w')
     lock = threading.Lock()
     #test aks
@@ -75,7 +77,7 @@ def geocoderTest():
            ,'lSXoUcCoRqx0hk0wRWB4W17y','Ow5fqi6DQXmgD5PGSB7QBdHF']
     threadNum = 46
     for i in range(1, 2):
-        file_read = open('coreoutput', 'r')
+        file_read = open(coordfile, 'r')
         lines = file_read.readlines()
         for i in range(0, len(lines)-1,threadNum):
             #file_write.write(list[i])
