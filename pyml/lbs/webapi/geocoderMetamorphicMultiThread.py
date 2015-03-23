@@ -34,7 +34,7 @@ def executeTest(results, lock, item,ak):
 #         lbslogger.logerror(resultJsonObject['result'] + '--' + resultJsonObject['message'])
         print('')
     location = resultJsonObject['result']['formatted_address']
-    reverseGeocodingContext = '/geocoder/v2/?output=json&ak=wOexvA0egnE0qUUWHYcyY4wX&address=' + location
+    reverseGeocodingContext = '/geocoder/v2/?output=json&ak=' + ak + '&address=' + location
     result = getRequest("api.map.baidu.com", context)
     coord = json.loads(result)
     try:
@@ -63,7 +63,7 @@ def geocoderTest():
     results = open("./results", 'w')
     lock = threading.Lock()
     #test aks
-    aks = ['vECxaR3X2rxKiNhBNeuYtsWv','pII0GrTCm3QEUPAfGhDkKLOO','ZAx1xPgWDssewnwfbeVl3GBH','4ruNDn5crmwqugzhDMaTfQ8S'
+    aks = ['wOexvA0egnE0qUUWHYcyY4wX','pII0GrTCm3QEUPAfGhDkKLOO','ZAx1xPgWDssewnwfbeVl3GBH','4ruNDn5crmwqugzhDMaTfQ8S'
            ,'HjyLoNejFfRWY6t620Bx98gm','aifExz5WqcfRC9rG1VNQFj2r','c1aFgdE2G3DaKwO2Vlzi5Gjz','ybshwoCMjCReo7sOGlqbbHkx'
            ,'kZhvkb6HvtZ4w88FxDnHOnyh','qBqxyhit2GF7yDMGVGMG469G','0bUIy97E5RBI0d1e3onFVeCd','ErcT11Tmqx0eT4XwU7cDEdWg'
            ,'7TcKG9u9N8P63Q3qtLiTG3DL','mWzLRt1YM8vaPcNkIW1oFnFm','H1PGz0wWBqnPHk3t0BaH25Sa','awQg1jKdklDsvL6SjEEGbPs6',
