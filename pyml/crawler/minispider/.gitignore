@@ -1,0 +1,8 @@
+/output/
+/__init__.pyc
+/main.pyc
+/SpiderConfigParser.pyc
+/SpiderFileUtils.pyc
+/SpiderHandler.pyc
+/SpiderHtmlParser.pyc
+/SpiderThreadPool.pyc
