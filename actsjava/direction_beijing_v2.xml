@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="direction_beijing_v2">
+  <Parameters>
+    <Parameter id="0" name="origin" type="1">
+      <values>
+        <value>115.983772,40.461984</value>
+        <value>北京市延庆县湖北西路2号</value>
+        <value>116.251233,40.222663</value>
+        <value>北京市昌平区中石路58号</value>
+        <value>116.636929,40.324859</value>
+        <value>北京市怀柔区后横街18号</value>
+        <value>116.657698,40.132035</value>
+        <value>北京市顺义区新顺南大街22号</value>
+        <value>116.344872,40.088773</value>
+        <value>北京市昌平区西大街9号院-17-8</value>
+        <value>116.296651,40.053906</value>
+        <value>北京市海淀区东北旺西路</value>
+        <value>116.320151,39.988569</value>
+        <value>北京市海淀区海淀大街4号</value>
+        <value>116.474013,40.003189</value>
+        <value>北京市朝阳区广顺北大街18号</value>
+        <value>116.664382,39.914452</value>
+        <value>北京市通州区新华大街103号</value>
+        <value>北京市石景山区杨庄东路127-1号</value>
+        <value>116.359605,39.946708</value>
+        <value>116.31663,39.968057</value>
+        <value>北京市海淀区北三环西路68号</value>
+        <value>116.401574,39.955863</value>
+        <value>北京市东城区旧鼓楼大街66号</value>
+        <value>116.432045,39.946986</value>
+        <value>116.412426,39.930776</value>
+        <value>北京市东城区北沿河大街87-2</value>
+        <value>116.364205,39.906123</value>
+        <value>116.323242,39.872352</value>
+        <value>116.237867,39.877668</value>
+        <value>116.503766,39.881433</value>
+        <value>116.45691,39.804095</value>
+        <value>116.326692,39.778814</value>
+        <value>116.145881,39.738434</value>>
+      </values>
+      <basechoices>
+        <basechoice>北京市延庆县湖北西路2号</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="1" name="mode" type="1">
+      <values>
+        <value>driving</value>
+        <value>walking</value>
+        <value>transit</value>
+      </values>
+      <basechoices>
+        <basechoice>driving</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="3" name="region" type="1">
+      <values>
+        <value>北京</value>
+      </values>
+      <basechoices>
+        <basechoice>北京</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="4" name="origin_region" type="1">
+      <values>
+        <value>北京</value>
+      </values>
+      <basechoices>
+        <basechoice>北京</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="5" name="destination_region" type="1">
+      <values>
+        <value>北京</value>
+      </values>
+      <basechoices>
+        <basechoice>北京</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="6" name="output" type="1">
+      <values>
+        <value>json</value>
+        <value>xml</value>
+      </values>
+      <basechoices>
+        <basechoice>xml</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="2" name="coord_type" type="1">
+      <values>
+        <value>bd09ll</value>
+        <value>bd09mc</value>
+        <value>gcj02</value>
+        <value>wgs84</value>
+      </values>
+      <basechoices>
+        <basechoice>bd09ll</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="8" name="tactics" type="1">
+      <values>
+        <value>10</value>
+        <value>11</value>
+        <value>12</value>
+      </values>
+      <basechoices>
+        <basechoice>11</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="9" name="ak" type="1">
+      <values>
+        <value>nhZquGiTMCkyuhETG4Pr0sCS</value>
+        <value>FG6XrATeb7lXkjbp91Pfjt5g</value>
+        <value>wOexvA0egnE0qUUWHYcyY4wX</value>
+        <value>bPmTt9CaamIcRRfR8vhFamjf</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="7" name="destination" type="1">
+      <values>
+        <value>115.983772,40.461984</value>
+        <value>北京市延庆县湖北西路2号</value>
+        <value>116.251233,40.222663</value>
+        <value>北京市昌平区中石路58号</value>
+        <value>116.636929,40.324859</value>
+        <value>北京市怀柔区后横街18号</value>
+        <value>116.657698,40.132035</value>
+        <value>北京市顺义区新顺南大街22号</value>
+        <value>116.344872,40.088773</value>
+        <value>北京市昌平区西大街9号院-17-8</value>
+        <value>116.296651,40.053906</value>
+        <value>北京市海淀区东北旺西路</value>
+        <value>116.320151,39.988569</value>
+        <value>北京市海淀区海淀大街4号</value>
+        <value>116.474013,40.003189</value>
+        <value>北京市朝阳区广顺北大街18号</value>
+        <value>116.664382,39.914452</value>
+        <value>北京市通州区新华大街103号</value>
+        <value>北京市石景山区杨庄东路127-1号</value>
+        <value>116.359605,39.946708</value>
+        <value>116.31663,39.968057</value>
+        <value>北京市海淀区北三环西路68号</value>
+        <value>116.401574,39.955863</value>
+        <value>北京市东城区旧鼓楼大街66号</value>
+        <value>116.432045,39.946986</value>
+        <value>116.412426,39.930776</value>
+        <value>北京市东城区北沿河大街87-2</value>
+        <value>116.364205,39.906123</value>
+        <value>116.323242,39.872352</value>
+        <value>116.237867,39.877668</value>
+        <value>116.503766,39.881433</value>
+        <value>116.45691,39.804095</value>
+        <value>116.326692,39.778814</value>
+        <value>116.145881,39.738434</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations>
+    <Relation Strength="3" Default="true">
+      <Parameter name="origin">
+        <value>115.983772,40.461984</value>
+        <value>北京市延庆县湖北西路2号</value>
+        <value>116.251233,40.222663</value>
+        <value>北京市昌平区中石路58号</value>
+        <value>116.636929,40.324859</value>
+        <value>北京市怀柔区后横街18号</value>
+        <value>116.657698,40.132035</value>
+        <value>北京市顺义区新顺南大街22号</value>
+        <value>116.344872,40.088773</value>
+        <value>北京市昌平区西大街9号院-17-8</value>
+        <value>116.296651,40.053906</value>
+        <value>北京市海淀区东北旺西路</value>
+        <value>116.320151,39.988569</value>
+        <value>北京市海淀区海淀大街4号</value>
+        <value>116.474013,40.003189</value>
+        <value>北京市朝阳区广顺北大街18号</value>
+        <value>116.664382,39.914452</value>
+        <value>北京市通州区新华大街103号</value>
+        <value>北京市石景山区杨庄东路127-1号</value>
+        <value>116.359605,39.946708</value>
+        <value>116.31663,39.968057</value>
+        <value>北京市海淀区北三环西路68号</value>
+        <value>116.401574,39.955863</value>
+        <value>北京市东城区旧鼓楼大街66号</value>
+        <value>116.432045,39.946986</value>
+        <value>116.412426,39.930776</value>
+        <value>北京市东城区北沿河大街87-2</value>
+        <value>116.364205,39.906123</value>
+        <value>116.323242,39.872352</value>
+        <value>116.237867,39.877668</value>
+        <value>116.503766,39.881433</value>
+        <value>116.45691,39.804095</value>
+        <value>116.326692,39.778814</value>
+        <value>116.145881,39.738434</value>
+      </Parameter>
+      <Parameter name="mode">
+        <value>driving</value>
+        <value>walking</value>
+        <value>transit</value>
+      </Parameter>
+      <Parameter name="tactics">
+        <value>10</value>
+        <value>11</value>
+        <value>12</value>
+      </Parameter>
+    </Relation>
+  </Relations>
+  <Constraints />
+</System>
+

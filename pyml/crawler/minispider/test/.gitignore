@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /__init__.pyc
 /SpiderConfigParserTest.pyc
 /SpiderHtmlParserTest.pyc
 /test.log
+=======
+/test.log
+/__init__.pyc
+/SpiderConfigParserTest.pyc
+>>>>>>> branch 'master' of https://github.com/onehao/opensource.git
