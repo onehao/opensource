@@ -14,6 +14,7 @@ from crawler.minispider.SpiderHtmlParser import SpiderHtmlParser
 from crawler.minispider.SpiderThreadPool import ThreadPool
 
 
+<<<<<<< HEAD
 class Spiderhandler(object):
     '''
     crawling related logics.
@@ -36,6 +37,29 @@ class Spiderhandler(object):
                 self.tp.add_job(self.htmlparser.parse_url, urlQueue.pop(), config.getOutputDir(), 
                                 config.getTargetUrlPattern(), config.getCrawlInterval(), 
                                 config.getTimeOut())
+=======
+class Spiderhandler():
+    '''
+    crawling related logics.
+    '''
+    def __init__(self):
+        #self.tp = ThreadPool(100)
+        self.htmlparser = SpiderHtmlParser()
+        self.tempQueue = []
+    
+    def crawl_urls(self, urlQueue, config, max_depth):
+        '''
+        crawling using the DFS way.
+        '''
+        if(max_depth < 0 or len(urlQueue) == 0):
+            return
+        self.tp = ThreadPool(config.getThreadCount())
+        while(len(urlQueue) > 0):
+            try:
+                #urls = self.htmlparser.parse_url(urlQueue.pop(), output_directory, target_url, crawl_interval, crawl_timeout)
+                self.tp.add_job(self.htmlparser.parse_url, urlQueue.pop(), config.getOutputDir(), 
+                                config.getTargetUrlPattern(), config.getCrawlInterval(), config.getTimeOut())
+>>>>>>> branch 'master' of https://github.com/onehao/opensource.git
                  
             except Exception as ex:
                 continue

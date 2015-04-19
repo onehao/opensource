@@ -16,7 +16,10 @@ import sys
 import time
 import crawler
 from crawler.myemail import send_mail
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/onehao/opensource.git
 
 #http://www.pythoner.com/200.html
 #运行时没问题， 但是编译有有错误提示， 可以忽略。  

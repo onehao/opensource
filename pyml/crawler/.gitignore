@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /00001/
 /00002/
 /00003/
@@ -12,3 +13,19 @@
 /__init__.pyc
 /lbs_forum_email_tracker.pyc
 /myemail.pyc
+=======
+/00001/
+/00002/
+/00003/
+/00004/
+/00005/
+/00006/
+/00007/
+/00008/
+/00009/
+/00010/
+/test.log
+/__init__.pyc
+/lbs_forum_email_tracker.pyc
+/myemail.pyc
+>>>>>>> branch 'master' of https://github.com/onehao/opensource.git

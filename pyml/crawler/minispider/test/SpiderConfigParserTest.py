@@ -10,6 +10,7 @@ Created on 2015年3月13日
 @author: wanhao01
 '''
 
+<<<<<<< HEAD
 import time
 import unittest
 
@@ -68,6 +69,43 @@ class TestSequenceFunctions(unittest.TestCase):
             file_object.close()
         self.assertIn(message, all_the_text[-1], 
                       'the log file should contain the expect content: ' + message)
+=======
+import os
+import random
+import sys
+import unittest
+
+from crawler.minispider.SpiderConfigParser import SpiderConfig, NoConfigError
+
+
+class TestSequenceFunctions(unittest.TestCase):
+
+    def setUp(self):
+        configName = "../spider.conf"
+        self.spiderConfig = SpiderConfig(configName)
+        self.spiderConfig.loadConfigFile()
+
+    def test_FileNotExist(self):
+        # make sure the shuffled sequence does not lose any elements
+        configName = "spider.abc"
+        self.spiderConfig = SpiderConfig(configName)
+        try:
+            self.spiderConfig.loadConfigFile()
+            self.assertTrue(False, 'NoConfigError should be thrown.')
+        except NoConfigError as exception:
+            self.assertTrue(True, 'test_FileNotExist pass.')
+    
+    def test_AttributeNotExist(self):
+        configName = "spidertest.conf"
+        #os.remove(os.path.split(os.path.realpath(__file__))[0] + os.sep + 'test.log')
+        self.spiderConfig = SpiderConfig(configName)
+        try:
+            self.spiderConfig.loadConfigFile()
+            self.assertTrue(False, 'NoConfigError should be thrown.')
+        except NoConfigError as exception:
+            self.assertTrue(True, 'test_FileNotExist pass.')
+    
+>>>>>>> branch 'master' of https://github.com/onehao/opensource.git
         
 
 if __name__ == '__main__':

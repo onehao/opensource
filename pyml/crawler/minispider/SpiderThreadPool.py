@@ -113,7 +113,11 @@ def test():
     print 'start testing'   
     wm = ThreadPool(10)   
     for i in range(50):   
+<<<<<<< HEAD
         wm.add_job(save_url, i, i  *0.001)   
+=======
+        wm.add_job(save_url, i, i*0.001)   
+>>>>>>> branch 'master' of https://github.com/onehao/opensource.git
     wm.wait_for_complete()   
     print 'end testing'  
     

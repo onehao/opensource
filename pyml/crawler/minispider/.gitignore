@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 /__init__.pyc
 /SpiderConfigParser.pyc
 /SpiderFileUtils.pyc
 /SpiderHtmlParser.pyc
+=======
+/output/
+/__init__.pyc
+/main.pyc
+/SpiderConfigParser.pyc
+/SpiderFileUtils.pyc
+/SpiderHandler.pyc
+/SpiderHtmlParser.pyc
+/SpiderThreadPool.pyc
+>>>>>>> branch 'master' of https://github.com/onehao/opensource.git
