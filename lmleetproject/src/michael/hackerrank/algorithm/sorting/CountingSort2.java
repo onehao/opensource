@@ -1,9 +1,7 @@
 package michael.hackerrank.algorithm.sorting;
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class CountingSort2 {
 
@@ -20,5 +18,6 @@ public class CountingSort2 {
         for(int v : list){
             System.out.print(v + " ");
         }
+        in.close();
     }
 }

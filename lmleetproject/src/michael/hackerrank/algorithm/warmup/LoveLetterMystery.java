@@ -1,10 +1,6 @@
 package michael.hackerrank.algorithm.warmup;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Scanner;
 
 public class LoveLetterMystery {
 
@@ -17,6 +13,7 @@ public class LoveLetterMystery {
 	            test = in.next();
 	            System.out.println(calculatePalindromes(test));
 	        }
+	        in.close();
 	    }
 	    
 	    private static int calculatePalindromes(String test){

@@ -1,9 +1,6 @@
 package michael.hackerrank.algorithm.sorting;
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class QuickSortInPlace {
 
@@ -16,6 +13,7 @@ public class QuickSortInPlace {
 			list.add(in.nextInt());
 		}
 		quickSortInPlace(list, n-1, 0);
+		in.close();
     }
 	
 	private static void quickSortInPlace(ArrayList<Integer> list, int pivotIndex, int startIndex){

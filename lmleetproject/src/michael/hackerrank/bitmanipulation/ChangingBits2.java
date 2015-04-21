@@ -1,13 +1,11 @@
 package michael.hackerrank.bitmanipulation;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.math.BigInteger;
+import java.util.Scanner;
 
 public class ChangingBits2 {
 
+	@SuppressWarnings({ "resource", "unused" })
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
 	        int N;

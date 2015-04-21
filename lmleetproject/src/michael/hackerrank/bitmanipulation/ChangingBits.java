@@ -1,6 +1,8 @@
 package michael.hackerrank.bitmanipulation;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class ChangingBits {
 
@@ -8,6 +10,7 @@ public class ChangingBits {
 	 * @param args
 	 * @throws IOException 
 	 */
+	@SuppressWarnings({ "resource", "unused" })
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
