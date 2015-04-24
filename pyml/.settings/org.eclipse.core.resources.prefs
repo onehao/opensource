@@ -1,3 +1,6 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=branch 'master' of https\://github.com/onehao/opensource.git
 eclipse.preferences.version=1
 encoding//crawler/2ndfun_email_tracker.py=utf-8
 encoding//crawler/__init__.py=utf-8
@@ -13,10 +16,7 @@ encoding//crawler/minispider/eagle.py=utf-8
 encoding//crawler/minispider/main.py=utf-8
 encoding//crawler/minispider/mini_spider.py=utf-8
 encoding//crawler/minispider/test/SpiderConfigParserTest.py=utf-8
-<<<<<<< HEAD
 encoding//crawler/minispider/test/SpiderHtmlParserTest.py=utf-8
-=======
->>>>>>> branch 'master' of https://github.com/onehao/opensource.git
 encoding//crawler/minispider/testpool.py=utf-8
 encoding//crawler/myemail.py=utf-8
 encoding//crawler/qiubai.py=utf-8
@@ -32,13 +32,11 @@ encoding//lbs/util/myemail.py=utf-8
 encoding//lbs/webapi/genLocationByCoord.py=utf-8
 encoding//lbs/webapi/geocoderMetamorphic.py=utf-8
 encoding//lbs/webapi/geocoderMetamorphicMultiThread.py=utf-8
+encoding//lbs/webapi/getAPIUser.py=utf-8
 encoding//lbs/webapi/getRandomIP.py=utf-8
 encoding//lbs/webapi/ipcompare.py=utf-8
 encoding//lbs/webapi/lbslogger.py=utf-8
-<<<<<<< HEAD
-=======
 encoding//lbs/webapi/log_analyser.py=utf-8
->>>>>>> branch 'master' of https://github.com/onehao/opensource.git
 encoding//lbs/webapi/parseJson.py=utf-8
 encoding//lbs/webapi/uidforeventdetail.py=utf-8
 encoding//others/Kmeans.py=utf-8
@@ -46,14 +44,8 @@ encoding//others/test.py=utf-8
 encoding//tools/family/HiFamily.py=utf-8
 encoding//tools/newspdf/pdfforkindle.py=utf8
 encoding//tools/newspdf/xhtml2pdf/pisa.py=utf-8
-<<<<<<< HEAD
-encoding//tutorial/class.py=utf-8
-encoding//tutorial/stdlibp1.py=utf-8
-encoding//tutorial/stdlibp2.py=utf-8
-encoding//tuturial/io/myio.py=utf-8
-=======
 encoding//tools/onedrive/removedup/removeduplicatefiles.py=utf-8
 encoding//tutorial/class.py=utf-8
 encoding//tutorial/stdlibp1.py=utf-8
 encoding//tutorial/stdlibp2.py=utf-8
->>>>>>> branch 'master' of https://github.com/onehao/opensource.git
+encoding//tuturial/io/myio.py=utf-8
