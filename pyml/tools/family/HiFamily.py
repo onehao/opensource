@@ -18,7 +18,7 @@ import urllib2
  
 class HiFamily:
  
-    target_url = 'http://family.baidu.com/comment/comment/productAddComment.do'
+    target_url = 'http://jishu.baidu.com/newsdetail/commentlist'
     comment_list = ["good!", "ding~", "nice~"]
      
     def __init__(self, url, cookies, comment = "good!", change_comment = True, times = 10,

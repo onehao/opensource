@@ -37,8 +37,8 @@ def getRandomIP():
             city = location['content']['address_detail']['city']
             district = location['content']['address_detail']['district']
             street = location['content']['address_detail']['street']
-            print(province + "，" + city + "，" + district + "，" + street)
-            lbsiplocation = province + "，" + city + "，" + district + "，" + street
+            print(province + "，" + city + "，" + district + "，"+ street)
+            lbsiplocation = province + "，" + city + "，" + dist rict + "，" + street
         except:
             print('request: ' + iplocation)
             print('result: ' + result)
