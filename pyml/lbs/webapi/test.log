@@ -1783,3 +1783,109 @@
 2015-05-07 19:40:59,220 - minispider - INFO - /direction/v1 calling number: 15239
 2015-05-07 19:41:39,032 - minispider - INFO - /direction/v1/routematrix calling number: 4190
 2015-05-07 19:42:18,936 - minispider - INFO - /location/ip calling number: 19312
+2015-06-10 15:13:51,313 - minispider - INFO - minispider -- init
+2015-06-10 15:14:20,790 - minispider - INFO - minispider -- init
+2015-06-10 15:14:44,529 - minispider - ERROR - error
+2015-06-10 15:17:18,030 - minispider - INFO - minispider -- init
+2015-06-10 15:19:27,792 - minispider - ERROR - error
+2015-06-10 15:21:29,569 - minispider - INFO - minispider -- init
+2015-06-10 15:21:51,651 - minispider - ERROR - error
+2015-06-10 15:22:48,200 - minispider - ERROR - error
+2015-06-10 15:23:41,743 - minispider - ERROR - error
+2015-06-10 15:24:04,609 - minispider - ERROR - error
+2015-06-10 15:24:06,979 - minispider - ERROR - error
+2015-06-10 15:24:12,558 - minispider - ERROR - error
+2015-06-10 15:25:06,660 - minispider - ERROR - error
+2015-06-10 15:25:26,141 - minispider - ERROR - error
+2015-06-10 15:25:28,407 - minispider - ERROR - error
+2015-06-10 15:25:34,938 - minispider - ERROR - error
+2015-06-10 15:26:32,177 - minispider - ERROR - error
+2015-06-10 15:26:56,928 - minispider - ERROR - error
+2015-06-10 15:27:01,039 - minispider - ERROR - error
+2015-06-10 15:27:07,822 - minispider - ERROR - error
+2015-06-10 15:28:18,313 - minispider - ERROR - error
+2015-06-10 15:28:39,714 - minispider - ERROR - error
+2015-06-10 15:28:43,664 - minispider - ERROR - error
+2015-06-10 15:28:51,209 - minispider - ERROR - error
+2015-06-10 15:29:14,753 - minispider - ERROR - error
+2015-06-10 15:30:20,401 - minispider - ERROR - error
+2015-06-10 15:30:51,233 - minispider - ERROR - error
+2015-06-10 15:30:56,858 - minispider - ERROR - error
+2015-06-10 15:31:04,444 - minispider - ERROR - error
+2015-06-10 15:31:28,980 - minispider - ERROR - error
+2015-06-10 15:32:59,368 - minispider - ERROR - error
+2015-06-10 15:33:01,058 - minispider - ERROR - error
+2015-06-10 15:33:09,171 - minispider - ERROR - error
+2015-06-10 15:33:35,631 - minispider - ERROR - error
+2015-06-10 15:34:48,549 - minispider - INFO - minispider -- init
+2015-06-10 15:35:39,138 - minispider - ERROR - error
+2015-06-10 15:35:45,549 - minispider - ERROR - error
+2015-06-10 15:35:48,612 - minispider - ERROR - error
+2015-06-10 15:35:51,219 - minispider - ERROR - error
+2015-06-10 15:35:52,914 - minispider - ERROR - error
+2015-06-10 15:35:55,832 - minispider - ERROR - error
+2015-06-10 15:35:58,058 - minispider - ERROR - error
+2015-06-10 15:35:59,641 - minispider - ERROR - error
+2015-06-10 15:36:42,734 - minispider - ERROR - error
+2015-06-10 15:36:49,809 - minispider - ERROR - error
+2015-06-10 15:37:20,161 - minispider - ERROR - error
+2015-06-10 15:37:21,760 - minispider - ERROR - error
+2015-06-10 15:37:23,369 - minispider - ERROR - error
+2015-06-10 15:37:43,546 - minispider - ERROR - error
+2015-06-10 15:37:50,694 - minispider - ERROR - error
+2015-06-10 15:37:52,249 - minispider - ERROR - error
+2015-06-10 15:37:55,280 - minispider - ERROR - error
+2015-06-10 15:38:02,398 - minispider - ERROR - error
+2015-06-10 15:38:03,944 - minispider - ERROR - error
+2015-06-10 15:38:05,536 - minispider - ERROR - error
+2015-06-10 15:38:07,602 - minispider - ERROR - error
+2015-06-10 15:38:41,888 - minispider - ERROR - error
+2015-06-10 15:38:47,210 - minispider - ERROR - error
+2015-06-10 15:39:16,542 - minispider - ERROR - error
+2015-06-10 15:39:26,377 - minispider - ERROR - error
+2015-06-10 15:39:41,917 - minispider - ERROR - error
+2015-06-10 15:39:46,361 - minispider - ERROR - error
+2015-06-10 15:39:53,621 - minispider - ERROR - error
+2015-06-10 15:40:21,404 - minispider - ERROR - error
+2015-06-10 15:48:20,596 - minispider - INFO - minispider -- init
+2015-06-10 15:49:16,558 - minispider - ERROR - error
+2015-06-10 15:49:21,391 - minispider - ERROR - error
+2015-06-10 15:49:27,158 - minispider - ERROR - error
+2015-06-10 15:49:28,661 - minispider - ERROR - error
+2015-06-10 15:49:30,207 - minispider - ERROR - error
+2015-06-10 15:49:31,746 - minispider - ERROR - error
+2015-06-10 15:49:35,826 - minispider - ERROR - error
+2015-06-10 15:49:38,986 - minispider - ERROR - error
+2015-06-10 15:49:57,595 - minispider - ERROR - error
+2015-06-10 15:50:19,424 - minispider - ERROR - error
+2015-06-10 15:50:27,562 - minispider - ERROR - error
+2015-06-10 15:50:54,911 - minispider - ERROR - error
+2015-06-10 15:50:56,414 - minispider - ERROR - error
+2015-06-10 15:50:57,857 - minispider - ERROR - error
+2015-06-10 15:51:17,279 - minispider - ERROR - error
+2015-06-10 15:51:24,071 - minispider - ERROR - error
+2015-06-10 15:51:29,400 - minispider - ERROR - error
+2015-06-10 15:51:36,585 - minispider - ERROR - error
+2015-06-10 15:51:38,220 - minispider - ERROR - error
+2015-06-10 15:51:39,772 - minispider - ERROR - error
+2015-06-10 15:51:41,783 - minispider - ERROR - error
+2015-06-10 15:51:51,721 - minispider - ERROR - error
+2015-06-10 15:52:18,713 - minispider - ERROR - error
+2015-06-10 15:52:24,030 - minispider - ERROR - error
+2015-06-10 15:52:50,917 - minispider - ERROR - error
+2015-06-10 15:52:53,413 - minispider - ERROR - error
+2015-06-10 15:53:01,266 - minispider - ERROR - error
+2015-06-10 15:53:17,290 - minispider - ERROR - error
+2015-06-10 15:53:30,696 - minispider - ERROR - error
+2015-06-10 15:53:56,296 - minispider - ERROR - error
+2015-06-10 15:59:53,086 - minispider - INFO - minispider -- init
+2015-06-10 16:00:27,756 - minispider - INFO - minispider -- init
+2015-06-10 16:01:44,223 - minispider - INFO - minispider -- init
+2015-06-10 16:02:30,313 - minispider - ERROR - error
+2015-06-10 16:02:35,085 - minispider - ERROR - error
+2015-06-10 16:02:40,391 - minispider - ERROR - error
+2015-06-10 16:02:41,809 - minispider - ERROR - error
+2015-06-10 16:02:43,344 - minispider - ERROR - error
+2015-06-10 16:02:45,164 - minispider - ERROR - error
+2015-06-10 16:02:49,437 - minispider - ERROR - error
+2015-06-10 16:02:52,779 - minispider - ERROR - error

@@ -33,6 +33,7 @@ encoding//lbs/webapi/genLocationByCoord.py=utf-8
 encoding//lbs/webapi/geocoderMetamorphic.py=utf-8
 encoding//lbs/webapi/geocoderMetamorphicMultiThread.py=utf-8
 encoding//lbs/webapi/getAPIUser.py=utf-8
+encoding//lbs/webapi/getGeosearchUser.py=utf-8
 encoding//lbs/webapi/getRandomIP.py=utf-8
 encoding//lbs/webapi/ipcompare.py=utf-8
 encoding//lbs/webapi/lbslogger.py=utf-8
