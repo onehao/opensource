@@ -19,15 +19,27 @@ class APIUserParser(object):
     __GEOSEARCH__ = ""
     __GEOSEARCHV2__=""
     __GEODATA__ = ""
+    __GEOSEARCHNEARBY__ = ""
+    __GEOSEARCHLOCAL__ = ""
+    __GEOSEARCHBOUND__ = ""
+    __GEOSEARCHDETAIL__ = ""
+    
     __dict__ = {'a': 'a'}
     def __init__(self):
         self.__GEOSEARCH__ = '/geosearch/v3'
         self.__GEOSEARCHV2__ = '/geosearch/v2'
+        self.__GEOSEARCHNEARBY__ = "/geosearch/v3/nearby"
+        self.__GEOSEARCHLOCAL__ = "/geosearch/v3/local"
+        self.__GEOSEARCHBOUND__ = "/geosearch/v3/bound"
+        self.__GEOSEARCHDETAIL__ = "/geosearch/v3/detail"
+        
         self.__GEODATA__ = ''
         
         self.__dict__.clear()
         self.__dict__= {self.__GEOSEARCH__: 'geosearch',self.__GEOSEARCHV2__ : 'geosearchv2',
-                         self.__GEODATA__: 'geodata'}
+                         self.__GEODATA__: 'geodata', self.__GEOSEARCHNEARBY__ : 'geosearchnearby',
+                         self.__GEOSEARCHLOCAL__ : 'geosearchlocal', self.__GEOSEARCHBOUND__: 'geosearchbound',
+                         self.__GEOSEARCHDETAIL__ : 'geosearchdetail'}
         
         self.__logger__ = lbslogger
         self.__logger__.__name__ = 'LBS user parser'
@@ -60,9 +72,13 @@ class APIUserParser(object):
         self.__analysebypattern(self.__GEODATA__, file_read)
         
     def analyzelogfolderV2(self, folder):
-#         self.__analysebypatternfolder(self.__GEOSEARCH__, folder)
-        self.__analysebypatternfolder(self.__GEOSEARCHV2__, folder)
+        self.__analysebypatternfolder(self.__GEOSEARCH__, folder)
+#         self.__analysebypatternfolder(self.__GEOSEARCHV2__, folder)
 #         self.__analysebypatternfolder(self.__GEODATA__, folder)
+        self.__analysebypatternfolder(self.__GEOSEARCHNEARBY__, folder)
+        self.__analysebypatternfolder(self.__GEOSEARCHLOCAL__, folder)
+        self.__analysebypatternfolder(self.__GEOSEARCHBOUND__, folder)
+        self.__analysebypatternfolder(self.__GEOSEARCHDETAIL__, folder)
         
     def analyzelogfolder(self, folder):
         count_geoconv = 0
@@ -150,8 +166,8 @@ class APIUserParser(object):
                 data = file_read.read()
                 match = pattern.findall(data)
                 for request in match:
-                    pattern = re.compile('ak=.*?[\s&]',re.DOTALL)
-                    match2 = pattern.findall(request)
+                    pattern2 = re.compile('ak=.*?[\s&]',re.DOTALL)
+                    match2 = pattern2.findall(request)
                     if len(match2) > 0:
                         ak = match2[0][3:-1]
                         if ak in dic.keys():
@@ -161,8 +177,19 @@ class APIUserParser(object):
         diclist = sorted(dic.iteritems(), key=lambda d:d[1], reverse = True)
         for key in diclist:
             context = '/apics/app?method=search&app_ak=' + key[0];
-            result = getRequest("m1-map-controlservice00.m1.baidu.com:8088", context)
+#             result = getRequest("m1-map-controlservice00.m1.baidu.com:8088", context)
+            result = getRequest("console.map.n.shifen.com", context)
             resultJsonObject = json.loads(result)
+            
+            #retry if the request failed by status not equal to 0.
+            for i in range(3):
+                if(resultJsonObject['status'] != 0):
+                    result = getRequest("console.map.n.shifen.com", context)
+                    time.sleep(0.1)
+                    resultJsonObject = json.loads(result)
+                else:
+                    break;
+            
             if(resultJsonObject['status'] != 0):
                 #lbslogger.logerror(resultJsonObject['result'] + '--' + resultJsonObject['message'])
                 lbslogger.logerror('error')
@@ -174,10 +201,12 @@ class APIUserParser(object):
                 resultJsonObject = json.loads(result)
                 item = ''
                 try:
+#                     item = (key[0] + "," + str(key[1]) + "," + resultJsonObject['userInfo']['dev_info']['realname'] + "," + resultJsonObject['userInfo']['dev_info']['developer_alias'] + "," + resultJsonObject['userInfo']['dev_info']['introduction'] + 
+#                             "," + resultJsonObject['userInfo']['pass_info']['email'] + "\n").encode("gb2312")
                     item = (key[0] + "," + str(key[1]) + "," + resultJsonObject['userInfo']['dev_info']['realname'] + "," + resultJsonObject['userInfo']['dev_info']['developer_alias'] + "," + resultJsonObject['userInfo']['dev_info']['introduction'] + 
-                            "," + resultJsonObject['userInfo']['pass_info']['email'] + "\n").encode("gb2312")
+                                 "\n").encode("gb2312")
                 except Exception as e:
-
+                    lbslogger.logerror(str(e))
                     continue
                 file_write.write(item) 
         file_read.close();
