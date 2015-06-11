@@ -14,3 +14,10 @@
 /telematrics.csv
 /telematrics1.csv
 /geoconv.csv
+/geosearch.csv
+/geosearchbound.csv
+/geosearchdetail.csv
+/geosearchlocal.csv
+/geosearchnearby.csv
+/geosearchv2.csv
+/getGeosearchUser.py
