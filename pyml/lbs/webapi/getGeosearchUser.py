@@ -15,7 +15,7 @@ import timer
 import lbslogger
 
 
-class APIUserParser(object):
+class GenGeoInitData(object):
     __GEOSEARCH__ = ""
     __GEOSEARCHV2__=""
     __GEODATA__ = ""
@@ -150,8 +150,8 @@ class APIUserParser(object):
                 except Exception as e:
 
                     continue
-                file_write.write(item) 
-                
+                file_write.write(item)        
+                      
     def __analysebypatternfolder(self, patternString, folder):
         pattern = re.compile('GET ' + patternString + '.*?HTTP/1.1',re.DOTALL)
         dic = {'a':0}
@@ -224,7 +224,7 @@ def getRequest(requestUrl,context):
        
 
 if __name__ == '__main__':
-    parser = APIUserParser()
+    parser = GenGeoInitData()
     #analyser.analyzelogfolder('Z:\\logs')
 #     parser.analyzelog('D:\\document\\ftp\\lighttpd.log.wf.2014081310')
 #     parser.analyzelog('Z:\\logs\\lighttpd.log.2015031815')
