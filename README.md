@@ -11,6 +11,7 @@ my first .md update
  * }; 
  */
 
+ref:http://www.codeproject.com/Articles/27742/How-To-Reverse-a-Linked-List-3-Different-Ways 
 
 2. Reverse Linked List II 
 Reverse a linked list from position m to n. Do it in-place and in one-pass.
