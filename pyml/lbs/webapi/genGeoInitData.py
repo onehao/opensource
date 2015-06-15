@@ -93,7 +93,7 @@ class APIUserParser(object):
                 category = u'地铁'.encode('gb2312')
                 category_en = 'metro'
                 url = resultJsonObject['contents'][j]['url']
-                item = title + ',' + longitude + ',' + latitude + ',' + coord_type + ','  + metrotype + ',' + category_en + ',' + type2 +',' + category + ',' + url + ',Ow5fqi6DQXmgD5PGSB7QBdHF,106990' + '\n'
+                item = title + ',' + longitude + ',' + latitude + ',' + coord_type + ','  + metrotype + ',' + type2 + ',' + category +',' + category_en + ',' + url + ',Ow5fqi6DQXmgD5PGSB7QBdHF,106990' + '\n'
                 file_write.writelines(item)
                 continue
         file_write.close(); 
@@ -119,12 +119,40 @@ class APIUserParser(object):
                     category = u'公交'.encode('gb2312')
                     category_en = 'bus'
                     url = resultJsonObject['contents'][j]['url']
-                    item = title + ',' + longitude + ',' + latitude + ',' + coord_type + ','  + metrotype + ',' + category_en + ',' + type2 +',' + category + ',' + url + ',Ow5fqi6DQXmgD5PGSB7QBdHF,106990' + '\n'
+                    item = title + ',' + longitude + ',' + latitude + ',' + coord_type + ','  + metrotype + ',' + type2 + ',' + category +',' + category_en + ',' + url + ',Ow5fqi6DQXmgD5PGSB7QBdHF,106990' + '\n'
                     file_write.writelines(item)
                     continue
                 except:
                     continue
         file_write.close();
+        
+        
+    #init for table, 106992, ak=Ow5fqi6DQXmgD5PGSB7QBdHF, Table8:  id: 106992,  name： geo表_点6景点
+    def getPoisTable8(self):
+        
+        #地铁数据
+        file_write = open('geodatainitTable8Scenic.csv', 'w')
+        file_write.write("title,longitude,latitude,coord_type,type2,weight2,url,ak,geotable_id\n".encode("gb2312")) 
+        for i in range(80):
+            context = '/geosearch/v3/nearby?geotable_id=57350&ak=CF2fbb818a53d5ef10e702dadf5495e6&location=116.404772,39.938644&radius=10000000&page_size=50&sortby=distance:1&page_index=' + str(i)
+            result = getRequest("api.map.baidu.com", context)
+            resultJsonObject = json.loads(result)
+            
+            for j in range(len(resultJsonObject['contents'])):
+                try:
+                    title = resultJsonObject['contents'][j]['title'].encode('gb2312')
+                    longitude = str(resultJsonObject['contents'][j]['location'][0])
+                    latitude = str(resultJsonObject['contents'][j]['location'][1])
+                    coord_type = str(resultJsonObject['contents'][j]['coord_type'])
+                    
+                    type2 = str(random.randint(0, 3))
+                    weight2 = str(random.randint(0, 10))
+                    url = resultJsonObject['contents'][j]['url']
+                    item = title + ',' + longitude + ',' + latitude + ',' + coord_type + ',' + type2 + ',' + weight2 + ',' + url + ',Ow5fqi6DQXmgD5PGSB7QBdHF,106992' + '\n'
+                    file_write.writelines(item)
+                except:
+                    continue
+        file_write.close(); 
             
                    
 def getRequest(requestUrl,context):
@@ -143,5 +171,6 @@ if __name__ == '__main__':
     #analyser.analyzelogfolder('Z:\\logs')
 #     parser.analyzelog('D:\\document\\ftp\\lighttpd.log.wf.2014081310')
 #     parser.analyzelog('Z:\\logs\\lighttpd.log.2015031815')
-    parser.getPoisTable7()
+#     parser.getPoisTable7()
+    parser.getPoisTable8()
     pass
