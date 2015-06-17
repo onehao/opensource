@@ -14,6 +14,11 @@ import time
 import timer
 
 import lbslogger
+from matplotlib.backends.backend_pgf import writeln
+
+import sys 
+reload(sys) 
+sys.setdefaultencoding('utf8') 
 
 
 class APIUserParser(object):
@@ -153,6 +158,54 @@ class APIUserParser(object):
                 except:
                     continue
         file_write.close(); 
+        
+        
+    def getPoisTable10(self):
+        
+        #地铁数据
+        file_write = open('geodatainitTable10.csv', 'w')
+        #getting data from url list
+#         urls = 
+        file_write.write("title,longitude,latitude,coord_type,view_count,going_count,gone_count,scene_layer,score,tags,desc,star,ak,geotable_id\n".encode("gb2312")) 
+        contexts = ['/geosearch/v2/nearby123?q=&coord_type=3&location=116.3734,39.932764&radius=500000&sortby=view_count:-1&page_size=50&ak=ojwqHSG8FIulDpM5SSVV6G0F&geotable_id=48349&page_index=0',
+                    '/geosearch/v2/nearby123?q=&coord_type=3&location=115.8,28.68&radius=500000000&sortby=view_count:-1&page_size=50&ak=ojwqHSG8FIulDpM5SSVV6G0F&geotable_id=48349&page_index=0',
+                    '/geosearch/v2/nearby123?q=&coord_type=3&location=-100.815888,39.893803&radius=1000000&sortby=view_count:-1&page_size=50&ak=ojwqHSG8FIulDpM5SSVV6G0F&geotable_id=48349&page_index=0']
+        
+        for context in contexts:
+#             context = '/geosearch/v2/nearby123?q=&coord_type=3&location=115.8,28.68&radius=500000000&sortby=view_count:-1&page_size=50&ak=ojwqHSG8FIulDpM5SSVV6G0F&geotable_id=48349&page_index=0'
+            result = getRequest("api.map.baidu.com", context)
+            resultJsonObject = json.loads(result)
+            total = resultJsonObject['total']
+            pages = total/50 + 1;
+            
+            for i in range(pages):
+                context = context[:-1] + str(i)
+                result = getRequest("api.map.baidu.com", context)
+                resultJsonObject = json.loads(result)
+                
+                for j in range(len(resultJsonObject['contents'])):
+                    try:
+                        title = resultJsonObject['contents'][j]['title'].encode('gb2312')
+                        longitude = str(resultJsonObject['contents'][j]['location'][0])
+                        latitude = str(resultJsonObject['contents'][j]['location'][1])
+                        coord_type = str(resultJsonObject['contents'][j]['coord_type'])
+                        
+                        view_count = str(resultJsonObject['contents'][j]['view_count'])
+                        going_count = str(resultJsonObject['contents'][j]['going_count'])
+                        tags = str(resultJsonObject['contents'][j]['tags'])
+                        gone_count = str(resultJsonObject['contents'][j]['gone_count'])
+                        scene_layer = str(resultJsonObject['contents'][j]['scene_layer'])
+                        score = str(resultJsonObject['contents'][j]['score'])
+                        desc = ''.join(resultJsonObject['contents'][j]['desc'].decode('utf8').encode('gb2312').split())
+#                         desc = ''.join(resultJsonObject['contents'][j]['desc'].split())
+                        desc = desc.replace(',', '')
+                        star = str(resultJsonObject['contents'][j]['star'])
+    
+                        item = title + ',' + longitude + ',' + latitude + ',' + coord_type + ',' + view_count + ',' + going_count + ',' + gone_count + ',' + scene_layer + ','+ score + ',' + tags + ',' + desc + ','+ star +  ',Ow5fqi6DQXmgD5PGSB7QBdHF,106994' + '\n'
+                        file_write.writelines(item)
+                    except Exception as e:
+                        continue
+        file_write.close(); 
             
                    
 def getRequest(requestUrl,context):
@@ -172,5 +225,6 @@ if __name__ == '__main__':
 #     parser.analyzelog('D:\\document\\ftp\\lighttpd.log.wf.2014081310')
 #     parser.analyzelog('Z:\\logs\\lighttpd.log.2015031815')
 #     parser.getPoisTable7()
-    parser.getPoisTable8()
+    parser.getPoisTable10()
+
     pass
