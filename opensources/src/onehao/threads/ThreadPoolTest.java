@@ -35,20 +35,20 @@ public class ThreadPoolTest {
 		}
 		System.out.println("all of 10 tasks have committed.");
 		threadPool.shutdown();
-		
-		Executors.newScheduledThreadPool(3).schedule(new Runnable(){
+
+		Executors.newScheduledThreadPool(3).schedule(new Runnable() {
 			@Override
 			public void run() {
 				System.out.println("bombing!");
-				
+
 			}
 		}, 10, TimeUnit.SECONDS);
-		
-		Executors.newScheduledThreadPool(3).scheduleAtFixedRate(new Runnable(){
+
+		Executors.newScheduledThreadPool(3).scheduleAtFixedRate(new Runnable() {
 			@Override
 			public void run() {
 				System.out.println("bombing!");
-				
+
 			}
 		}, 10, 2, TimeUnit.SECONDS);
 	}

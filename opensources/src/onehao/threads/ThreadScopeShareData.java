@@ -43,7 +43,7 @@ public class ThreadScopeShareData {
 				int data = threadData.get(Thread.currentThread());
 				System.out.println("B from " + Thread.currentThread().getName()
 						+ " has get data : " + data);
-			}else {
+			} else {
 				System.out.println("B: the key hasn't been added yet.");
 			}
 		}

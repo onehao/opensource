@@ -5,8 +5,7 @@ package onehao.threads;
  * 
  * 如果每个线程执行的代码相同，可以使用同一个Runnable对象，这个Runnable对象中那个共享数据。例如， 买票系统可以这么做。
  * 
- * 如果执行代码不同，如本例，需要两个run方法。 
- * 1.将共享数据封装在另外一个对象中，然后将这个对象逐一传递给各个Runnable对象。
+ * 如果执行代码不同，如本例，需要两个run方法。 1.将共享数据封装在另外一个对象中，然后将这个对象逐一传递给各个Runnable对象。
  * 2.将Runnable对象作为某一个类中的内部类，共享数据作为这个外部类中的成员变量。
  * 
  * @author Michael Wan
@@ -14,13 +13,14 @@ package onehao.threads;
  */
 public class MultiThreadShareData {
 	private static ShareData1 data3 = new ShareData1();
+
 	public static void main(String[] args) {
 		final ShareData1 data2 = new ShareData1();
 		final ShareData1 data1 = new ShareData1();
-		
+
 		new Thread(new MyRunnable1(data2)).start();
 		new Thread(new MyRunnable2(data2)).start();
-		
+
 		new Thread(new Runnable() {
 			@Override
 			public void run() {

@@ -20,7 +20,8 @@ public class ThreadLocalTest {
 					// mydata.setName("name" + dataa);
 					// mydata.setAge(dataa);
 					// myThreadScopeData.set(mydata);
-					MyThreadScopeData.getThreadInstance().setName("name" + dataa);
+					MyThreadScopeData.getThreadInstance().setName(
+							"name" + dataa);
 					MyThreadScopeData.getThreadInstance().setAge(dataa);
 					new A().get();
 					new B().get();
@@ -56,9 +57,9 @@ public class ThreadLocalTest {
 			// MyThreadScopeData mydata = myThreadScopeData.get();
 			// System.out.println("B from " + mydata.getName() + "," +
 			// mydata.getAge());
-//			MyThreadScopeData mydata = MyThreadScopeData.getInstance();
-//			System.out.println("B from " + mydata.getName() + ","
-//					+ mydata.getAge());
+			// MyThreadScopeData mydata = MyThreadScopeData.getInstance();
+			// System.out.println("B from " + mydata.getName() + ","
+			// + mydata.getAge());
 			MyThreadScopeData myData = MyThreadScopeData.getThreadInstance();
 			System.out
 					.println("B from " + Thread.currentThread().getName()

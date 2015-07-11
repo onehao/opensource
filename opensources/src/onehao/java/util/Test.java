@@ -13,10 +13,8 @@ import java.util.List;
 @SuppressWarnings("serial")
 public class Test implements Serializable {
 
-
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws IOException, Exception {
-
 
 		ArrayList<String> list = new ArrayList<String>();
 
@@ -64,51 +62,46 @@ public class Test implements Serializable {
 		temp = list.toArray(c);
 
 		temp = list.toArray(new String[1]);
-		//temp = list.toArray(null);
+		// temp = list.toArray(null);
 
 		// resize
 		((ArrayList<String>) list).trimToSize();
 
 		String[] strings = {};
 
-		//strings[10] = "a";
+		// strings[10] = "a";
 
 		List<String> list3 = new ArrayList<String>();
-		
+
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
 		ObjectOutputStream out = new ObjectOutputStream(stream);
-		
+
 		out.writeObject(list);
-		
-		
+
 		out.close();
-		
-		
-		
+
 		InputStream instream = new ByteArrayInputStream(stream.toByteArray());
 		ObjectInputStream in = new ObjectInputStream(instream);
-		
-		list3 = (ArrayList<String>)in.readObject();
+
+		list3 = (ArrayList<String>) in.readObject();
 
 	}
 
 	Object[] elementData = new Object[3];
 
-//	@SuppressWarnings("unchecked")
-//	E elementData(int index) {
-//		return (E) elementData[index];
-//	}
-	
-	public static native void arraycopy(Object src,  int  srcPos,
-            Object dest, int destPos,
-            int length);
-	
+	// @SuppressWarnings("unchecked")
+	// E elementData(int index) {
+	// return (E) elementData[index];
+	// }
+
+	public static native void arraycopy(Object src, int srcPos, Object dest,
+			int destPos, int length);
+
 	public static native boolean createFileExclusively(String path)
-            throws IOException;
-	
-	
-	public static native void CreateFile(String lpFileName, int dwDesiredAccess,int dwShareMode, Object lpSecurityAttributes,
-			  int dwCreationDisposition,
-			  int dwFlagsAndAttributes,
-			  Object hTemplateFile);
+			throws IOException;
+
+	public static native void CreateFile(String lpFileName,
+			int dwDesiredAccess, int dwShareMode, Object lpSecurityAttributes,
+			int dwCreationDisposition, int dwFlagsAndAttributes,
+			Object hTemplateFile);
 }

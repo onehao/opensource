@@ -46,7 +46,7 @@ class Business {
 	private boolean isSub = true;
 
 	public synchronized void sub(int j) {
-		while(!isSub){ //or if(!isSub)
+		while (!isSub) { // or if(!isSub)
 			try {
 				this.wait();
 			} catch (InterruptedException e) {
@@ -56,15 +56,15 @@ class Business {
 		}
 
 		for (int i = 0; i < 10; i++) {
-			System.out.println("sub thread sequence of " + i + ", loop of "
-					+ j);
+			System.out
+					.println("sub thread sequence of " + i + ", loop of " + j);
 		}
 		isSub = !isSub;
 		this.notify();
 	}
 
 	public synchronized void main(int j) {
-		while (isSub) { //or if(!isSub) 推荐使用while防止伪唤醒。
+		while (isSub) { // or if(!isSub) 推荐使用while防止伪唤醒。
 			try {
 				this.wait();
 			} catch (InterruptedException e) {
@@ -73,8 +73,8 @@ class Business {
 			}
 		}
 		for (int i = 1; i <= 100; i++) {
-			System.out.println("main thread sequence of " + i
-					+ ", loop of " + j);
+			System.out.println("main thread sequence of " + i + ", loop of "
+					+ j);
 		}
 		isSub = !isSub;
 		this.notify();

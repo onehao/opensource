@@ -6,31 +6,33 @@ import java.util.TimerTask;
 
 /***
  * more please refer to the JAVA quartz lib.
+ * 
  * @author Michael Wan
  *
  */
 public class TraditionalTimerTest {
-	
+
 	private static int count = 0;
+
 	public static void main(String[] args) {
-		
-//		new Timer().schedule(new TimerTask(){
-//			@Override
-//			public void run() {
-//				System.out.println("Invoking!!!!");
-//			}
-//		}, 10000, 3000);
-		class MyTimerTask extends TimerTask{
+
+		// new Timer().schedule(new TimerTask(){
+		// @Override
+		// public void run() {
+		// System.out.println("Invoking!!!!");
+		// }
+		// }, 10000, 3000);
+		class MyTimerTask extends TimerTask {
 			@Override
 			public void run() {
 				count = (count + 1) % 2;
 				System.out.println("Invoking~~~~~~~~");
-				new Timer().schedule(new MyTimerTask(), 2000 + 2000*count);
+				new Timer().schedule(new MyTimerTask(), 2000 + 2000 * count);
 			}
 		}
 		new Timer().schedule(new MyTimerTask(), 2000);
-		
-		while(true){
+
+		while (true) {
 			System.out.println(new Date().getSeconds());
 			try {
 				Thread.sleep(1000);
@@ -39,8 +41,7 @@ public class TraditionalTimerTest {
 				e.printStackTrace();
 			}
 		}
-			
-	}
-	
-}
 
+	}
+
+}
