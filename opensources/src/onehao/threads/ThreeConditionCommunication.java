@@ -59,7 +59,6 @@ public class ThreeConditionCommunication {
 		Condition condition3 = lock.newCondition();
 		private int isSub = 1;
 
-		
 		public/* synchronized */void sub2(int j) {
 			lock.lock();
 			try {
@@ -84,7 +83,7 @@ public class ThreeConditionCommunication {
 				lock.unlock();
 			}
 		}
-		
+
 		public/* synchronized */void sub3(int j) {
 			lock.lock();
 			try {

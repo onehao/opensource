@@ -6,6 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /***
  * ref from jdk document.
+ * 
  * @author Michael Wan.
  *
  */

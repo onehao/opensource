@@ -4529,6 +4529,7 @@ public final class MyFormatter implements Closeable, Flushable {
 		// (Sat Nov 04 12:02:33 EST 1999)
 		static final char DATE = 'D'; // (mm/dd/yy)
 		static final char ISO_STANDARD_DATE = 'F'; // (%Y-%m-%d)
+
 		// * static final char LOCALE_DATE = 'x'; // (mm/dd/yy)
 
 		static boolean isValid(char c) {

@@ -56,8 +56,8 @@ public class CallableAndFuture {
 				}
 			});
 		}
-		
-		for(int i = 0; i < 10; i++){
+
+		for (int i = 0; i < 10; i++) {
 			try {
 				System.out.println(completionService.take().get());
 			} catch (InterruptedException | ExecutionException e) {
