@@ -47,11 +47,12 @@ public class BlockingQueueCommunication {
 		// }
 		// new Thread().start();
 	}
+
 	static class Business {
 		BlockingQueue<Integer> queue1 = new ArrayBlockingQueue<Integer>(1);
 		BlockingQueue<Integer> queue2 = new ArrayBlockingQueue<Integer>(1);
-		
-		//匿名构造方法。运行在任何构造方法之前。
+
+		// 匿名构造方法。运行在任何构造方法之前。
 		{
 			try {
 				queue2.put(1);
@@ -60,18 +61,19 @@ public class BlockingQueueCommunication {
 				e.printStackTrace();
 			}
 		}
+
 		public void sub(int j) {
 			try {
 				queue1.put(1);
-				
+
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
 			for (int i = 0; i < 10; i++) {
-				System.out
-						.println("sub thread sequence of " + i + ", loop of " + j);
+				System.out.println("sub thread sequence of " + i + ", loop of "
+						+ j);
 			}
 			try {
 				queue2.take();
@@ -89,8 +91,8 @@ public class BlockingQueueCommunication {
 				e.printStackTrace();
 			}
 			for (int i = 1; i <= 100; i++) {
-				System.out.println("main thread sequence of " + i + ", loop of "
-						+ j);
+				System.out.println("main thread sequence of " + i
+						+ ", loop of " + j);
 			}
 			try {
 				queue1.take();
@@ -102,4 +104,3 @@ public class BlockingQueueCommunication {
 	}
 
 }
-
