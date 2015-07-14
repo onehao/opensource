@@ -34,7 +34,6 @@ public class Test extends Thread {
 		b.start();
 		c.start();
 		d.start();
-
 	}
 
 	public void run() {
