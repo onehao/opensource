@@ -1,7 +1,5 @@
 package syn;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 //不能改动此Test类	
@@ -53,28 +51,30 @@ class TestDo {
 	}
 
 	// private ArrayList keys = new ArrayList();
-	private CopyOnWriteArrayList keys = new CopyOnWriteArrayList();
+	private CopyOnWriteArrayList<String> keys = new CopyOnWriteArrayList<String>();
 
 	public void doSome(Object key, String value) {
-		Object o = key;
+		String o = ((String) key).intern();
 		if (!keys.contains(o)) {
 			keys.add(o);
-		} else {
-
-			for (Iterator iter = keys.iterator(); iter.hasNext();) {
-				try {
-					Thread.sleep(20);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				Object oo = iter.next();
-				if (oo.equals(o)) {
-					o = oo;
-					break;
-				}
-			}
-		}
+		} 
+//		else {
+//			
+//
+//			for (Iterator<String> iter = keys.iterator(); iter.hasNext();) {
+//				try {
+//					Thread.sleep(20);
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//				String oo = iter.next();
+//				if (oo.equals(o)) {
+//					o = oo;
+//					break;
+//				}
+//			}
+//		}
 		synchronized (o)
 		// 以大括号内的是需要局部同步的代码，不能改动!
 		{
