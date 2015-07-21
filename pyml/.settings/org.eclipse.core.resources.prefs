@@ -4,6 +4,7 @@
 eclipse.preferences.version=1
 encoding//crawler/2ndfun_email_tracker.py=utf-8
 encoding//crawler/__init__.py=utf-8
+encoding//crawler/career_tracker.py=utf-8
 encoding//crawler/lbs_forum.py=utf-8
 encoding//crawler/lbs_forum_email_tracker.py=utf-8
 encoding//crawler/minispider/SpiderConfigParser.py=utf-8
