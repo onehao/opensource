@@ -75,18 +75,20 @@ def getByrPositions(urls,title):
         matchTitle = patternTitle.findall(m)
         
         print(len(match))
+        print(len(matchTitle))
         crawler.logger.info(match)
         for i in range(0,len(match)-1):
             try:
                 match[i] = match[i].replace("<td class=\"title_9\">","")
                 match[i] = match[i].replace("</td>","")
-                matchTitle[1 + 2*(i+1)] = matchTitle[1 + 2*(i+1)].replace("<td class=\"title_10\">","")
-                matchTitle[1 + 2*(i+1)] = matchTitle[i].replace("</td>","")
+                matchTitle[i*2] = matchTitle[i*2].replace("<td class=\"title_10\">","")
+                matchTitle[i*2] = matchTitle[i*2].replace("</td>","")
                 
-                result += match[i].decode("GB2312") + ' ----- ' + '' + "<br />"
+                result += match[i].decode("GB2312") + ' ----- ' + matchTitle[i] + "<br />"
             except:
                 continue
     result = result.replace('/article', 'http://bbs.byr.cn/article')
+    print(result)
     if send_mail(mailto_list, 'BYR _ ' + title+"_"+ time.strftime("%Y-%m-%d", time.localtime()), result):
         crawler.logger.info("发送成功".decode('utf8'))
     else:  

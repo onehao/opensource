@@ -28,22 +28,10 @@ from crawler.myemail import send_mail
 crawler.logger.info(sys.getdefaultencoding())
 mailto_list=['onehaojacket@gmail.com', 'wanhao01@baidu.com'] 
 
-# class MyHTTPRedirectHandler(urllib2.HTTPRedirectHandler):
-#     def http_error_302(self, req, fp, code, msg, headers):
-#         print "Cookie Manip Right Here"
-#         return urllib2.HTTPRedirectHandler.http_error_302(self, req, fp, code, msg, headers)
-# 
-#     http_error_301 = http_error_303 = http_error_307 = http_error_302
-
-
 def getByrPositions(urls,title):
     result = ""
     result2 = []
     crawler.logger.info("test")
-#     cookieprocessor = urllib2.HTTPCookieProcessor()
-# 
-#     opener = urllib2.build_opener(MyHTTPRedirectHandler, cookieprocessor)
-#     urllib2.install_opener(opener)
 
     #section pattern for posts
     pattern = re.compile('<td class=\"title_9\">.*?</td>',re.DOTALL)
@@ -68,7 +56,7 @@ def getByrPositions(urls,title):
 
         urlopen = urllib2.urlopen(req)
         m = urlopen.read()
-        m = zlib.decompress(m, 16+zlib.MAX_WBITS);
+        #m = zlib.decompress(m, 16+zlib.MAX_WBITS);
         print(m)
         # 将正则表达式编译成Pattern对象
 
@@ -96,13 +84,7 @@ def getByrPositions(urls,title):
         crawler.logger.error('发送失败'.decode('utf8'))
       
 
-byrUrls = ['http://bbs.byr.cn/s/article?t1=%25E6%25B5%258B%25E8%25AF%2595&au=&b=JobInfo' #test
+byrUrls = ['http://api.map.baidu.com/geodata/v3/poi/detail?geotable_id=106994&ak=Ow5fqi6DQXmgD5PGSB7QBdHF&id=949366265',
+           'http://api.map.baidu.com/geodata/v3/poi/detail?geotable_id=106994&id=949366265' #test
            ]
 getByrPositions(byrUrls, 'BYR - QA')
-# m58urlsHTC = ['http://bj.58.com/changping/htc/pve_5537_101_200/?PGTID=14241570060020.31668903841637075&ClickID=2','http://bj.58.com/haidian/htc/pve_5537_101_200/?PGTID=14241570096550.9543016497045755&ClickID=2']
-# getNewsmthPositions(m58urlsHTC,'58.com -- HTC')
-# ganjiurls = ['http://bj.ganji.com/mi/changping/p2/?p=','http://bj.ganji.com/mi/changping/p2/?p=']
-# getGanjiItems(ganjiurls,"ganjiMIUI",2)
-# ganjiurlsHTC = ['http://bj.ganji.com/htc/haidian/p2/', 'http://bj.ganji.com/htc/changping/p2/']
-# getGanjiItems(ganjiurlsHTC,"ganjiHTC",2)
-#raw_input()
