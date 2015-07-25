@@ -75,7 +75,7 @@ def getGanjiItems(urls,title,page):
     #send_mail(mailto_list, 'LBS WEB API forum _2' + time.strftime("%Y-%m-%d", time.localtime()), result2)
     
     
-def get58Items(urls,title):
+def getNewsmthPositions(urls,title):
     #url = 'http://bbs.lbsyun.baidu.com/forum.php?mod=forumdisplay&fid=7&page='
     result = ""
     result2 = []
@@ -122,10 +122,10 @@ def get58Items(urls,title):
     else:  
         crawler.logger.error('发送失败'.decode('utf8'))
         
-m58urlsMIUI = ['http://bj.58.com/xiaomi/pve_5537_101_200/?PGTID=14241553799050.06778648379258811&ClickID=2','http://bj.58.com/haidian/xiaomi/pve_5537_101_200/?PGTID=14241558490290.5991021553054452&ClickID=2','http://bj.58.com/changping/xiaomi/pve_5537_101_200/?PGTID=14241568309340.7953142840415239&ClickID=2']
-get58Items(m58urlsMIUI,'58.com -- MIUI')
+smthUrls = ['http://bj.58.com/xiaomi/pve_5537_101_200/?PGTID=14241553799050.06778648379258811&ClickID=2','http://bj.58.com/haidian/xiaomi/pve_5537_101_200/?PGTID=14241558490290.5991021553054452&ClickID=2','http://bj.58.com/changping/xiaomi/pve_5537_101_200/?PGTID=14241568309340.7953142840415239&ClickID=2']
+getNewsmthPositions(smthUrls,'58.com -- MIUI')
 m58urlsHTC = ['http://bj.58.com/changping/htc/pve_5537_101_200/?PGTID=14241570060020.31668903841637075&ClickID=2','http://bj.58.com/haidian/htc/pve_5537_101_200/?PGTID=14241570096550.9543016497045755&ClickID=2']
-get58Items(m58urlsHTC,'58.com -- HTC')
+getNewsmthPositions(m58urlsHTC,'58.com -- HTC')
 ganjiurls = ['http://bj.ganji.com/mi/changping/p2/?p=','http://bj.ganji.com/mi/changping/p2/?p=']
 getGanjiItems(ganjiurls,"ganjiMIUI",2)
 ganjiurlsHTC = ['http://bj.ganji.com/htc/haidian/p2/', 'http://bj.ganji.com/htc/changping/p2/']
