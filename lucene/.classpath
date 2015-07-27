@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="libs/lucene-analyzers-common-5.2.1.jar"/>
+	<classpathentry kind="lib" path="libs/lucene-analyzers-smartcn-5.2.1.jar"/>
+	<classpathentry kind="lib" path="libs/lucene-core-5.2.1.jar" sourcepath="C:/Users/Administrator/.m2/repository/org/apache/lucene/lucene-core/5.2.1/lucene-core-5.2.1-sources.jar"/>
+	<classpathentry kind="lib" path="libs/lucene-highlighter-5.2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
