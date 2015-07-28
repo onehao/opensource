@@ -158,7 +158,6 @@ public class KthLargest {
 		tree = new TreeSet<Integer>(new Comparator<Integer>(){
 			@Override
 			public int compare(Integer o1, Integer o2) {
-				// TODO Auto-generated method stub
 				if(o1 > o2){
 					return 1;
 				}else{
@@ -168,11 +167,11 @@ public class KthLargest {
 		});
 		
 		for (int num : nums) {
-			// store in a min heap with max size K.
+			// store in a R-B tree with max size K.
 			if (tree.size() < k) {
 				tree.add(num);
 			} else {
-				// replace the head of the min heap, if the present element is
+				// replace the head of the R-B tree, if the present element is
 				// larger than the head.
 				if (tree.first() < num) {
 					tree.pollFirst();
@@ -198,7 +197,6 @@ public class KthLargest {
 		skipList = new ConcurrentSkipListSet<Integer>(new Comparator<Integer>(){
 			@Override
 			public int compare(Integer o1, Integer o2) {
-				// TODO Auto-generated method stub
 				if(o1 > o2){
 					return 1;
 				}else{
@@ -208,11 +206,11 @@ public class KthLargest {
 		});
 		
 		for (int num : nums) {
-			// store in a min heap with max size K.
+			// store in a skip list with max size K.
 			if (skipList.size() < k) {
 				skipList.add(num);
 			} else {
-				// replace the head of the min heap, if the present element is
+				// replace the head of the skip list, if the present element is
 				// larger than the head.
 				if (skipList.first() < num) {
 					skipList.pollFirst();
