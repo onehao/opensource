@@ -1,6 +1,5 @@
 package michael.leetcode;
 
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 
 /**
@@ -16,39 +15,64 @@ import java.util.LinkedHashMap;
  * @author Michael Wan.
  *
  */
-public class LRUCache {
+public class LRUCache extends LinkedHashMap<Integer, Integer>{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2192443559249456884L;
+
 	// define a LinkedhashMap which store the key stored and used sequence.
 	LinkedHashMap<Integer, Integer> map;
 
 	private int capacity;
 
 	public LRUCache(int capacity) {
+		super(capacity, 0.075F, true);
 		this.capacity = capacity;
-		map = new LinkedHashMap<Integer, Integer>(capacity, 0.75F, true);
+		
+		//map = new LinkedHashMap<Integer, Integer>(capacity, 0.75F, true);
+	}
+	
+	public int get(int key){
+		Integer result = super.get(key);
+		return result == null ? -1 : result;
+	}
+	
+	public void set(int key, int value){
+		super.put(key, value);
 	}
 
-	public int get(int key) {
-		if (!map.containsKey(key)) {
-			return -1;
-		}
-		return map.get(key);
-	}
+//	public int get(int key) {
+//		if (!map.containsKey(key)) {
+//			return -1;
+//		}
+//		return map.get(key);
+//	}
 
-	public void set(int key, int value) {
-		// When add a new key, remove the les
-		if (map.size() == this.capacity && !map.containsKey(key)) {
-			removeLeast();
-		}
-		map.put(key, value);
-		// get to make the added key last used.
-		map.get(key);
-	}
-
-	// remove the least recently used key controlled by the map.
-	private void removeLeast() {
-		Iterator<Integer> iterator = map.keySet().iterator();
-		int last = iterator.next();
-		map.remove(last);
+//	public void set(int key, int value) {
+//		// When add a new key, remove the les
+//		if (map.size() == this.capacity && !map.containsKey(key)) {
+//			removeLeast();
+//		}
+//		map.put(key, value);
+//		// get to make the added key last used.
+//		map.get(key);
+//	}
+//
+//	// remove the least recently used key controlled by the map.
+//	private void removeLeast() {
+//		Iterator<Integer> iterator = map.keySet().iterator();
+//		int last = iterator.next();
+//		map.remove(last);
+//	}
+	
+//	public void set(int key, int value){
+//		map.put(key, value);
+//	}
+	
+	@Override
+	protected boolean removeEldestEntry(java.util.Map.Entry<Integer,Integer> eldest) {
+		return map.size() > this.capacity;
 	}
 
 	public static void main(String[] args) {
