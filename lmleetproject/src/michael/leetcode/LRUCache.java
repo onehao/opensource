@@ -1,5 +1,6 @@
 package michael.leetcode;
 
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 
 /**
@@ -15,11 +16,7 @@ import java.util.LinkedHashMap;
  * @author Michael Wan.
  *
  */
-public class LRUCache extends LinkedHashMap<Integer, Integer>{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -2192443559249456884L;
+public class LRUCache{
 
 	// define a LinkedhashMap which store the key stored and used sequence.
 	LinkedHashMap<Integer, Integer> map;
@@ -27,52 +24,33 @@ public class LRUCache extends LinkedHashMap<Integer, Integer>{
 	private int capacity;
 
 	public LRUCache(int capacity) {
-		super(capacity, 0.075F, true);
 		this.capacity = capacity;
-		
-		//map = new LinkedHashMap<Integer, Integer>(capacity, 0.75F, true);
-	}
-	
-	public int get(int key){
-		Integer result = super.get(key);
-		return result == null ? -1 : result;
-	}
-	
-	public void set(int key, int value){
-		super.put(key, value);
+
+		map = new LinkedHashMap<Integer, Integer>(capacity, 0.75F, true);
 	}
 
-//	public int get(int key) {
-//		if (!map.containsKey(key)) {
-//			return -1;
-//		}
-//		return map.get(key);
-//	}
+	public int get(int key) {
+		if (!map.containsKey(key)) {
+			return -1;
+		}
+		return map.get(key);
+	}
 
-//	public void set(int key, int value) {
-//		// When add a new key, remove the les
-//		if (map.size() == this.capacity && !map.containsKey(key)) {
-//			removeLeast();
-//		}
-//		map.put(key, value);
-//		// get to make the added key last used.
-//		map.get(key);
-//	}
-//
-//	// remove the least recently used key controlled by the map.
-//	private void removeLeast() {
-//		Iterator<Integer> iterator = map.keySet().iterator();
-//		int last = iterator.next();
-//		map.remove(last);
-//	}
-	
-//	public void set(int key, int value){
-//		map.put(key, value);
-//	}
-	
-	@Override
-	protected boolean removeEldestEntry(java.util.Map.Entry<Integer,Integer> eldest) {
-		return map.size() > this.capacity;
+	public void set(int key, int value) {
+		// When add a new key, remove the les
+		if (map.size() == this.capacity && !map.containsKey(key)) {
+			removeLeast();
+		}
+		map.put(key, value);
+		// get to make the added key last used.
+		map.get(key);
+	}
+
+	// remove the least recently used key controlled by the map.
+	private void removeLeast() {
+		Iterator<Integer> iterator = map.keySet().iterator();
+		int last = iterator.next();
+		map.remove(last);
 	}
 
 	public static void main(String[] args) {
@@ -122,6 +100,42 @@ public class LRUCache extends LinkedHashMap<Integer, Integer>{
 		cache3.set(1, 1);
 		cache3.set(4, 1);
 		System.out.println(cache3.get(2));
+
+		// case4
+		LRUCache2<Integer, Integer> cache4 = new LRUCache2<Integer, Integer>(2);
+		cache4.set(2, 1);
+		cache4.set(2, 2);
+		System.out.println(cache4.get(2));
+		cache4.set(1, 1);
+		cache4.set(4, 1);
+		System.out.println(cache4.get(2));
 	}
 
+}
+
+class LRUCache2<K, V> extends LinkedHashMap<K, V> {
+	private static final long serialVersionUID = -2192443559249456884L;
+
+	private int capacity;
+
+	public LRUCache2(int capacity) {
+		super(capacity, 0.075F, true);
+		this.capacity = capacity;
+
+		// map = new LinkedHashMap<Integer, Integer>(capacity, 0.75F, true);
+	}
+	
+	public void set(K key, V value){
+		super.put(key, value);
+	}
+	
+	public V get(Object key){
+		V result = super.get(key);
+		return (V) (result == null ? -1 : result);
+	}
+
+	@Override
+	protected boolean removeEldestEntry(java.util.Map.Entry<K, V> eldest) {
+		return super.size() > this.capacity;
+	}
 }
