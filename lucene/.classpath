@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="lib/commons-beanutils-core-1.8.2.jar"/>
@@ -9,7 +10,6 @@
 	<classpathentry kind="lib" path="lib/db-4.7.25.jar"/>
 	<classpathentry kind="lib" path="lib/jakarta-regexp-1.5.jar"/>
 	<classpathentry kind="lib" path="lib/je-3.3.69.jar"/>
-	<classpathentry kind="lib" path="lib/junit-4.1.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-analyzers-3.0.2-dev.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-analyzers-3.0.2-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-analyzers-3.0.2.jar"/>
@@ -28,8 +28,8 @@
 	<classpathentry kind="lib" path="lib/lucene-collation-3.0.2-dev.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-collation-3.0.2-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-collation-3.0.2.jar"/>
-	<classpathentry kind="lib" path="lib/lucene-core-3.0.2-dev.jar"/>
-	<classpathentry kind="lib" path="lib/lucene-core-3.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-3.0.2-dev.jar" sourcepath="lib/lucene-core-3.1.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-3.0.2.jar" sourcepath="lib/lucene-core-3.1.0-sources.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-demos-3.0.2-dev.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-fast-vector-highlighter-3.0.2-dev.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-fast-vector-highlighter-3.0.2-javadoc.jar"/>
@@ -94,7 +94,6 @@
 	<classpathentry kind="lib" path="lib/nutch/hadoop-0.19.1-core.jar"/>
 	<classpathentry kind="lib" path="lib/nutch/lucene-core-2.4.0.jar"/>
 	<classpathentry kind="lib" path="lib/nutch/nutch-1.0.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="libs/lucene-analyzers-common-5.2.1.jar"/>
 	<classpathentry kind="lib" path="libs/lucene-analyzers-smartcn-5.2.1.jar"/>
 	<classpathentry kind="lib" path="libs/lucene-core-5.2.1.jar" sourcepath="C:/Users/Administrator/.m2/repository/org/apache/lucene/lucene-core/5.2.1/lucene-core-5.2.1-sources.jar"/>

@@ -58,6 +58,7 @@ public class Explainer {
       Document doc = searcher.doc(match.doc);
       System.out.println(doc.get("title"));
       System.out.println(explanation.toString());  //#B
+      System.out.println(explanation.toHtml());
     }
     searcher.close();
     directory.close();
