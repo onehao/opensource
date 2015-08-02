@@ -1,4 +1,4 @@
-package michael.leetcode;
+package michael.leetcode.linkedlist;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;

@@ -1,4 +1,4 @@
-package michael.leetcode;
+package michael.leetcode.stringarray;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

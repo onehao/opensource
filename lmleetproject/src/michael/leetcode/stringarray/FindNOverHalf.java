@@ -1,4 +1,4 @@
-package michael.leetcode;
+package michael.leetcode.stringarray;
 
 /**
  * Find the number in the array, that the occurrence is more than a half.
