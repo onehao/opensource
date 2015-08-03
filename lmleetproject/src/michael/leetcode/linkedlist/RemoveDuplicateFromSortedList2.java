@@ -22,22 +22,34 @@ public class RemoveDuplicateFromSortedList2 {
 		boolean isRemoveCurrent = false;
 		while (head.next != null) {
 			if (head.val == head.next.val) {
-				head.next = head.next.next;
+				head = head.next;
 				isRemoveCurrent = true;
 				continue;
 			}
-			if(!isRemoveCurrent){
+			if (!isRemoveCurrent) {
 				result.next = checkDup;
-			}else{
-				result.next = head.next;
+				checkDup = checkDup.next;
+
+				// when 2 duplicate element in the end of the list, make sure
+				// the previous element not append them.
+				result.next.next = null;
+			} else {
+				checkDup = head.next;
+				isRemoveCurrent = false;
+				head = checkDup;
+				continue;
 			}
+
 			result = result.next;
-			checkDup = head.next;
 			isRemoveCurrent = false;
 			head = checkDup;
-			
+
 		}
 
+		// remember to check last element after loop, for linked list.
+		if (!isRemoveCurrent) {
+			result.next = head;
+		}
 		return resultHead.next;
 	}
 
