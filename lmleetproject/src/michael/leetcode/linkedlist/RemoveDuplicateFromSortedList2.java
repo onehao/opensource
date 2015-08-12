@@ -81,6 +81,52 @@ public class RemoveDuplicateFromSortedList2 {
         
         return resultHead.next;
     }
+    
+    // TODO: not correct yet.
+    public ListNode deleteDuplicates3(ListNode head) {
+        // do make sure to check boundaries.
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode result = new ListNode(0);
+        result.next = head;
+        ListNode resultHead = result.next;
+        while(result.next != null && result.next.next != null){
+            //duplicate
+            if(result.val == result.next.val){
+                while(result.next != null && result.next.val == result.val){
+                    result.next = result.next.next;
+                }
+                
+            }else{
+//                result.next = result.next.next;
+//                result = result.next;
+            	result = result.next;
+            }
+        }
+        
+        return resultHead.next;
+    }
+    
+    public ListNode deleteDuplicates4(ListNode head) {
+        ListNode t = new ListNode(0);
+        t.next = head;
+     
+        ListNode p = t;
+        while(p.next!=null&&p.next.next!=null){
+            if(p.next.val == p.next.next.val){
+                int dup = p.next.val;
+                while(p.next!=null&&p.next.val==dup){
+                    p.next = p.next.next;
+                }
+            }else{
+                p=p.next;
+            }
+     
+        }
+     
+        return t.next;
+    }
 
     public static void main(String[] args) {
         ListNode node1 = new ListNode(1);
@@ -91,7 +137,7 @@ public class RemoveDuplicateFromSortedList2 {
         ListNode node6 = (node5.next = new ListNode(6));
 
         ListNode recorderList = new RemoveDuplicateFromSortedList2()
-                .deleteDuplicates2(node1);
+                .deleteDuplicates3(node1);
         printNode(recorderList);
 
     }
