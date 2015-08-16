@@ -1,4 +1,4 @@
-package linda.leetcode;
+package michael.leetcode.basestructure;
 
 public class TreeNode {
 		int val;
