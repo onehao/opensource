@@ -1,5 +1,5 @@
 package com.onehao.demo;
-import static spark.Spark.get;
+import static spark.Spark.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,8 +9,13 @@ import java.util.Map;
 public class HelloWorld {
     public static void main(String[] args) {
         get("/hello", (req, res) -> "Hello World");
+        put("/hello", (req, res) -> "Hello World");
         
-        get("/hellojson", (req, res) ->  new MyMessage("Hello World"), new JsonTransformer());
+        get("/hellojson", "application/json", (req, res) ->  {
+        	res.type("application/json");
+        	return new MyMessage("Hello World");
+        }, new JsonTransformer());
+        get("/hellojson2", "text/json", (req, res) ->  new MyMessage("Hello World"), new JsonTransformer());
     }
 }
 
