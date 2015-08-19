@@ -20,7 +20,13 @@ public class MinimumDepthOfBinaryTree {
 		if(root == null){
 			return 0;
 		}
-		return Math.min(minDepth(root.left) + 1, minDepth(root.right) + 1);
+		if(root.left == null){
+			return getMinDepth(root.right) + 1;
+		}
+		if(root.right == null){
+			return getMinDepth(root.left) + 1;
+		}
+		return Math.min(getMinDepth(root.left) + 1, getMinDepth(root.right) + 1);
 	}
 	
 	public static void main(String[] args) {
