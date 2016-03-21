@@ -14,14 +14,12 @@ import re
 import string, urllib2
 import sys
 import time
-import crawler
-from crawler.myemail import send_mail
+
 
 
 #http://www.pythoner.com/200.html
 #运行时没问题， 但是编译有有错误提示， 可以忽略。  
 #sys.setdefaultencoding('utf8')
-crawler.logger.info(sys.getdefaultencoding())
 mailto_list=["wanhao01@baidu.com", 'onehaojacket@gmail.com','174823192@qq.com'] 
 
 
@@ -29,7 +27,6 @@ def get4PageForum(url,title):
     #url = 'http://bbs.lbsyun.baidu.com/forum.php?mod=forumdisplay&fid=7&page='
     result = ""
     result2 = []
-    crawler.logger.info("test")
     for i in range(1, 4):
         sName = string.zfill(i,5) #+ '.html'#自动填充成六位的文件名
         crawler.logger.info('正在下载第' + str(i) + '个网页，并将其存储为' + sName + '......')
