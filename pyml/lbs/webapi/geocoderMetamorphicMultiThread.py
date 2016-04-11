@@ -12,7 +12,6 @@ import threading
 import unittest
 
 import lbslogger
-<<<<<<< HEAD
 
 
 reload(sys)
