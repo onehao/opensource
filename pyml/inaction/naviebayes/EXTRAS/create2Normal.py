@@ -5,8 +5,11 @@ Created on Oct 6, 2010
 @author: Peter
 '''
 from numpy import *
+from random import random
+
 import matplotlib
 import matplotlib.pyplot as plt
+
 
 n = 1000 #number of points to create
 xcord0 = []
