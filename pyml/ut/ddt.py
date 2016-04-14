@@ -5,6 +5,12 @@
 # DDT is licensed under the MIT License, included in
 # https://github.com/txels/ddt/blob/master/LICENSE.md
 
+'''
+Created on 2016年4月14日
+
+@author: michael.wh
+'''
+
 import inspect
 import json
 import os
