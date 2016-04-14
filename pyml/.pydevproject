@@ -16,6 +16,7 @@
 <path>/${PROJECT_DIR_NAME}/crawler</path>
 <path>/${PROJECT_DIR_NAME}/crawler/scrapy</path>
 <path>/${PROJECT_DIR_NAME}/crawler/minispider</path>
+<path>/${PROJECT_DIR_NAME}/ut</path>
 </pydev_pathproperty>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 2.7</pydev_property>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">D:\Python27\python.exe</pydev_property>
