@@ -42,11 +42,12 @@ class UnicodeReader:
         filename = self.filename
         with open(filename, 'rb') as f:
             reader = csv.reader(f)
+            print('this is heading... ' + str(next(reader)))
             try:
                 for row in reader:
                     print row
-                    for cell in row:
-                        print cell
+#                     for cell in row:
+#                         print cell
             except csv.Error as e:
                 sys.exit('file %s, line %d: %s' % (filename, reader.line_num, e))
 
