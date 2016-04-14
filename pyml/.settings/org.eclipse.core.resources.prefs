@@ -28,6 +28,7 @@ encoding//crawler/scrapy/tutorial/spiders/dmoz_spider.py=utf-8
 encoding//crawler/sms/__init__.py=utf-8
 encoding//crawler/tieba.py=utf-8
 encoding//csv/UnicodeCsvParser.py=utf-8
+encoding//difflib/jsondiff.py=utf-8
 encoding//hackerrank/2ndfun_email_tracker.py=utf-8
 encoding//hackerrank/Whatsyourname.py=utf-8
 encoding//inaction/ch03/decisiontree/test.py=utf-8
