@@ -46,8 +46,8 @@ class UnicodeReader:
             try:
                 for row in reader:
                     print row
-#                     for cell in row:
-#                         print cell
+                    for cell in row:
+                        print cell
             except csv.Error as e:
                 sys.exit('file %s, line %d: %s' % (filename, reader.line_num, e))
 
