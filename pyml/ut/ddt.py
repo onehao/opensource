@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# This file is a part of DDT (https://github.com/txels/ddt)
-# Copyright 2012-2015 Carles Barrobés and DDT contributors
-# For the exact contribution history, see the git revision log.
-# DDT is licensed under the MIT License, included in
-# https://github.com/txels/ddt/blob/master/LICENSE.md
 '''
 Created on 2016年4月14日
 refactor from the Git project DDT (https://github.com/txels/ddt)
 add support for parsing excel 2010+(.xlsx) files as data source.
 @author: michael.wh
 '''
+# This file is a part of DDT (https://github.com/txels/ddt)
+# Copyright 2012-2015 Carles Barrobés and DDT contributors
+# For the exact contribution history, see the git revision log.
+# DDT is licensed under the MIT License, included in
+# https://github.com/txels/ddt/blob/master/LICENSE.md
 
 from functools import wraps
 import inspect
@@ -24,7 +24,7 @@ from openpyxl import load_workbook
 reload(sys)
 print sys.setdefaultencoding('utf-8')
 
-__version__ = '1.0.2'
+__version__ = '1.0.1'
 
 # These attributes will not conflict with any real python attribute
 # They are added to the decorated test method and processed later
@@ -176,13 +176,9 @@ def process_file_data(cls, name, func, file_attr):
         # 获取第一个worksheet作为数据源
         ws = wb.get_sheet_by_name(wb.get_sheet_names()[0])
         header = ws[1]
-        for i, elem in enumerate(ws.iter_rows(row_offset=2)):
-            #print('-------------------------')
-            #for j,v in enumerate(header):
-                #print(v.value + '-----' + elem[j].value)
-                
-            
-            #print('elem[1:3]' + str(elem[3].value))
+        for i, elem in enumerate(ws.iter_rows(row_offset=0)):
+            if i == 0:
+                continue
             key, value = header, elem
             test_name = mk_test_name(name, key, i)
             dict1 = [{header:elem}]
