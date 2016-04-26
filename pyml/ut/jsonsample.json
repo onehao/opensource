@@ -1,0 +1,18 @@
+[
+    {
+        "city": "010",
+        "keyword": "tian anmen",
+        "response": "天安门   4",
+        "test": "1"
+    },
+    {
+        "city": "0101",
+        "keyword": "tian anmen1",
+        "response": "天安门   41"
+    },
+    {
+        "city": "0102",
+        "keyword": "tian anmen2",
+        "response": "天安门   42"
+    }
+]

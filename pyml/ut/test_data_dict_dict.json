@@ -1,6 +1,6 @@
 {
     "positive_integer_range": {
-        "start": 0,
+        "start": ' ',
         "end": 2,
         "value": 1
     },

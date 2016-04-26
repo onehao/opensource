@@ -33,6 +33,7 @@ __version__ = '1.0.1'
 
 DATA_ATTR = '%values'      # store the data the test must run with
 FILE_ATTR = '%file_path'   # store the path to JSON file
+EXCEL_ATTR = '%excel_path'   # store the path to excel file
 UNPACK_ATTR = '%unpack'    # remember that we have to unpack values
 
 
@@ -72,7 +73,31 @@ def data(*values):
     return wrapper
 
 
-def file_data(value):
+def excel_data(value):
+    """
+    Method decorator to add to your test methods.
+
+    Should be added to methods of instances of ``unittest.TestCase``.
+
+    ``value`` should be a path relative to the directory of the file
+    containing the decorated ``unittest.TestCase``. The file
+    should contain JSON encoded data, that can either be a list or a
+    dict.
+
+    In case of a list, each value in the list will correspond to one
+    test case, and the value will be concatenated to the test method
+    name.
+
+    In case of a dict, keys will be used as suffixes to the name of the
+    test case, and values will be fed as test data.
+
+    """
+    def wrapper(func):
+        setattr(func, EXCEL_ATTR, value)
+        return func
+    return wrapper
+
+def json_data(value):
     """
     Method decorator to add to your test methods.
 
@@ -165,7 +190,7 @@ def rowToList(header):
         key.append(v.value)
     return key
 
-def process_file_data(cls, name, func, file_attr):
+def process_excel_data(cls, name, func, file_attr):
     """
     Process the parameter in the `file_data` decorator.
 
@@ -195,7 +220,33 @@ def process_file_data(cls, name, func, file_attr):
             tupleValue = key,value
             dict1 = {test_name: tupleValue}
             add_test(cls, test_name, func, dict1)
+            
+def process_file_data(cls, name, func, file_attr):
+    """
+    Process the parameter in the `file_data` decorator.
+    """
+    cls_path = os.path.abspath(inspect.getsourcefile(cls))
+    data_file_path = os.path.join(os.path.dirname(cls_path), file_attr)
 
+    def _raise_ve(*args):  # pylint: disable-msg=W0613
+        raise ValueError("%s does not exist" % file_attr)
+
+    if os.path.exists(data_file_path) is False:
+        test_name = mk_test_name(name, "error")
+        add_test(cls, test_name, _raise_ve, None)
+    else:
+        data = json.loads(open(data_file_path).read())
+        for i, elem in enumerate(data):
+            if isinstance(data, dict):
+                key, value = elem, data[elem]
+                test_name = mk_test_name(name, key, i)
+            elif isinstance(data, list):
+                value = elem
+                test_name = mk_test_name(name, value, i)
+            if isinstance(value, dict):
+                add_test(cls, test_name, func, **value)
+            else:
+                add_test(cls, test_name, func, value)
 
 def ddt(cls):
     """
@@ -237,5 +288,9 @@ def ddt(cls):
         elif hasattr(func, FILE_ATTR):
             file_attr = getattr(func, FILE_ATTR)
             process_file_data(cls, name, func, file_attr)
+            delattr(cls, name)
+        elif hasattr(func, EXCEL_ATTR):
+            file_attr = getattr(func, EXCEL_ATTR)
+            process_excel_data(cls, name, func, file_attr)
             delattr(cls, name)
     return cls

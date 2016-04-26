@@ -7,12 +7,13 @@ Created on 2016年4月14日
 import unittest
 
 import DataDrivenTestBase
-from ddt import ddt, data, unpack, file_data
+from ddt import ddt, data, unpack, json_data, excel_data
+
 
 @ddt
 class TestData(DataDrivenTestBase.DataDrivenTestBase):
     url =  'http://hostname:port/context?'
-    @file_data('sample.xlsx')
+    @excel_data('sample.xlsx')
     def test_file_data_list(self, dict1):
 #         print('-------------------------')
         weburl = self.url + self.getURLParametersFromDataSource(dict1)
@@ -22,7 +23,7 @@ class TestData(DataDrivenTestBase.DataDrivenTestBase):
         
         #verification response
         
-    @file_data('sample.xlsx')
+    @excel_data('sample.xlsx')
     def testSample(self, dict1):
         acturlResult = self.mockFunction(dict1)
         expectedResult = self.getExpectValue(dict1)
@@ -48,27 +49,15 @@ class TestData(DataDrivenTestBase.DataDrivenTestBase):
             urlParameters += '+{0}'.format(v)
         print(urlParameters)
         return urlParameters[1:]        
-        # parsing url from data source.
+#     @json_data('test_data_list.json')
+#     def test_file_data_list2(self, value):
+#         pass #self.assertTrue(is_a_greeting(value))
         
-    def getURLParametersFromDataSource(self, inputDict):
-        urlParameters = ''
-        k = inputDict.values()[0]
-        for j,v in enumerate(k[0]):
-            urlParameters += '&{0}={1}'.format(v, k[1][j])
-        self.encodeUrl(urlParameters)
-        return urlParameters[1:]
-    
-#     # parsing url from data source.
-#     def getURLParametersFromDataSource(self, inputDict):
-#         urlParameters = ''
-#         for k in inputDict[0].keys():
-#             for j,v in enumerate(k):
-#                 urlParameters += '&{0}={1}'.format(v, inputDict[0][k][j])
-#         self.encodeUrl(urlParameters)
-#         return urlParameters[1:]
-    
-    def encodeUrl(self,url):
-        url=url.replace('%3B',';')
-        url=url.replace('%2C',',')
-        
+    @json_data("jsonsample.json")
+    def test_file_data_dict_dict(self, city, keyword, response,test=''):
+        print('---------------')
+        print(test)
+        print(city)
+        print(keyword)
+        print(response)
         
