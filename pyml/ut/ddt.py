@@ -190,6 +190,7 @@ def rowToList(header):
         key.append(v.value)
     return key
 
+#parsing excel file.
 def process_excel_data(cls, name, func, file_attr):
     """
     Process the parameter in the `file_data` decorator.
@@ -220,7 +221,8 @@ def process_excel_data(cls, name, func, file_attr):
             tupleValue = key,value
             dict1 = {test_name: tupleValue}
             add_test(cls, test_name, func, dict1)
-            
+
+#default parsing json file          
 def process_file_data(cls, name, func, file_attr):
     """
     Process the parameter in the `file_data` decorator.
