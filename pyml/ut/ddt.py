@@ -19,7 +19,7 @@ import os
 import re
 from openpyxl import load_workbook
 
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 
 # These attributes will not conflict with any real python attribute
 # They are added to the decorated test method and processed later
