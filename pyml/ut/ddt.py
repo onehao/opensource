@@ -4,7 +4,6 @@
 # For the exact contribution history, see the git revision log.
 # DDT is licensed under the MIT License, included in
 # https://github.com/txels/ddt/blob/master/LICENSE.md
-
 '''
 Created on 2016年4月14日
 refactor from the Git project DDT (https://github.com/txels/ddt)
@@ -17,7 +16,13 @@ import inspect
 import json
 import os
 import re
+import sys
+
 from openpyxl import load_workbook
+
+
+reload(sys)
+print sys.setdefaultencoding('utf-8')
 
 __version__ = '1.0.2'
 
