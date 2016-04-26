@@ -7,15 +7,17 @@
 
 '''
 Created on 2016年4月14日
-
+refactor from the Git project DDT (https://github.com/txels/ddt)
+add support for parsing excel 2010+(.xlsx) files as data source.
 @author: michael.wh
 '''
 
+from functools import wraps
 import inspect
 import json
 import os
 import re
-from functools import wraps
+from openpyxl import load_workbook
 
 __version__ = '1.0.1'
 
@@ -165,18 +167,21 @@ def process_file_data(cls, name, func, file_attr):
         test_name = mk_test_name(name, "error")
         add_test(cls, test_name, _raise_ve, None)
     else:
-        data = json.loads(open(data_file_path).read())
-        for i, elem in enumerate(data):
-            if isinstance(data, dict):
-                key, value = elem, data[elem]
-                test_name = mk_test_name(name, key, i)
-            elif isinstance(data, list):
-                value = elem
-                test_name = mk_test_name(name, value, i)
-            if isinstance(value, dict):
-                add_test(cls, test_name, func, **value)
-            else:
-                add_test(cls, test_name, func, value)
+        wb = load_workbook(filename = data_file_path)
+        # 获取第一个worksheet作为数据源
+        ws = wb.get_sheet_by_name(wb.get_sheet_names()[0])
+        header = ws[1]
+        for i, elem in enumerate(ws.iter_rows(row_offset=2)):
+            #print('-------------------------')
+            #for j,v in enumerate(header):
+                #print(v.value + '-----' + elem[j].value)
+                
+            
+            #print('elem[1:3]' + str(elem[3].value))
+            key, value = header, elem
+            test_name = mk_test_name(name, key, i)
+            dict1 = [{header:elem}]
+            add_test(cls, test_name, func, dict1)
 
 
 def ddt(cls):
