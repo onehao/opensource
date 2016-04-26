@@ -4,65 +4,71 @@ Created on 2016年4月14日
 
 @author: michael.wh
 '''
-import math
 import unittest
 
-from numpy.testing.utils import assert_equal
-
+import DataDrivenTestBase
 from ddt import ddt, data, unpack, file_data
 
 @ddt
-class TestData(unittest.TestCase):
-    @data([2, 2, 4],[2, 3, 8],[1, 9, 1],[0, 9, 0])
-    @unpack
-    def test_pow(self, base, exponent, expected):
-        print("start")
-        assert_equal(math.pow(base, exponent), expected)
-        print("pass")
-#         
-#     @data([3, 2], [4, 3], [5, 3])
-#     @unpack
-#     def test_list_extracted_with_doc(self, first_value, second_value):
-#         """Extract into args with first value {} and second value {}"""
-#         print("start")
-#         self.assertTrue(first_value > second_value)
-        
+class TestData(DataDrivenTestBase.DataDrivenTestBase):
+    url =  'http://hostname:port/context?'
     @file_data('sample.xlsx')
     def test_file_data_list(self, dict1):
-        print('-------------------------')
-#         for key, value in enumerate(dict1):
-#             print(key.value + '-----' + value[j].value)
-        print(self.getURLParametersFromDataSource(dict1))
-#         print(type(dict1))
-#         print(type(dict1[0]))
-#         for k in dict1[0].keys():
-#             for j,v in enumerate(k):
-#                 print(v.value + '-----' + dict1[0][k][j].value) #+ dict1[1].value[j].value)
-                
+#         print('-------------------------')
+        weburl = self.url + self.getURLParametersFromDataSource(dict1)
+        print(weburl)
+        
+        #invoke request with the url  ${weburl}
+        
+        #verification response
+        
+    @file_data('sample.xlsx')
+    def testSample(self, dict1):
+        acturlResult = self.mockFunction(dict1)
+        expectedResult = self.getExpectValue(dict1)
+        self.assertEqual(acturlResult, expectedResult, 'mockFunction 验证失败')
+     
+    # 从excel指定列读取期望值    
+    def getExpectValue(self,dict1):
+        expectValue = ''
+        #从dict获取信息
+        # dict键为testname， 值为2个元素的list， list[0]为excel 第一列值， list[1]为excel递归读取后续值。
+        k = dict1.values()[0]
+        # 获取第5列作为期望值
+        expectValue = k[1][4]
+        print(expectValue)
+        return expectValue
     
+    # 模拟使用excel中data构造数据               
+    def mockFunction(self, dict1):
+        urlParameters = ''
+        k = dict1.values()[0]
+        #从第一个cell到倒数第一个cell中数据构造。
+        for v in k[1][:-1]:
+            urlParameters += '+{0}'.format(v)
+        print(urlParameters)
+        return urlParameters[1:]        
+        # parsing url from data source.
+        
     def getURLParametersFromDataSource(self, inputDict):
         urlParameters = ''
-        for k in inputDict[0].keys():
-            for j,v in enumerate(k):
-                urlParameters += '&{0}={1}'.format(v.value, inputDict[0][k][j].value)
+        k = inputDict.values()[0]
+        for j,v in enumerate(k[0]):
+            urlParameters += '&{0}={1}'.format(v, k[1][j])
         self.encodeUrl(urlParameters)
         return urlParameters[1:]
+    
+#     # parsing url from data source.
+#     def getURLParametersFromDataSource(self, inputDict):
+#         urlParameters = ''
+#         for k in inputDict[0].keys():
+#             for j,v in enumerate(k):
+#                 urlParameters += '&{0}={1}'.format(v, inputDict[0][k][j])
+#         self.encodeUrl(urlParameters)
+#         return urlParameters[1:]
     
     def encodeUrl(self,url):
         url=url.replace('%3B',';')
         url=url.replace('%2C',',')
-                
-        
-#     @file_data("test_data_dict_dict.json")
-#     def test_file_data_dict_dict(self, start, end, value):
-#         self.assertLess(start, end)
-#         self.assertLess(value, end)
-#         self.assertGreater(value, start)
-#         
-#     @data(u'ascii', u'non-ascii-\N{SNOWMAN}')
-#     def test_unicode(self, value):
-#         self.assertIn(value, (u'ascii', u'non-ascii-\N{SNOWMAN}'))
-#         
         
         
-    

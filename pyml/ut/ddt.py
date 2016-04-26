@@ -5,6 +5,7 @@ refactor from the Git project DDT (https://github.com/txels/ddt)
 add support for parsing excel 2010+(.xlsx) files as data source.
 @author: michael.wh
 '''
+
 # This file is a part of DDT (https://github.com/txels/ddt)
 # Copyright 2012-2015 Carles Barrobés and DDT contributors
 # For the exact contribution history, see the git revision log.
@@ -157,6 +158,13 @@ def add_test(cls, test_name, func, *args, **kwargs):
     setattr(cls, test_name, feed_data(func, test_name, *args, **kwargs))
 
 
+
+def rowToList(header):
+    key = []
+    for v in header:
+        key.append(v.value)
+    return key
+
 def process_file_data(cls, name, func, file_attr):
     """
     Process the parameter in the `file_data` decorator.
@@ -176,12 +184,16 @@ def process_file_data(cls, name, func, file_attr):
         # 获取第一个worksheet作为数据源
         ws = wb.get_sheet_by_name(wb.get_sheet_names()[0])
         header = ws[1]
+        key = rowToList(header)
         for i, elem in enumerate(ws.iter_rows(row_offset=0)):
             if i == 0:
                 continue
-            key, value = header, elem
-            test_name = mk_test_name(name, key, i)
-            dict1 = [{header:elem}]
+            value = rowToList(elem)
+#             test_name = mk_test_name(name, key, i)
+            test_name = "{0}_{1}".format(name,  i + 1)
+#             dict1 = [{key:value}]
+            tupleValue = key,value
+            dict1 = {test_name: tupleValue}
             add_test(cls, test_name, func, dict1)
 
 
