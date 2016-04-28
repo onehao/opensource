@@ -215,6 +215,12 @@ def process_excel_data(cls, name, func, file_attr):
             if i == 0:
                 continue
             value = rowToList(elem)
+            
+            # 会丢失列的顺序
+#             for i in range(len(header)):
+#                 dict[key[i]] = value[i]
+#                 
+#             print(dict)
 #             test_name = mk_test_name(name, key, i)
             test_name = "{0}_{1}".format(name,  i + 1)
 #             dict1 = [{key:value}]
