@@ -9,7 +9,6 @@ import unittest
 import DataDrivenTestBase
 from ddt import ddt, data, unpack, json_data, excel_data
 
-
 @ddt
 class TestData(DataDrivenTestBase.DataDrivenTestBase):
     url =  'http://hostname:port/context?'
