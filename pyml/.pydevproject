@@ -19,6 +19,7 @@
 <path>/${PROJECT_DIR_NAME}/csv</path>
 <path>/${PROJECT_DIR_NAME}/difflib</path>
 <path>/${PROJECT_DIR_NAME}/webpy</path>
+<path>/${PROJECT_DIR_NAME}/basic</path>
 </pydev_pathproperty>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 2.7</pydev_property>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">D:\Python27\python.exe</pydev_property>

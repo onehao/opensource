@@ -2,6 +2,7 @@
 <<<<<<<=HEAD
 >>>>>>>=branch 'master' of https\://github.com/onehao/opensource.git
 eclipse.preferences.version=1
+encoding//basic/extension/selfkeyword.py=utf-8
 encoding//crawler/2ndfun_email_tracker.py=utf-8
 encoding//crawler/__init__.py=utf-8
 encoding//crawler/career_tracker.py=utf-8
