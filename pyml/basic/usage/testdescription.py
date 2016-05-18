@@ -18,3 +18,8 @@ class DemoTest(unittest.TestCase):
         """Test foo this is michael"""
         self.assertTrue(False)
         pass
+    
+    @pytest.mark.p1
+    def test_foo2(self):
+        self.assertTrue(False)
+        pass
