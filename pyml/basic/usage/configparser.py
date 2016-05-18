@@ -14,3 +14,7 @@ print(str(list))
 str2 = '["省","市","区","州","村","镇","乡"]' #"["1/","2","3","4","5"]"
 list2 = json.loads(str2,encoding='utf-8')
 print(str(list2))
+
+
+str3 = '12345'
+print(str3.index('6'))
