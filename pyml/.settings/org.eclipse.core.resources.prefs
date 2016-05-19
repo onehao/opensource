@@ -3,6 +3,7 @@
 >>>>>>>=branch 'master' of https\://github.com/onehao/opensource.git
 eclipse.preferences.version=1
 encoding//basic/extension/selfkeyword.py=utf-8
+encoding//basic/plugins/report.py=utf-8
 encoding//basic/usage/configparser.py=utf-8
 encoding//basic/usage/conftest.py=utf-8
 encoding//basic/usage/testdescription.py=utf-8
