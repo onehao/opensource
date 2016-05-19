@@ -19,6 +19,8 @@ class DemoTest(unittest.TestCase):
     @pytest.mark.p1
     def test_foo(self):
         """Test foo this is michael"""
+        test = "中文‘”".decode('US-ASCII',errors='ignore').encode('US-ASCII', errors='ignore')
+        print(test)
         self.assertTrue(False)
         pass
     

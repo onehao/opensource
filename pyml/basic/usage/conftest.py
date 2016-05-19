@@ -10,7 +10,7 @@ import pytest
 
 
 sys.path.append('../plugins')
-pytest_plugins = "report"
+#pytest_plugins = "report"
 # @pytest.mark.tryfirst
 # def pytest_runtest_makereport(item, call, __multicall__):
 #     # execute all other hooks to obtain the report object
@@ -27,3 +27,13 @@ pytest_plugins = "report"
 #     the items in-place."""
 #     print(str(items))
 #     pass
+
+@pytest.mark.tryfirst
+def pytest_terminal_summary(terminalreporter):
+    # execute all other hooks to obtain the report object
+    print(str(terminalreporter))
+    pass
+
+def pytest_addoption(parser):
+    parser.addoption("--aaaaaaaaaaaaaaaaaaaa", action="store", default="type1",
+        help="my option: type1 or type2")
