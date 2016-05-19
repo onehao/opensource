@@ -8,7 +8,13 @@
 5. books on python.
 6. onedrive clean tools.
 7. extracing info to pdf
-8. 
+8. 基础环境配置，eclipse & pydev
+9. 第三方依赖库
+10. pydev配置 & debug
+11. 并发指定框架房重构
+12. 并发执行说明
+13. 可视化report
+14. 自定义pytest插件， 支持description加载
 
 
 #actsjava 
@@ -46,4 +52,45 @@ For example:
 Given 1->2->3->4->5->NULL, m = 2 and n = 4,
 return 1->4->3->2->5->NULL.
 
+
+
+format sample
+# This is an <h1> tag
+## This is an <h2> tag
+###### This is an <h6> tag
+*This text will be italic*
+_This will also be italic_
+
+**This text will be bold**
+__This will also be bold__
+
+_You **can** combine them_
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+1. Item 1
+2. Item 2
+3. Item 3
+   * Item 3a
+   * Item 3b
+   * 
+   
+
+
+![GitHub Logo](https://avatars3.githubusercontent.com/u/1018359?v=3&s=460)
+Format: ![Alt Text](url)
+
+http://github.com - automatic!
+[GitHub](http://github.com)
+
+
+As Kanye West said:
+
+> We're living the future so
+> the present is our past.
+
+
+I think you should use an
+`<addr>` element here instead.
 
