@@ -72,7 +72,7 @@ _You **can** combine them_
    
 
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](https://avatars3.githubusercontent.com/u/1018359?v=3&s=460)
 Format: ![Alt Text](url)
 
 http://github.com - automatic!
