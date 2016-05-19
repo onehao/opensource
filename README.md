@@ -8,7 +8,13 @@
 5. books on python.
 6. onedrive clean tools.
 7. extracing info to pdf
-8. 
+8. 基础环境配置，eclipse & pydev
+9. 第三方依赖库
+10. pydev配置 & debug
+11. 并发指定框架房重构
+12. 并发执行说明
+13. 可视化report
+14. 自定义pytest插件， 支持description加载
 
 
 #actsjava 
