@@ -339,7 +339,7 @@ function one_row_for_data() {
     });
 }
 </script>
-    <p>Report generated on 19-May-2016 at 09:34:30</p>
+    <p>Report generated on 19-May-2016 at 16:35:15</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -349,7 +349,7 @@ function one_row_for_data() {
         <td>Python</td>
         <td>2.7.10</td></tr></table>
     <h2>Summary</h2>
-    <p>3 tests ran in 0.10 seconds.<br/><span class="passed">0 passed</span>, <span class="skipped">0 skipped</span>, <span class="failed">3 failed</span>, <span class="error">0 errors</span>.<br/><span class="skipped">0 expected failures</span>, <span class="failed">0 unexpected passes</span>.</p>
+    <p>0 tests ran in 0.31 seconds.<br/><span class="passed">0 passed</span>, <span class="skipped">0 skipped</span>, <span class="failed">0 failed</span>, <span class="error">4 errors</span>.<br/><span class="skipped">0 expected failures</span>, <span class="failed">0 unexpected passes</span>.</p>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -359,26 +359,32 @@ function one_row_for_data() {
           <th class="sortable numeric" col="duration">Duration</th>
           <th>Links</th></tr></thead>
       <tbody id="results-table-body">
-        <tr class="failed results-table-row">
-          <td class="col-result">Failed</td>
-          <td class="col-name">testdescription.py::DemoTest.test_foo -- &quot;Test foo this is michael&quot;</td>
+        <tr class="error results-table-row">
+          <td class="col-result">Error</td>
+          <td class="col-name">testdescription.py::DemoTest::test_foo::setup</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td>
+          <td class="extra">
+            <div class="log">request = &lt;SubRequest 'callattr_ahead_of_alltests' for &lt;TestCaseFunction 'test_foo'&gt;&gt;<br/><br/>    @pytest.fixture(scope="session", autouse=True)<br/>    def callattr_ahead_of_alltests(request):<br/>        print ("callattr_ahead_of_alltests called")<br/>        seen = set([None])<br/>        session = request.node<br/>        for item in session.items:<br/>            cls = item.getparent(pytest.Class)<br/>&gt;           cls._nodeid = item._obj.__doc__.strip()<br/><span class="error">E           AttributeError: 'NoneType' object has no attribute 'strip'</span><br/><br/>conftest.py:52: AttributeError<br/>---------------------------- Captured stdout setup -----------------------------<br/>callattr_ahead_of_alltests called
+</div></td></tr>
+        <tr class="error results-table-row">
+          <td class="col-result">Error</td>
+          <td class="col-name">Test foo this is michael::test_foo2::setup</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td>
           <td class="extra">
-            <div class="log">self = &lt;usage.testdescription.DemoTest testMethod=test_foo&gt;<br/><br/>    @pytest.mark.p1<br/>    def test_foo(self):<br/>        """Test foo this is michael"""<br/>&gt;       self.assertTrue(False)<br/><span class="error">E       AssertionError: False is not true</span><br/><br/>testdescription.py:22: AssertionError<br/></div></td></tr>
-        <tr class="failed results-table-row">
-          <td class="col-result">Failed</td>
-          <td class="col-name">testdescription.py::DemoTest.test_foo2 -- &quot;&quot;</td>
+            <div class="log">request = &lt;SubRequest 'callattr_ahead_of_alltests' for &lt;TestCaseFunction 'test_foo'&gt;&gt;<br/><br/>    @pytest.fixture(scope="session", autouse=True)<br/>    def callattr_ahead_of_alltests(request):<br/>        print ("callattr_ahead_of_alltests called")<br/>        seen = set([None])<br/>        session = request.node<br/>        for item in session.items:<br/>            cls = item.getparent(pytest.Class)<br/>&gt;           cls._nodeid = item._obj.__doc__.strip()<br/><span class="error">E           AttributeError: 'NoneType' object has no attribute 'strip'</span><br/><br/>conftest.py:52: AttributeError<br/></div></td></tr>
+        <tr class="error results-table-row">
+          <td class="col-result">Error</td>
+          <td class="col-name">Test foo this is michael::test_foo3::setup</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td>
           <td class="extra">
-            <div class="log">self = &lt;usage.testdescription.DemoTest testMethod=test_foo2&gt;<br/><br/>    @pytest.mark.p1<br/>    def test_foo2(self):<br/>&gt;       self.assertTrue(False)<br/><span class="error">E       AssertionError: False is not true</span><br/><br/>testdescription.py:27: AssertionError<br/></div></td></tr>
-        <tr class="failed results-table-row">
-          <td class="col-result">Failed</td>
-          <td class="col-name">testdescription.py::DemoTest.test_foo3 -- &quot;Test foo this 
-        is michael, 
-        hah&quot;</td>
-          <td class="col-duration">0.00</td>
+            <div class="log">request = &lt;SubRequest 'callattr_ahead_of_alltests' for &lt;TestCaseFunction 'test_foo'&gt;&gt;<br/><br/>    @pytest.fixture(scope="session", autouse=True)<br/>    def callattr_ahead_of_alltests(request):<br/>        print ("callattr_ahead_of_alltests called")<br/>        seen = set([None])<br/>        session = request.node<br/>        for item in session.items:<br/>            cls = item.getparent(pytest.Class)<br/>&gt;           cls._nodeid = item._obj.__doc__.strip()<br/><span class="error">E           AttributeError: 'NoneType' object has no attribute 'strip'</span><br/><br/>conftest.py:52: AttributeError<br/></div></td></tr>
+        <tr class="error results-table-row">
+          <td class="col-result">Error</td>
+          <td class="col-name">Test foo this is michael::test_foo3::teardown</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td>
           <td class="extra">
-            <div class="log">self = &lt;usage.testdescription.DemoTest testMethod=test_foo3&gt;<br/><br/>    @pytest.mark.p1<br/>    def test_foo3(self):<br/>        """Test foo this<br/>            is michael,<br/>            hah<br/>            """<br/>&gt;       self.assertTrue(False)<br/><span class="error">E       AssertionError: False is not true</span><br/><br/>testdescription.py:36: AssertionError<br/></div></td></tr></tbody></table></body></html>
+            <div class="log">self = &lt;CallInfo when='teardown' exception: assert (&lt;UnitTestCase 'DemoTest'&gt; is None or &lt;UnitTestCase 'DemoTest'&gt; in [&lt;Sessi...+    where [&lt;Session 'usage'&gt;, &lt;Module 'testdescription.py'&gt;] = &lt;_pytest.runner.SetupState object at 0x035C9BB0&gt;.stack&gt;<br/>func = &lt;function &lt;lambda&gt; at 0x03662870&gt;, when = 'teardown'<br/><br/>    def __init__(self, func, when):<br/>        #: context of invocation: one of "setup", "call",<br/>        #: "teardown", "memocollect"<br/>        self.when = when<br/>        self.start = time()<br/>        try:<br/>&gt;           self.result = func()<br/><br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\runner.py:150: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\runner.py:138: in &lt;lambda&gt;<br/>    return CallInfo(lambda: ihook(item=item, **kwds), when=when)<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\vendored_packages\pluggy.py:724: in __call__<br/>    return self._hookexec(self, self._nonwrappers + self._wrappers, kwargs)<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\vendored_packages\pluggy.py:338: in _hookexec<br/>    return self._inner_hookexec(hook, methods, kwargs)<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\vendored_packages\pluggy.py:333: in &lt;lambda&gt;<br/>    _MultiCall(methods, kwargs, hook.spec_opts).execute()<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\vendored_packages\pluggy.py:595: in execute<br/>    return _wrapped_call(hook_impl.function(*args), self.execute)<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\vendored_packages\pluggy.py:253: in _wrapped_call<br/>    return call_outcome.get_result()<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\vendored_packages\pluggy.py:279: in get_result<br/>    _reraise(*ex)  # noqa<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\vendored_packages\pluggy.py:264: in __init__<br/>    self.result = func()<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\vendored_packages\pluggy.py:596: in execute<br/>    res = hook_impl.function(*args)<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\runner.py:103: in pytest_runtest_teardown<br/>    item.session._setupstate.teardown_exact(item, nextitem)<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\runner.py:387: in teardown_exact<br/>    self._teardown_towards(needed_collectors)<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\runner.py:393: in _teardown_towards<br/>    self._pop_and_teardown()<br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\runner.py:353: in _pop_and_teardown<br/>    self._teardown_with_finalization(colitem)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;_pytest.runner.SetupState object at 0x035C9BB0&gt;<br/>colitem = &lt;UnitTestCase 'DemoTest'&gt;<br/><br/>    def _teardown_with_finalization(self, colitem):<br/>        self._callfinalizers(colitem)<br/>        if hasattr(colitem, "teardown"):<br/>            colitem.teardown()<br/>        for colitem in self._finalizers:<br/>            assert colitem is None or colitem in self.stack \<br/>&gt;            or isinstance(colitem, tuple)<br/><span class="error">E           assert (&lt;UnitTestCase 'DemoTest'&gt; is None or &lt;UnitTestCase 'DemoTest'&gt; in [&lt;Session 'usage'&gt;, &lt;Module 'testdescription.py'&gt;] or isinstance(&lt;UnitTestCase 'DemoTest'&gt;, tuple))</span><br/><span class="error">E            +  where [&lt;Session 'usage'&gt;, &lt;Module 'testdescription.py'&gt;] = [&lt;Session 'usage'&gt;, &lt;Module 'testdescription.py'&gt;]</span><br/><span class="error">E            +    where [&lt;Session 'usage'&gt;, &lt;Module 'testdescription.py'&gt;] = &lt;_pytest.runner.SetupState object at 0x035C9BB0&gt;.stack</span><br/><br/>D:\Python27\lib\site-packages\pytest-2.9.1-py2.7.egg\_pytest\runner.py:376: AssertionError<br/></div></td></tr></tbody></table></body></html>

@@ -35,5 +35,22 @@ def pytest_terminal_summary(terminalreporter):
     pass
 
 def pytest_addoption(parser):
-    parser.addoption("--aaaaaaaaaaaaaaaaaaaa", action="store", default="type1",
+    parser.addoption("--cmdopt", action="store", default="type1",
         help="my option: type1 or type2")
+    
+@pytest.fixture
+def cmdopt(request):
+    return request.config.getoption("--cmdopt")
+
+# @pytest.fixture(scope="session", autouse=True)
+# def callattr_ahead_of_alltests(request):
+#     print ("callattr_ahead_of_alltests called")
+#     seen = set([None])
+#     session = request.node
+#     for item in session.items:
+#         cls = item.getparent(pytest.Class)
+#         cls._nodeid = item._obj.__doc__.strip()
+#         if cls not in seen:
+#             if hasattr(cls.obj, "callme"):
+#                 cls.obj.callme()
+#             seen.add(cls)

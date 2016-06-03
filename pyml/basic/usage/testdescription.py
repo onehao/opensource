@@ -37,3 +37,13 @@ class DemoTest(unittest.TestCase):
         """
         self.assertTrue(False)
         pass
+    
+#     @pytest.mark.p1
+#     @pytest.fixture
+#     def test_foo4(self,cmdopt):
+#         """Test foo this 
+#         is michael, 
+#         hah
+#         """
+#         self.assertEqual(self.cmdopt, 'test', 'check cmdopt is test.')
+#         pass
