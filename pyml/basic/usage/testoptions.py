@@ -11,11 +11,11 @@ import pytest
 
 #works when outside the class.
 def test_foo(self,ips):
-        """Test foo this is michael"""
-        test = "中文‘”".decode('US-ASCII',errors='ignore').encode('US-ASCII', errors='ignore')
-        print(ips)
-        self.assertTrue(False)
-        pass
+    """Test foo this is michael"""
+    test = "中文‘”".decode('US-ASCII',errors='ignore').encode('US-ASCII', errors='ignore')
+    print(ips)
+    self.assertTrue(False)
+    pass
 
 class DemoTest(unittest.TestCase):
     def shortDescription(self):
