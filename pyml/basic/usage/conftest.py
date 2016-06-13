@@ -37,7 +37,7 @@ def pytest_addoption(parser):
     parser.addoption("--ips", action="store", default="type1",
         help="my option: type1 or type2")
     
-@pytest.fixture(scope = "session")
+@pytest.fixture(scope = "module")
 def ips(request):
     return request.config.getoption("--ips")
 
