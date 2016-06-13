@@ -8,7 +8,6 @@ import sys
 
 import pytest
 
-
 sys.path.append('../plugins')
 #pytest_plugins = "report"
 # @pytest.mark.tryfirst
@@ -35,12 +34,12 @@ def pytest_terminal_summary(terminalreporter):
     pass
 
 def pytest_addoption(parser):
-    parser.addoption("--cmdopt", action="store", default="type1",
+    parser.addoption("--ips", action="store", default="type1",
         help="my option: type1 or type2")
     
-@pytest.fixture
-def cmdopt(request):
-    return request.config.getoption("--cmdopt")
+@pytest.fixture(scope = "session")
+def ips(request):
+    return request.config.getoption("--ips")
 
 # @pytest.fixture(scope="session", autouse=True)
 # def callattr_ahead_of_alltests(request):
